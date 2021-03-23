@@ -1,2 +1,1 @@
-# online-zoo
-Task name: Online Zoo
+# Task name: Online Zoo
