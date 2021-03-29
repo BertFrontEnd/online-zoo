@@ -1,0 +1,25 @@
+.header {
+  background-color: var(--header-background-color);
+}
+
+.header__wrapper {
+  @include alignment(space-between, center, row, nowrap);
+  width: 100%;
+  padding: 26px 0;
+}
+
+.header__logo {
+  h1 {
+    @include font-size(3.6rem, 900);
+  }
+
+  span {
+    @include font-size(1.8rem, 900);
+  }
+}
+
+.header__navigation {
+  ul {
+    @include alignment(center, center, row, nowrap);
+  }
+}

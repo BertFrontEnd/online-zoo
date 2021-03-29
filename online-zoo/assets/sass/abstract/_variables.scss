@@ -1,0 +1,80 @@
+:root {
+  --primary-background-color: #fbfbfb;
+  --secondary-background-color: #f2f2f2;
+  --header-background-color: #ffffff;
+  --footer-background-color: #333333;
+  --primary-text-color: #333333;
+  --secondary-text-color: #4f4f4f;
+  --clickable-arrow-color: #333333;
+  --non-clickable-arrow-color: #828282;
+  --promo-base-color: #fefefe;
+  --promo-range-line-color: #bdbdbd57;
+  --promo-range-point-color: #fefefe;
+  --promo-range-active-text-color: #fefefe;
+  --promo-range-inactive-text-color: #bdbdbd;
+  --range-line-color: #bdbdbd57;
+  --range-point-color: #333333;
+  --promo-range-active-text-color: #333333;
+  --promo-range-inactive-text-color: #bdbdbd;
+  --card-color: #fefefe;
+  --tooltip-color: #fefefe;
+  --map-color: #333333;
+  --pinned-map-color: #dadada;
+  --stroke-pinned-map-color: #333333;
+  --checkbox-label-color: #f2f2f2;
+  --checkbox-point-color: #ffffff;
+}
+
+[data-background='light'] {
+  --primary-background-color: #fbfbfb;
+  --secondary-background-color: #f2f2f2;
+  --header-background-color: #ffffff;
+  --footer-background-color: #333333;
+  --primary-text-color: #333333;
+  --secondary-text-color: #4f4f4f;
+  --clickable-arrow-color: #333333;
+  --non-clickable-arrow-color: #828282;
+  --promo-base-color: #fefefe;
+  --promo-range-line-color: #bdbdbd57;
+  --promo-range-point-color: #fefefe;
+  --promo-range-active-text-color: #fefefe;
+  --promo-range-inactive-text-color: #bdbdbd;
+  --range-line-color: #bdbdbd57;
+  --range-point-color: #333333;
+  --promo-range-active-text-color: #333333;
+  --promo-range-inactive-text-color: #bdbdbd;
+  --card-color: #fefefe;
+  --tooltip-color: #fefefe;
+  --map-color: #333333;
+  --pinned-map-color: #dadada;
+  --stroke-pinned-map-color: #333333;
+  --checkbox-label-color: #f2f2f2;
+  --checkbox-point-color: #ffffff;
+}
+
+[data-background='dark'] {
+  --primary-background-color: #333333;
+  --secondary-background-color: #4f4f4f;
+  --header-background-color: #333333;
+  --footer-background-color: #333333;
+  --primary-text-color: #fefefe;
+  --secondary-text-color: #f2f2f2;
+  --clickable-arrow-color: #fefefe;
+  --non-clickable-arrow-color: #828282;
+  --promo-base-color: #fefefe;
+  --promo-range-line-color: #bdbdbd57;
+  --promo-range-point-color: #fefefe;
+  --promo-range-active-text-color: #fefefe;
+  --promo-range-inactive-text-color: #bdbdbd;
+  --range-line-color: #bdbdbd57;
+  --range-point-color: #fefefe;
+  --promo-range-active-text-color: #fefefe;
+  --promo-range-inactive-text-color: #bdbdbd;
+  --card-color: #3c3c3c;
+  --tooltip-color: #333333;
+  --map-color: #e1e1e1;
+  --pinned-map-color: #333333;
+  --stroke-pinned-map-color: #fefefe;
+  --checkbox-label-color: #4f4f4f;
+  --checkbox-point-color: #1b1b1b;
+}
