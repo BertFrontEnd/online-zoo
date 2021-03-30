@@ -1,0 +1,10 @@
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: $social-icon-color;
+  @extend %transition;
+
+  &:hover {
+    fill: $social-icon-color-hover;
+  }
+}

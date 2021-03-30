@@ -9,17 +9,27 @@
 }
 
 .header__logo {
+  @include alignment(space-between, center, column, nowrap);
   h1 {
     @include font-size(3.6rem, 900);
+    text-transform: uppercase;
   }
 
   span {
+    margin-top: -16px;
     @include font-size(1.8rem, 900);
+    letter-spacing: 3px;
   }
 }
 
 .header__navigation {
   ul {
     @include alignment(center, center, row, nowrap);
+
+    li {
+      a {
+        @include font-size(1.6rem, 500);
+      }
+    }
   }
 }

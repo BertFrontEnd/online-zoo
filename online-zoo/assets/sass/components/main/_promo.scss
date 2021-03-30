@@ -1,0 +1,17 @@
+.promo {
+  background-image: url(./assets/img/background/promo.jpg);
+  background-size: cover;
+}
+
+.promo__wrapper {
+  position: relative;
+  @include alignment(space-between, center, column, nowrap);
+  width: 100%;
+  padding: 26px 0;
+}
+
+.promo__slider {
+  .slider__image {
+    @include alignment(space-between, center, row, nowrap);
+  }
+}
