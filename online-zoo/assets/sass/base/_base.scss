@@ -1,8 +1,24 @@
 html {
   font-size: 10px;
-  background-color: var(--primary-background-color);
 }
 
 body {
   @extend %font;
+  @include font-size(1.6rem, normal);
+  background-color: var(--primary-background-color);
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+.text {
 }
