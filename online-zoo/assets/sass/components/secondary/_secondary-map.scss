@@ -1,0 +1,23 @@
+.secondary-map__wrapper {
+  @include alignment(space-between, center, column, nowrap);
+  width: 100%;
+  padding: 26px 0;
+}
+
+.secondary-map__description {
+  @include alignment(center, center, column, nowrap);
+  width: 100%;
+}
+
+.secondary-map__slider {
+  @include alignment(center, center, row, nowrap);
+  width: 100%;
+
+  .slider__image {
+    @include alignment(center, center, row, nowrap);
+
+    img {
+      margin: 10px;
+    }
+  }
+}

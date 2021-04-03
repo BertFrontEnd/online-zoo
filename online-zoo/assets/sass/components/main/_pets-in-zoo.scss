@@ -5,7 +5,14 @@
 }
 
 .pets-in-zoo__slider {
+  @include alignment(center, center, row, nowrap);
+  width: 100%;
+
   .slider__image {
     @include alignment(space-between, center, row, nowrap);
+
+    img {
+      margin: 10px;
+    }
   }
 }

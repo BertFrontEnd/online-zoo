@@ -68,9 +68,13 @@
         </div>
         <nav class="header__navigation">
           <ul>
-            <li><a href="#" class="navigation__header-link">About</a></li>
+            <li>About</li>
             <li><a href="#" class="navigation__header-link">Zoos</a></li>
-            <li><a href="#" class="navigation__header-link">Map</a></li>
+            <li>
+              <a href="./assets/pages/map.html" class="navigation__header-link"
+                >Map</a
+              >
+            </li>
             <li><a href="#" class="navigation__header-link">Contact Us</a></li>
             <li><a href="#" class="navigation__header-link">Design</a></li>
           </ul>
@@ -91,14 +95,14 @@
           </div>
           <div class="promo__slider">
             <div class="slider__image">
-              <img src="./assets/img/animal-promo/eagle.jpg" alt="" />
-              <img src="./assets/img/animal-promo/panda.jpg" alt="" />
-              <img src="./assets/img/animal-promo/alligator.jpg" alt="" />
-              <img src="./assets/img/animal-promo/gorilla.jpg" alt="" />
-              <img src="./assets/img/animal-promo/fox.jpg" alt="" />
-              <img src="./assets/img/animal-promo/sloth.jpg" alt="" />
-              <img src="./assets/img/animal-promo/elephant.jpg" alt="" />
-              <img src="./assets/img/animal-promo/jaguar.jpg" alt="" />
+              <img src="./assets/img/animal-promo/eagle-promo.jpg" alt="" />
+              <img src="./assets/img/animal-promo/panda-promo.jpg" alt="" />
+              <img src="./assets/img/animal-promo/alligator-promo.jpg" alt="" />
+              <img src="./assets/img/animal-promo/gorilla-promo.jpg" alt="" />
+              <img src="./assets/img/animal-promo/fox-promo.jpg" alt="" />
+              <img src="./assets/img/animal-promo/sloth-promo.jpg" alt="" />
+              <img src="./assets/img/animal-promo/elephant-promo.jpg" alt="" />
+              <img src="./assets/img/animal-promo/jaguar-promo.jpg" alt="" />
             </div>
             <div class="slider__line">
               <span class="line__horizontal"></span>
@@ -121,8 +125,8 @@
               step="1"
             />
           </div>
-          <div class="promo__social">
-            <ul>
+          <div class="promo__social-header">
+            <ul class="social-header__direction">
               <li>
                 <a href="#">
                   <svg class="social-icon">
@@ -232,6 +236,10 @@
         <div class="wrapper pets-in-zoo__wrapper">
           <h3 class="pets-in-zoo__title">Pets in Zoo</h3>
           <div class="pets-in-zoo__slider">
+            <div class="slider___arrow">
+              <button class="arrow__left arrow">&lt;</button>
+              <button class="arrow__right arrow">&gt;</button>
+            </div>
             <div class="slider__image">
               <img src="./assets/img/animal-zoo/panda-zoo.jpg" alt="" />
               <img src="./assets/img/animal-zoo/eagle-zoo.jpg" alt="" />
@@ -298,8 +306,8 @@
           <h3 class="testimonials__title">Testimonials</h3>
           <div class="testimonials__slider">
             <div class="slider___arrow">
-              <div class="arrow__left arrow">&lt;</div>
-              <div class="arrow__right arrow">&gt;</div>
+              <button class="arrow__left arrow">&lt;</button>
+              <button class="arrow__right arrow">&gt;</button>
             </div>
             <div class="slider__card">
               <div class="card__info">
@@ -375,7 +383,7 @@
           </div>
           <div class="primary-map__tooltip">
             <div class="tooltip__card eagle">
-              <h5 class="tooltip__title">West End Bald Eagle</h5>
+              <p class="tooltip__title">West End Bald Eagle</p>
               <p class="tooltip__region text">
                 <span>Region: </span>on an island near Los Angeles
               </p>
@@ -390,7 +398,7 @@
               </div>
             </div>
             <div class="tooltip__card alligator">
-              <h5 class="tooltip__title">Alligator Аnd Spoonbill Swamp</h5>
+              <p class="tooltip__title">Alligator Аnd Spoonbill Swamp</p>
               <p class="tooltip__region text">
                 <span>Region: </span>on the east coast of the United States from
                 North Carolina to Texas
@@ -407,7 +415,7 @@
               </div>
             </div>
             <div class="tooltip__card gorilla">
-              <h5 class="tooltip__title">Gorilla</h5>
+              <p class="tooltip__title">Gorilla</p>
               <p class="tooltip__region text">
                 <span>Region: </span>equatorial forests of western and central
                 Africa
@@ -424,7 +432,7 @@
               </div>
             </div>
             <div class="tooltip__card panda">
-              <h5 class="tooltip__title">Panda</h5>
+              <p class="tooltip__title">Panda</p>
               <p class="tooltip__region text">
                 <span>Region: </span>in the mountainous regions of central China
               </p>
@@ -453,9 +461,9 @@
             <span class="footer__secodary-header">online</span>
           </div>
           <ul class="navigation__link">
-            <li><a href="#">About</a></li>
+            <li>About</li>
             <li><a href="#">Zoos</a></li>
-            <li><a href="#">Map</a></li>
+            <li><a href="./assets/pages/map.html">Map</a></li>
             <li><a href="#">Design</a></li>
           </ul>
           <button class="navigation__button button">
@@ -464,10 +472,8 @@
         </div>
 
         <div class="footer__about-us">
-          <div class="about-us__description">
-            <h6 class="description__title">Contact us</h6>
-          </div>
           <form action="#" class="about-us__form">
+            <h5 class="form__title">Contact us</h5>
             <div class="form__name">
               <input type="text" text="name" placeholder="Name" />
             </div>
@@ -482,13 +488,12 @@
                 rows="10"
               ></textarea>
             </fieldset>
-            <div class="form__checkbox">
-              <input type="checkbox" class="checkbox__info" />
+            <label class="form__checkbox">
+              <input type="checkbox" />
               I agree to the processing of Personal Data
-            </div>
+            </label>
             <input type="submit" class="form__send" value="Send" />
           </form>
-
           <div class="about-us__online-centre">
             <p class="online-centre__name">ZOO Online Centre</p>
             <address class="online-centre__street">
@@ -503,8 +508,8 @@
             <div class="online-centre__mail">
               <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
             </div>
-            <div class="online-centre__social-link">
-              <ul>
+            <div class="online-centre__social-footer">
+              <ul class="social-footer__direction">
                 <li>
                   <a href="#">
                     <svg class="social-icon">
@@ -539,12 +544,10 @@
         </div>
 
         <div class="footer__copyright">
-          <div class="copyright__author">
-            <span>©Noora Sagnayeva</span>
-          </div>
-          <div class="copyright__organization">
-            <span>©RSSchool and ©Yem Digital - 2021</span>
-          </div>
+          <span class="copyright__author">©Noora Sagnayeva</span>
+          <span class="copyright__organization"
+            >©RSSchool and ©Yem Digital - 2021</span
+          >
         </div>
       </div>
     </footer>

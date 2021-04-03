@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../font.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <script src="../../script.js" type="module" defer></script>
+    <title>ZOO online</title>
+  </head>
+
+  <body>
+    <svg style="display: none">
+      <symbol id="instagram" viewBox="0 0 20 20">
+        <g>
+          <path
+            d="M13.75 0H6.25C2.79875 0 0 2.79875 0 6.25V13.75C0 17.2013 2.79875 20 6.25 20H13.75C17.2013 20 20 17.2013 20 13.75V6.25C20 2.79875 17.2013 0 13.75 0ZM18.125 13.75C18.125 16.1625 16.1625 18.125 13.75 18.125H6.25C3.8375 18.125 1.875 16.1625 1.875 13.75V6.25C1.875 3.8375 3.8375 1.875 6.25 1.875H13.75C16.1625 1.875 18.125 3.8375 18.125 6.25V13.75Z"
+          />
+          <path
+            d="M10 5C7.23875 5 5 7.23875 5 10C5 12.7613 7.23875 15 10 15C12.7613 15 15 12.7613 15 10C15 7.23875 12.7613 5 10 5ZM10 13.125C8.2775 13.125 6.875 11.7225 6.875 10C6.875 8.27625 8.2775 6.875 10 6.875C11.7225 6.875 13.125 8.27625 13.125 10C13.125 11.7225 11.7225 13.125 10 13.125Z"
+          />
+          <path
+            d="M15.3752 5.29148C15.7432 5.29148 16.0415 4.99319 16.0415 4.62523C16.0415 4.25727 15.7432 3.95898 15.3752 3.95898C15.0073 3.95898 14.709 4.25727 14.709 4.62523C14.709 4.99319 15.0073 5.29148 15.3752 5.29148Z"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="twitter" viewBox="0 0 20 17">
+        <g>
+          <path
+            d="M20 1.92375C19.2563 2.25 18.4637 2.46625 17.6375 2.57125C18.4875 2.06375 19.1363 1.26625 19.4412 0.305C18.6488 0.7775 17.7738 1.11125 16.8412 1.2975C16.0887 0.49625 15.0162 0 13.8462 0C11.5763 0 9.74875 1.8425 9.74875 4.10125C9.74875 4.42625 9.77625 4.73875 9.84375 5.03625C6.435 4.87 3.41875 3.23625 1.3925 0.7475C1.03875 1.36125 0.83125 2.06375 0.83125 2.82C0.83125 4.24 1.5625 5.49875 2.6525 6.2275C1.99375 6.215 1.3475 6.02375 0.8 5.7225C0.8 5.735 0.8 5.75125 0.8 5.7675C0.8 7.76 2.22125 9.415 4.085 9.79625C3.75125 9.8875 3.3875 9.93125 3.01 9.93125C2.7475 9.93125 2.4825 9.91625 2.23375 9.86125C2.765 11.485 4.2725 12.6788 6.065 12.7175C4.67 13.8088 2.89875 14.4662 0.98125 14.4662C0.645 14.4662 0.3225 14.4513 0 14.41C1.81625 15.5813 3.96875 16.25 6.29 16.25C13.835 16.25 17.96 10 17.96 4.5825C17.96 4.40125 17.9538 4.22625 17.945 4.0525C18.7588 3.475 19.4425 2.75375 20 1.92375Z"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="youtube" viewBox="0 0 20 14">
+        <g>
+          <path
+            d="M19.15 1.575C18.6075 0.61 18.0188 0.4325 16.82 0.365C15.6225 0.28375 12.6112 0.25 10.0025 0.25C7.38875 0.25 4.37625 0.28375 3.18 0.36375C1.98375 0.4325 1.39375 0.60875 0.84625 1.575C0.2875 2.53875 0 4.19875 0 7.12125C0 7.12375 0 7.125 0 7.125C0 7.1275 0 7.12875 0 7.12875V7.13125C0 10.0413 0.2875 11.7137 0.84625 12.6675C1.39375 13.6325 1.9825 13.8075 3.17875 13.8888C4.37625 13.9588 7.38875 14 10.0025 14C12.6112 14 15.6225 13.9587 16.8212 13.89C18.02 13.8087 18.6087 13.6338 19.1513 12.6688C19.715 11.715 20 10.0425 20 7.1325C20 7.1325 20 7.12875 20 7.12625C20 7.12625 20 7.12375 20 7.1225C20 4.19875 19.715 2.53875 19.15 1.575ZM7.5 10.875V3.375L13.75 7.125L7.5 10.875Z"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="vk" viewBox="0 0 20 12">
+        <g>
+          <path
+            d="M19.8217 10.1784C19.768 10.0883 19.4355 9.36579 17.8353 7.88068C16.1602 6.32557 16.3852 6.57809 18.4029 3.88914C19.6317 2.25152 20.123 1.25145 19.9692 0.823916C19.823 0.416387 18.9192 0.523894 18.9192 0.523894L15.9139 0.541396C15.9139 0.541396 15.6914 0.511393 15.5252 0.610151C15.3639 0.707658 15.2601 0.932674 15.2601 0.932674C15.2601 0.932674 14.7839 2.20027 14.1488 3.27785C12.81 5.55176 12.2737 5.67177 12.0549 5.53051C11.5461 5.20174 11.6736 4.20792 11.6736 3.50286C11.6736 1.29895 12.0074 0.380134 11.0223 0.142616C10.6948 0.0638606 10.4548 0.0113567 9.61848 0.00260608C8.54591 -0.00864474 7.63709 0.00635635 7.1233 0.257625C6.78078 0.425137 6.51701 0.798915 6.67827 0.820166C6.87703 0.846418 7.32707 0.941425 7.56583 1.26645C7.87461 1.68523 7.86336 2.6278 7.86336 2.6278C7.86336 2.6278 8.04087 5.22174 7.44958 5.54426C7.0433 5.76553 6.487 5.31425 5.29317 3.25034C4.68187 2.19402 4.21934 1.02518 4.21934 1.02518C4.21934 1.02518 4.13058 0.807665 3.97182 0.691407C3.77931 0.550146 3.50929 0.505143 3.50929 0.505143L0.651577 0.522644C0.651577 0.522644 0.222795 0.535146 0.0652839 0.721409C-0.0747264 0.887671 0.054033 1.2302 0.054033 1.2302C0.054033 1.2302 2.2917 6.46433 4.82438 9.10327C7.1483 11.5222 9.786 11.3634 9.786 11.3634H10.9811C10.9811 11.3634 11.3424 11.3234 11.5261 11.1247C11.6961 10.9422 11.6899 10.5996 11.6899 10.5996C11.6899 10.5996 11.6661 8.99577 12.4112 8.7595C13.145 8.52698 14.0876 10.3096 15.0864 10.9959C15.8414 11.5147 16.4152 11.4009 16.4152 11.4009L19.0867 11.3634C19.0867 11.3634 20.4843 11.2772 19.8217 10.1784Z"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="pin" viewBox="0 0 67 94">
+        <g>
+          <path
+            d="M33.2611 0.529297C15.028 0.529297 0.194824 15.3642 0.194824 33.5995C0.194824 51.2396 30.4252 91.4298 31.7129 93.1339C32.0747 93.6203 32.6544 93.9043 33.2613 93.9043C33.8682 93.9043 34.4479 93.6203 34.8096 93.1339C36.0972 91.4298 66.3278 51.2397 66.3278 33.5995C66.3274 15.3642 51.4942 0.529297 33.2611 0.529297ZM33.2611 51.1073C23.6096 51.1073 15.7554 43.2522 15.7554 33.5995C15.7554 23.9469 23.6096 16.0917 33.2611 16.0917C42.9126 16.0917 50.7668 23.9469 50.7668 33.5995C50.7668 43.2522 42.9126 51.1073 33.2611 51.1073Z"
+          />
+        </g>
+      </symbol>
+    </svg>
+
+    <header class="header">
+      <div class="wrapper header__wrapper">
+        <div class="header__logo">
+          <h1 class="logo__primary-header">Zoo</h1>
+          <span class="logo__secodary-header">online</span>
+        </div>
+        <nav class="header__navigation">
+          <ul>
+            <li>
+              <a href="../../index.html" class="navigation__header-link"
+                >About</a
+              >
+            </li>
+            <li><a href="#" class="navigation__header-link">Zoos</a></li>
+            <li>Map</li>
+            <li><a href="#" class="navigation__header-link">Contact Us</a></li>
+            <li><a href="#" class="navigation__header-link">Design</a></li>
+          </ul>
+        </nav>
+        <label class="header__checkbox">
+          <input type="checkbox" />
+          <span></span>
+        </label>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="secondary-map">
+        <div class="wrapper secondary-map__wrapper">
+          <div class="secondary-map__description">
+            <h3 class="description__title">Choose your favorite</h3>
+            <p class="description__text text">
+              As a voice for wildlife, we are devastated by the impact of the
+              2020 Australian bushfires on precious species and their habitat,
+              and we are determined to assist in all aspects, including
+              providing veterinary support and raising much-needed emergency
+              funds. Zoo Online saves wildlife and inspires everyone to make
+              conservation a priority in their lives. Animals have the right to
+              a pain-free and happy life. They have equal claim to the resources
+              of this planet, and deserve a life of dignity and compassion.As a
+              voice for wildlife, we are devastated by the impact of the 2020
+              Australian bushfires on precious species and their habitat.
+            </p>
+          </div>
+          <div class="secondary-map__slider">
+            <div class="slider___arrow">
+              <button class="arrow__left arrow">&lt;</button>
+              <button class="arrow__right arrow">&gt;</button>
+            </div>
+            <div class="slider__image">
+              <img
+                src="../img/animal-pin-sidebar/gorilla-pin-sidebar.png"
+                alt=""
+              />
+              <img
+                src="../img/animal-pin-sidebar/panda-pin-sidebar.png"
+                alt=""
+              />
+              <img
+                src="../img/animal-pin-sidebar/alligator-pin-sidebar.png"
+                alt=""
+              />
+              <img
+                src="../img/animal-pin-sidebar/eagle-pin-sidebar.png"
+                alt=""
+              />
+              <img
+                src="../img/animal-pin-sidebar/tiger-pin-sidebar.png"
+                alt=""
+              />
+              <img
+                src="../img/animal-pin-sidebar/elephant-pin-sidebar.png"
+                alt=""
+              />
+              <img
+                src="../img/animal-pin-sidebar/lion-pin-sidebar.png"
+                alt=""
+              />
+              <img
+                src="../img/animal-pin-sidebar/zebra-pin-sidebar.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="secondary-map__control control">
+            <div class="counter">
+              <span class="current carrent-all">02</span>
+              <span class="slash slash-all">/</span>
+              <span class="total total-all">08</span>
+            </div>
+            <input
+              class="range range-all"
+              type="range"
+              min="0"
+              max="1"
+              value="2"
+              step="1"
+            />
+          </div>
+          <div class="secondary-map__map">
+            <img src="../img/map/map-light.svg" alt="" />
+            <div class="map__loaction">
+              <div class="loaction__pin eagle">
+                <svg class="pin-icon">
+                  <use xlink:href="#pin"></use>
+                </svg>
+              </div>
+              <div class="loaction__pin alligator">
+                <svg class="pin-icon">
+                  <use xlink:href="#pin"></use>
+                </svg>
+              </div>
+              <div class="loaction__pin gorilla">
+                <svg class="pin-icon">
+                  <use xlink:href="#pin"></use>
+                </svg>
+              </div>
+              <div class="loaction__pin panda">
+                <svg class="pin-icon">
+                  <use xlink:href="#pin"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="map__tooltip">
+              <div class="tooltip__card eagle">
+                <p class="tooltip__title">West End Bald Eagle</p>
+                <p class="tooltip__region text">
+                  <span>Region: </span>on an island near Los Angeles
+                </p>
+                <p class="tooltip__population text">
+                  <span>Population: </span>more than 270 pairs in 2013
+                </p>
+                <div class="tooltip__avatar">
+                  <img src="../img/animal-tooltip/eagle-tooltip.png" alt="" />
+                </div>
+              </div>
+              <div class="tooltip__card alligator">
+                <p class="tooltip__title">Alligator Аnd Spoonbill Swamp</p>
+                <p class="tooltip__region text">
+                  <span>Region: </span>on the east coast of the United States
+                  from North Carolina to Texas
+                </p>
+                <p class="tooltip__population text">
+                  <span>Population: </span>the number exceeds 1 million
+                  individuals
+                </p>
+                <div class="tooltip__avatar">
+                  <img
+                    src="../img/animal-tooltip/alligator-tooltip.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="tooltip__card gorilla">
+                <p class="tooltip__title">Gorilla</p>
+                <p class="tooltip__region text">
+                  <span>Region: </span>equatorial forests of western and central
+                  Africa
+                </p>
+                <p class="tooltip__population text">
+                  <span>Population: </span>low and declining due to
+                  deforestation of habitats and poaching
+                </p>
+                <div class="tooltip__avatar">
+                  <img src="../img/animal-tooltip/gorilla-tooltip.png" alt="" />
+                </div>
+              </div>
+              <div class="tooltip__card panda">
+                <p class="tooltip__title">Panda</p>
+                <p class="tooltip__region text">
+                  <span>Region: </span>in the mountainous regions of central
+                  China
+                </p>
+                <p class="tooltip__population text">
+                  <span>Population: </span>there are about 2060 individuals left
+                  in the wild
+                </p>
+                <div class="tooltip__avatar">
+                  <img src="../img/animal-tooltip/panda-tooltip.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="secondary-map__button button">Watch online</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrapper footer__wrapper">
+        <div class="footer__navigation">
+          <div class="navigation__logo">
+            <span class="footer__primary-header">Zoo</span>
+            <span class="footer__secodary-header">online</span>
+          </div>
+          <ul class="navigation__link">
+            <li><a href="../../index.html">About</a></li>
+            <li><a href="#">Zoos</a></li>
+            <li>Map</li>
+            <li><a href="#">Design</a></li>
+          </ul>
+          <button class="navigation__button button">
+            Donate for volunteers
+          </button>
+        </div>
+
+        <div class="footer__about-us">
+          <form action="#" class="about-us__form">
+            <h5 class="form__title">Contact us</h5>
+            <div class="form__name">
+              <input type="text" text="name" placeholder="Name" />
+            </div>
+            <div class="form__email">
+              <input type="email" text="email" placeholder="Email" />
+            </div>
+            <fieldset class="form__message">
+              <legend class="message__legend">Please enter your message</legend>
+              <textarea
+                class="message__textarea"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </fieldset>
+            <div class="form__checkbox">
+              <input type="checkbox" class="checkbox__info" />
+              I agree to the processing of Personal Data
+            </div>
+            <input type="submit" class="form__send" value="Send" />
+          </form>
+          <div class="about-us__online-centre">
+            <p class="online-centre__name">ZOO Online Centre</p>
+            <address class="online-centre__street">
+              132, Address District, Street
+            </address>
+            <time class="online-centre__time">
+              Open Daily 10:00 am - 5:00 pm</time
+            >
+            <div class="online-centre__phone">
+              <span>T(702)</span> <a href="tel:163-3433">163-3433</a>
+            </div>
+            <div class="online-centre__mail">
+              <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
+            </div>
+            <div class="online-centre__social-footer">
+              <ul class="social-footer__direction">
+                <li>
+                  <a href="#">
+                    <svg class="social-icon">
+                      <use xlink:href="#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="social-icon">
+                      <use xlink:href="#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="social-icon">
+                      <use xlink:href="#youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="social-icon">
+                      <use xlink:href="#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          <span class="copyright__author">©Noora Sagnayeva</span>
+          <span class="copyright__organization"
+            >©RSSchool and ©Yem Digital - 2021</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
