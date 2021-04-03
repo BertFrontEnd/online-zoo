@@ -1,0 +1,55 @@
+.zoos__wrapper {
+  @include alignment(center, flex-start, row, nowrap);
+  width: 100%;
+  padding: 26px 0;
+}
+
+.zoos__slider {
+  @include alignment(center, center, column, nowrap);
+  /*   height: 511px; */
+
+  .slider__image {
+    @include alignment(center, center, column, nowrap);
+
+    .image__container {
+      margin: 10px;
+      width: 108px;
+      height: auto;
+
+      &.container--current {
+        width: 137px;
+        height: 137px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.zoos__video {
+  @include alignment(center, center, column, nowrap);
+
+  .video__title {
+    align-self: flex-start;
+  }
+
+  .video__current {
+    margin-bottom: 30px;
+  }
+
+  .video__next {
+    @include alignment(center, center, row, nowrap);
+
+    .next__iframe:nth-child(2) {
+      margin-left: 26px;
+      margin-right: 26px;
+    }
+  }
+}
+
+.zoos__description {
+  width: 380px;
+}

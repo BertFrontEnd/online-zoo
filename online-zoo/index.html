@@ -61,7 +61,7 @@
     </svg>
 
     <header class="header">
-      <div class="wrapper header__wrapper">
+      <div class="header__wrapper wrapper">
         <div class="header__logo">
           <h1 class="logo__primary-header">Zoo</h1>
           <span class="logo__secodary-header">online</span>
@@ -69,14 +69,30 @@
         <nav class="header__navigation">
           <ul>
             <li>About</li>
-            <li><a href="#" class="navigation__header-link">Zoos</a></li>
+            <li>
+              <a
+                href="./assets/pages/panda.html"
+                class="navigation__header-link"
+                >Zoos</a
+              >
+            </li>
             <li>
               <a href="./assets/pages/map.html" class="navigation__header-link"
                 >Map</a
               >
             </li>
-            <li><a href="#" class="navigation__header-link">Contact Us</a></li>
-            <li><a href="#" class="navigation__header-link">Design</a></li>
+            <li>
+              <a href="#contact-us" class="navigation__header-link"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                class="navigation__header-link"
+                >Design</a
+              >
+            </li>
           </ul>
         </nav>
         <label class="header__checkbox">
@@ -161,7 +177,7 @@
       </section>
 
       <section class="how-it-works">
-        <div class="wrapper how-it-works__wrapper">
+        <div class="how-it-works__wrapper wrapper">
           <div class="how-it-works__description">
             <h3 class="description__title">How it works?</h3>
             <p class="description__text text">
@@ -202,7 +218,7 @@
       </section>
 
       <section class="inspiration">
-        <div class="wrapper inspiration__wrapper">
+        <div class="inspiration__wrapper wrapper">
           <div class="inspiration__content">
             <div class="content__icon icon--inspires"></div>
             <h4 class="content__title">What inspires us?</h4>
@@ -233,7 +249,7 @@
       </section>
 
       <section class="pets-in-zoo">
-        <div class="wrapper pets-in-zoo__wrapper">
+        <div class="pets-in-zoo__wrapper wrapper">
           <h3 class="pets-in-zoo__title">Pets in Zoo</h3>
           <div class="pets-in-zoo__slider">
             <div class="slider___arrow">
@@ -269,7 +285,7 @@
       </section>
 
       <section class="pay-and-feed">
-        <div class="wrapper pay-and-feed__wrapper">
+        <div class="pay-and-feed__wrapper wrapper">
           <div class="pay-and-feed__description">
             <h3 class="pay-and-feed__title">Pay and feed</h3>
             <p class="pay-and-feed__text text">
@@ -302,7 +318,7 @@
       </section>
 
       <section class="testimonials">
-        <div class="wrapper testimonials__wrapper">
+        <div class="testimonials__wrapper wrapper">
           <h3 class="testimonials__title">Testimonials</h3>
           <div class="testimonials__slider">
             <div class="slider___arrow">
@@ -354,7 +370,7 @@
       </section>
 
       <section class="primary-map">
-        <div class="wrapper primary-map__wrapper">
+        <div class="primary-map__wrapper wrapper">
           <h3 class="primary-map__title">Map</h3>
           <div class="primary-map__map">
             <img src="./assets/img/map/map-light.svg" alt="" />
@@ -454,7 +470,7 @@
     </main>
 
     <footer class="footer">
-      <div class="wrapper footer__wrapper">
+      <div class="footer__wrapper wrapper">
         <div class="footer__navigation">
           <div class="navigation__logo">
             <span class="footer__primary-header">Zoo</span>
@@ -462,16 +478,26 @@
           </div>
           <ul class="navigation__link">
             <li>About</li>
-            <li><a href="#">Zoos</a></li>
-            <li><a href="./assets/pages/map.html">Map</a></li>
-            <li><a href="#">Design</a></li>
+            <li>
+              <a href="./assets/pages/panda.html" class="link__footer">Zoos</a>
+            </li>
+            <li>
+              <a href="./assets/pages/map.html" class="link__footer">Map</a>
+            </li>
+            <li>
+              <a
+                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                class="link__footer"
+                >Design</a
+              >
+            </li>
           </ul>
           <button class="navigation__button button">
             Donate for volunteers
           </button>
         </div>
 
-        <div class="footer__about-us">
+        <div id="contact-us" class="footer__about-us">
           <form action="#" class="about-us__form">
             <h5 class="form__title">Contact us</h5>
             <div class="form__name">
