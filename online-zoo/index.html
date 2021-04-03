@@ -80,7 +80,7 @@
             <button class="content__button button">Watch online</button>
           </div>
           <div class="promo__slider">
-            <div class="slider__image">
+            <div class="slider__image-promo">
               <img src="./assets/img/animal-promo/eagle.jpg" alt="" />
               <img src="./assets/img/animal-promo/panda.jpg" alt="" />
               <img src="./assets/img/animal-promo/alligator.jpg" alt="" />
@@ -96,7 +96,7 @@
               <span class="line__large-circle"></span>
             </div>
           </div>
-          <div class="promo__control">
+          <div class="promo__control control">
             <div class="counter">
               <span class="current carrent-promo">02</span>
               <span class="slash slash-promo">/</span>
@@ -164,9 +164,11 @@
             </p>
           </div>
           <div class="how-it-works__slider">
-            <img src="./assets/img/animal-info/deer-info.jpg" alt="" />
+            <div class="slider__how-it-works">
+              <img src="./assets/img/animal-info/deer-info.jpg" alt="" />
+            </div>
           </div>
-          <div class="how-it-works__control">
+          <div class="how-it-works__control control">
             <div class="counter">
               <span class="current carrent-all">01</span>
               <span class="slash slash-all">/</span>
@@ -217,7 +219,35 @@
       </section>
 
       <section class="pets-in-zoo">
-        <div class="wrapper"></div>
+        <div class="wrapper pets-in-zoo__wrapper">
+          <h3 class="pets-in-zoo__title">Pets in Zoo</h3>
+          <div class="pets-in-zoo__slider">
+            <div class="slider__image-pets-in-zoo">
+              <img src="./assets/img/animal-zoo/panda-zoo.jpg" alt="" />
+              <img src="./assets/img/animal-zoo/eagle-zoo.jpg" alt="" />
+              <img src="./assets/img/animal-zoo/gorilla-zoo.jpg" alt="" />
+              <img src="./assets/img/animal-zoo/alligator-zoo.jpg" alt="" />
+            </div>
+          </div>
+          <div class="pets-in-zoo__control control">
+            <div class="counter">
+              <span class="current carrent-all">01</span>
+              <span class="slash slash-all">/</span>
+              <span class="total total-all">08</span>
+            </div>
+            <input
+              class="range range-all"
+              type="range"
+              min="0"
+              max="7"
+              value="0"
+              step="1"
+            />
+          </div>
+          <button class="how-it-works__button button">
+            Choose your favorite
+          </button>
+        </div>
       </section>
 
       <section class="pay-and-feed">
