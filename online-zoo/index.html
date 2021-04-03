@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/font.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module" defer></script>
     <title>ZOO online</title>
   </head>
+
   <body>
     <svg style="display: none">
       <symbol id="instagram" viewBox="0 0 20 20">
@@ -61,16 +63,16 @@
     <header class="header">
       <div class="wrapper header__wrapper">
         <div class="header__logo">
-          <h1>Zoo</h1>
-          <span>online</span>
+          <h1 class="logo__primary-header">Zoo</h1>
+          <span class="logo__secodary-header">online</span>
         </div>
         <nav class="header__navigation">
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Zoos</a></li>
-            <li><a href="#">Map</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Design</a></li>
+            <li><a href="#" class="navigation__header-link">About</a></li>
+            <li><a href="#" class="navigation__header-link">Zoos</a></li>
+            <li><a href="#" class="navigation__header-link">Map</a></li>
+            <li><a href="#" class="navigation__header-link">Contact Us</a></li>
+            <li><a href="#" class="navigation__header-link">Design</a></li>
           </ul>
         </nav>
         <label class="header__checkbox">
@@ -272,9 +274,15 @@
               <div class="step__icon icon--card"></div>
               <h4 class="step__title">You pay with a VISA card</h4>
             </div>
+            <div class="step-arrow">
+              <img src="./assets/img/control/step-arrow.svg" alt="" />
+            </div>
             <div class="content__step">
               <div class="step__icon icon--gate"></div>
               <h4 class="step__title">Payment goes to the Zoo</h4>
+            </div>
+            <div class="step-arrow">
+              <img src="./assets/img/control/step-arrow.svg" alt="" />
             </div>
             <div class="content__step">
               <div class="step__icon icon--pet"></div>
@@ -339,7 +347,7 @@
 
       <section class="primary-map">
         <div class="wrapper primary-map__wrapper">
-          <h3 class="primary-map__title"></h3>
+          <h3 class="primary-map__title">Map</h3>
           <div class="primary-map__map">
             <img src="./assets/img/map/map-light.svg" alt="" />
           </div>
@@ -437,8 +445,108 @@
       </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="wrapper footer__wrapper">
+        <div class="footer__navigation">
+          <div class="navigation__logo">
+            <span class="footer__primary-header">Zoo</span>
+            <span class="footer__secodary-header">online</span>
+          </div>
+          <ul class="navigation__link">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Zoos</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Design</a></li>
+          </ul>
+          <button class="navigation__button button">
+            Donate for volunteers
+          </button>
+        </div>
 
-    <script src="script.js" type="module"></script>
+        <div class="footer__about-us">
+          <div class="about-us__description">
+            <h6 class="description__title">Contact us</h6>
+          </div>
+          <form action="#" class="about-us__form">
+            <div class="form__name">
+              <input type="text" text="name" placeholder="Name" />
+            </div>
+            <div class="form__email">
+              <input type="email" text="email" placeholder="Email" />
+            </div>
+            <fieldset class="form__message">
+              <legend class="message__legend">Please enter your message</legend>
+              <textarea
+                class="message__textarea"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </fieldset>
+            <div class="form__checkbox">
+              <input type="checkbox" class="checkbox__info" />
+              I agree to the processing of Personal Data
+            </div>
+            <input type="submit" class="form__send" value="Send" />
+          </form>
+
+          <div class="about-us__online-centre">
+            <p class="online-centre__name">ZOO Online Centre</p>
+            <address class="online-centre__street">
+              132, Address District, Street
+            </address>
+            <time class="online-centre__time">
+              Open Daily 10:00 am - 5:00 pm</time
+            >
+            <div class="online-centre__phone">
+              <span>T(702)</span> <a href="tel:163-3433">163-3433</a>
+            </div>
+            <div class="online-centre__mail">
+              <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
+            </div>
+            <div class="online-centre__social-link">
+              <ul>
+                <li>
+                  <a href="#">
+                    <svg class="social-icon">
+                      <use xlink:href="#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="social-icon">
+                      <use xlink:href="#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="social-icon">
+                      <use xlink:href="#youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="social-icon">
+                      <use xlink:href="#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          <div class="copyright__author">
+            <span>©Noora Sagnayeva</span>
+          </div>
+          <div class="copyright__organization">
+            <span>©RSSchool and ©Yem Digital - 2021</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
