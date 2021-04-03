@@ -5,7 +5,7 @@
 }
 
 .pets-in-zoo__slider {
-  .slider__image-pets-in-zoo {
+  .slider__image {
     @include alignment(space-between, center, row, nowrap);
   }
 }

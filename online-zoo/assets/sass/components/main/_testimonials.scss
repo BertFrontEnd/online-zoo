@@ -1,0 +1,17 @@
+.testimonials__wrapper {
+  @include alignment(space-between, center, column, nowrap);
+  width: 100%;
+  padding: 26px 0;
+}
+
+.testimonials__slider {
+  @include alignment(space-between, center, row, nowrap);
+
+  .slider___arrow {
+    @include alignment(space-between, center, row, nowrap);
+  }
+
+  .slider__card {
+    @include alignment(space-between, center, row, nowrap);
+  }
+}
