@@ -1,0 +1,40 @@
+.button--custom {
+  position: relative;
+  width: 245px;
+  height: 55px;
+  padding-top: 2px;
+  padding-left: 44px;
+  @extend %button-reset;
+  @include font-size(1.8rem, 900);
+  color: var(--base-color);
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 39px;
+    width: 32px;
+    height: 35px;
+    content: '';
+    background-image: url(./assets/img/control/play.svg);
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+}
+
+.button--default,
+.button--footer {
+  width: 245px;
+  height: 55px;
+  padding-top: 2px;
+  @extend %button-reset;
+  @include font-size(1.8rem, 900);
+  color: var(--base-color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button--footer {
+  width: 275px;
+}

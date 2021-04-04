@@ -1,0 +1,25 @@
+.arrow__left,
+.arrow__right {
+  @extend %arrow-reset;
+  cursor: pointer;
+
+  .arrow {
+    width: 32px;
+    height: 32px;
+    fill: var(--clickable-arrow-color);
+    @extend %transition;
+
+    &:hover {
+      fill: var(--non-clickable-arrow-color);
+    }
+  }
+
+  .non-clickable-arrow {
+    fill: var(--non-clickable-arrow-color);
+    cursor: default;
+  }
+}
+
+.arrow__left {
+  transform: rotate(180deg);
+}

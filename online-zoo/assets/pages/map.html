@@ -93,7 +93,8 @@
         </nav>
         <label class="header__checkbox">
           <input type="checkbox" />
-          <span></span>
+          <span class="checkbox__container"></span>
+          <span class="checkbox__indicator"></span>
         </label>
       </div>
     </header>
@@ -140,14 +141,14 @@
             <img src="../img/animal-pin-sidebar/zebra-pin-sidebar.png" alt="" />
           </div>
         </div>
-        <div class="secondary-map__control control">
-          <div class="counter">
-            <span class="current carrent-all">02</span>
-            <span class="slash slash-all">/</span>
-            <span class="total total-all">08</span>
+        <div class="secondary-map__control">
+          <div class="control__counter">
+            <span class="counter__current current--all">02</span>
+            <span class="counter__slash slash--all">/</span>
+            <span class="counter__total total--all">08</span>
           </div>
           <input
-            class="range range-all"
+            class="control__range range--all"
             type="range"
             min="0"
             max="7"
@@ -235,7 +236,9 @@
             </div>
           </div>
         </div>
-        <button class="secondary-map__button button">Watch online</button>
+        <button class="secondary-map__button button--default">
+          Watch online
+        </button>
       </div>
     </main>
 
@@ -258,7 +261,7 @@
               >
             </li>
           </ul>
-          <button class="navigation__button button">
+          <button class="navigation__button button--footer">
             Donate for volunteers
           </button>
         </div>

@@ -1,18 +1,56 @@
 .pets-in-zoo__wrapper {
   @include alignment(space-between, center, column, nowrap);
   width: 100%;
-  padding: 26px 0;
+  padding: 91px 0 100px;
 }
 
+.pets-in-zoo__title {
+  margin-bottom: 28px;
+}
 .pets-in-zoo__slider {
+  position: relative;
   @include alignment(center, center, row, nowrap);
-  width: 100%;
+  margin-bottom: 25px;
+
+  .slider___arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include alignment(space-between, center, row, nowrap);
+    width: 1316px;
+    transform: translate(-50%, -50%);
+  }
 
   .slider__image {
     @include alignment(space-between, center, row, nowrap);
 
-    img {
-      margin: 10px;
+    .image__container {
+      width: 278px;
+      height: 400px;
+      margin: 0 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
     }
+  }
+}
+
+.pets-in-zoo__control {
+  @include alignment(center, center, column, nowrap);
+  margin-bottom: 30px;
+
+  .control__counter {
+    margin-bottom: 8px;
   }
 }

@@ -58,6 +58,14 @@
           />
         </g>
       </symbol>
+
+      <symbol id="slider-arrow" viewBox="0 0 18 30">
+        <g>
+          <path
+            d="M17.3337 13.8294L3.98332 0.479264C3.67454 0.170243 3.26235 0 2.82284 0C2.38334 0 1.97114 0.170243 1.66237 0.479264L0.679203 1.46218C0.0394526 2.10267 0.0394526 3.14363 0.679203 3.78314L11.8898 14.9938L0.666764 26.2169C0.357986 26.5259 0.1875 26.9378 0.1875 27.3771C0.1875 27.8168 0.357986 28.2288 0.666764 28.5381L1.64993 29.5207C1.95895 29.8298 2.3709 30 2.81041 30C3.24991 30 3.66211 29.8298 3.97088 29.5207L17.3337 16.1584C17.6432 15.8484 17.8132 15.4345 17.8122 14.9945C17.8132 14.5528 17.6432 14.1392 17.3337 13.8294Z"
+          />
+        </g>
+      </symbol>
     </svg>
 
     <header class="header">
@@ -108,37 +116,55 @@
         <div class="promo__wrapper wrapper">
           <div class="promo__content">
             <h2 class="content__title">Watch your favorite animal online</h2>
-            <button class="content__button button">Watch online</button>
+            <button class="content__button button--custom">Watch online</button>
           </div>
           <div class="promo__slider">
+            <div class="slider__line"></div>
             <div class="slider__image">
-              <img src="./assets/img/animal-promo/eagle-promo.jpg" alt="" />
-              <img src="./assets/img/animal-promo/panda-promo.jpg" alt="" />
-              <img src="./assets/img/animal-promo/alligator-promo.jpg" alt="" />
-              <img src="./assets/img/animal-promo/gorilla-promo.jpg" alt="" />
-              <img src="./assets/img/animal-promo/fox-promo.jpg" alt="" />
-              <img src="./assets/img/animal-promo/sloth-promo.jpg" alt="" />
-              <img src="./assets/img/animal-promo/elephant-promo.jpg" alt="" />
-              <img src="./assets/img/animal-promo/jaguar-promo.jpg" alt="" />
-            </div>
-            <div class="slider__line">
-              <span class="line__horizontal"></span>
-              <span class="line__little-circle"></span>
-              <span class="line__large-circle"></span>
+              <div class="image__container">
+                <img src="./assets/img/animal-promo/eagle-promo.jpg" alt="" />
+              </div>
+              <div class="image__container container--current">
+                <img src="./assets/img/animal-promo/panda-promo.jpg" alt="" />
+              </div>
+              <div class="image__container">
+                <img src="./assets/img/animal-promo/gorilla-promo.jpg" alt="" />
+              </div>
+              <div class="image__container">
+                <img
+                  src="./assets/img/animal-promo/alligator-promo.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="image__container">
+                <img src="./assets/img/animal-promo/fox-promo.jpg" alt="" />
+              </div>
+              <div class="image__container">
+                <img src="./assets/img/animal-promo/sloth-promo.jpg" alt="" />
+              </div>
+              <div class="image__container">
+                <img
+                  src="./assets/img/animal-promo/elephant-promo.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="image__container">
+                <img src="./assets/img/animal-promo/jaguar-promo.jpg" alt="" />
+              </div>
             </div>
           </div>
-          <div class="promo__control control">
-            <div class="counter">
-              <span class="current carrent-promo">02</span>
-              <span class="slash slash-promo">/</span>
-              <span class="total total-promo">08</span>
+          <div class="promo__control">
+            <div class="control__counter">
+              <span class="counter__current current--promo">02</span>
+              <span class="counter__slash slash--promo">/</span>
+              <span class="counter__total total--promo">08</span>
             </div>
             <input
-              class="range range-promo"
+              class="control__range range--promo"
               type="range"
               min="0"
               max="7"
-              value="2"
+              value="1"
               step="1"
             />
           </div>
@@ -196,17 +222,19 @@
           </div>
           <div class="how-it-works__slider">
             <div class="slider__image">
-              <img src="./assets/img/animal-info/deer-info.jpg" alt="" />
+              <div class="image__container">
+                <img src="./assets/img/animal-info/deer-info.jpg" alt="" />
+              </div>
             </div>
           </div>
-          <div class="how-it-works__control control">
-            <div class="counter">
-              <span class="current carrent-all">01</span>
-              <span class="slash slash-all">/</span>
-              <span class="total total-all">04</span>
+          <div class="how-it-works__control">
+            <div class="control__counter">
+              <span class="counter__current current--four">01</span>
+              <span class="counter__slash slash--four">/</span>
+              <span class="counter__total total--four">04</span>
             </div>
             <input
-              class="range range-all"
+              class="control__range range--four"
               type="range"
               min="0"
               max="3"
@@ -214,7 +242,9 @@
               step="1"
             />
           </div>
-          <button class="how-it-works__button button">Watch online</button>
+          <button class="how-it-works__button button--custom">
+            Watch online
+          </button>
         </div>
       </section>
 
@@ -254,24 +284,40 @@
           <h3 class="pets-in-zoo__title">Pets in Zoo</h3>
           <div class="pets-in-zoo__slider">
             <div class="slider___arrow">
-              <button class="arrow__left arrow">&lt;</button>
-              <button class="arrow__right arrow">&gt;</button>
+              <button class="arrow__left" disabled>
+                <svg class="arrow non-clickable-arrow">
+                  <use xlink:href="#slider-arrow"></use>
+                </svg>
+              </button>
+              <button class="arrow__right">
+                <svg class="arrow">
+                  <use xlink:href="#slider-arrow"></use>
+                </svg>
+              </button>
             </div>
             <div class="slider__image">
-              <img src="./assets/img/animal-zoo/panda-zoo.jpg" alt="" />
-              <img src="./assets/img/animal-zoo/eagle-zoo.jpg" alt="" />
-              <img src="./assets/img/animal-zoo/gorilla-zoo.jpg" alt="" />
-              <img src="./assets/img/animal-zoo/alligator-zoo.jpg" alt="" />
+              <div class="image__container">
+                <img src="./assets/img/animal-zoo/panda-zoo.jpg" alt="" />
+              </div>
+              <div class="image__container">
+                <img src="./assets/img/animal-zoo/eagle-zoo.jpg" alt="" />
+              </div>
+              <div class="image__container">
+                <img src="./assets/img/animal-zoo/gorilla-zoo.jpg" alt="" />
+              </div>
+              <div class="image__container">
+                <img src="./assets/img/animal-zoo/alligator-zoo.jpg" alt="" />
+              </div>
             </div>
           </div>
-          <div class="pets-in-zoo__control control">
-            <div class="counter">
-              <span class="current carrent-all">01</span>
-              <span class="slash slash-all">/</span>
-              <span class="total total-all">08</span>
+          <div class="pets-in-zoo__control">
+            <div class="control__counter">
+              <span class="counter__current current--all">01</span>
+              <span class="counter__slash slash--all">/</span>
+              <span class="counter__total total--all">08</span>
             </div>
             <input
-              class="range range-all"
+              class="control__range range--all"
               type="range"
               min="0"
               max="7"
@@ -279,7 +325,7 @@
               step="1"
             />
           </div>
-          <button class="how-it-works__button button">
+          <button class="pets-in-zoo__button button--default">
             Choose your favorite
           </button>
         </div>
@@ -314,7 +360,9 @@
               <h4 class="step__title">Panda gets the bamboo</h4>
             </div>
           </div>
-          <button class="how-it-works__button button">Watch online</button>
+          <button class="pay-and-feed__button button--default">
+            Watch online
+          </button>
         </div>
       </section>
 
@@ -351,14 +399,14 @@
               </div>
             </div>
           </div>
-          <div class="testimonials__control control">
-            <div class="counter">
-              <span class="current carrent-all">02</span>
-              <span class="slash slash-all">/</span>
-              <span class="total total-all">08</span>
+          <div class="testimonials__control">
+            <div class="control__counter">
+              <span class="counter__current current--all">01</span>
+              <span class="counter__slash slash--all">/</span>
+              <span class="counter__total total--all">08</span>
             </div>
             <input
-              class="range range-all"
+              class="control__range range--all"
               type="range"
               min="0"
               max="7"
@@ -366,7 +414,9 @@
               step="1"
             />
           </div>
-          <button class="testimonials__button button">Leave feedback</button>
+          <button class="testimonials__button button--default">
+            Leave feedback
+          </button>
         </div>
       </section>
 
@@ -465,7 +515,9 @@
               </div>
             </div>
           </div>
-          <button class="primary-map__button button">Watch online</button>
+          <button class="primary-map__button button--custom">
+            Watch online
+          </button>
         </div>
       </section>
     </main>
@@ -493,7 +545,7 @@
               >
             </li>
           </ul>
-          <button class="navigation__button button">
+          <button class="navigation__button button--footer">
             Donate for volunteers
           </button>
         </div>

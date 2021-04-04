@@ -1,5 +1,46 @@
 .how-it-works__wrapper {
   @include alignment(space-between, center, column, nowrap);
   width: 100%;
-  padding: 26px 0;
+  padding: 62px 0 101px;
+}
+
+.how-it-works__description {
+  width: 790px;
+  margin-bottom: 30px;
+
+  .description__title {
+    margin-top: 30px;
+    margin-bottom: 22px;
+  }
+
+  .description__text {
+    line-height: 1.6rem;
+    text-align: left;
+    color: var(--secondary-text-color);
+  }
+}
+
+.how-it-works__slider {
+  margin-bottom: 25px;
+
+  .slider__image {
+    .image__container {
+      height: 323px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.how-it-works__control {
+  @include alignment(center, center, column, nowrap);
+  margin-bottom: 30px;
+
+  .control__counter {
+    margin-bottom: 8px;
+  }
 }

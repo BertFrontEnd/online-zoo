@@ -1,3 +1,7 @@
+.secondary-map {
+  background-color: var(--secondary-background-color);
+}
+
 .secondary-map__wrapper {
   @include alignment(space-between, center, column, nowrap);
   width: 100%;

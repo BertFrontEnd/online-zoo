@@ -5,3 +5,17 @@
 %font {
   font-family: 'Roboto', sans-serif;
 }
+
+%button-reset {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background: $primary-gradient;
+}
+
+%arrow-reset {
+  font-size: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}

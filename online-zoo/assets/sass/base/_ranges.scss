@@ -1,0 +1,75 @@
+.current--promo {
+  margin-right: -2px;
+  @include font-size(2.4rem, 900);
+  color: var(--promo-range-active-text-color);
+}
+
+.slash--promo {
+  @include font-size(2.4rem, 900);
+  color: var(--promo-range-active-text-color);
+}
+
+.total--promo {
+  margin-left: -3px;
+  @include font-size(1.4rem, 900);
+  color: var(--promo-range-inactive-text-color);
+}
+
+.range--promo {
+  width: 245px;
+  height: 5px;
+  outline: none;
+  appearance: none;
+  background-color: var(--promo-range-line-color);
+
+  &::-webkit-slider-thumb {
+    width: 30px;
+    height: 10px;
+    appearance: none;
+    background-color: var(--promo-range-point-color);
+    cursor: pointer;
+  }
+}
+
+.current--all,
+.current--four {
+  margin-right: -2px;
+  @include font-size(2.4rem, 900);
+  color: var(--all-range-active-text-color);
+}
+
+.slash--all,
+.slash--four {
+  @include font-size(2.4rem, 900);
+  color: var(--all-range-active-text-color);
+}
+
+.total--all,
+.total--four {
+  margin-left: -3px;
+  @include font-size(1.4rem, 900);
+  color: var(--all-range-inactive-text-color);
+}
+
+.range--all,
+.range--four {
+  width: 245px;
+  height: 5px;
+  outline: none;
+  appearance: none;
+  background-color: var(--all-range-line-color);
+
+  &::-webkit-slider-thumb {
+    width: 30px;
+    height: 10px;
+    appearance: none;
+    background-color: var(--all-range-point-color);
+    cursor: pointer;
+  }
+}
+
+.range--four {
+  &::-webkit-slider-thumb {
+    width: 62px;
+  }
+}

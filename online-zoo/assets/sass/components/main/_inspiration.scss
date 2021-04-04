@@ -3,7 +3,46 @@
 }
 
 .inspiration__wrapper {
-  @include alignment(space-between, center, row, nowrap);
+  @include alignment(center, flex-start, row, nowrap);
   width: 100%;
-  padding: 26px 0;
+  padding: 100px 0 131px;
+
+  .inspiration__content {
+    @include alignment(center, center, column, nowrap);
+    width: 380px;
+
+    &:nth-child(2) {
+      margin: 0 30px;
+    }
+  }
+
+  .content__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(1px 1px 50px $drop-shadow-color);
+  }
+
+  .icon--inspires {
+    background-image: url(./assets/img/icon/inspires.svg);
+  }
+
+  .icon--mission {
+    background-image: url(./assets/img/icon/mission.svg);
+  }
+
+  .icon--belief {
+    background-image: url(./assets/img/icon/belief.svg);
+  }
+
+  .content__title {
+    margin-bottom: 12px;
+  }
+
+  .content__text {
+    line-height: 1.6rem;
+  }
 }

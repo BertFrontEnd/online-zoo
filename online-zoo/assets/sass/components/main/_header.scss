@@ -5,7 +5,7 @@
 .header__wrapper {
   @include alignment(space-between, center, row, nowrap);
   width: 100%;
-  padding: 18px 0 20px;
+  padding: 18px 0 21px;
 }
 
 .header__logo {
@@ -23,12 +23,13 @@
 .header__navigation {
   ul {
     @include alignment(center, center, row, nowrap);
-    margin-right: 40px;
+    margin-right: 6px;
 
     li {
       position: relative;
       padding-top: 10px;
       margin: 0 42px;
+      color: var(--primary-text-color);
 
       &:hover {
         &::after {
