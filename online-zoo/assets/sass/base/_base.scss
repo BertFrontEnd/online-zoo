@@ -9,6 +9,10 @@ body {
 }
 
 h1 {
+  @include font-size(2.8rem, 900);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px var(--primary-text-color);
 }
 
 h2 {
