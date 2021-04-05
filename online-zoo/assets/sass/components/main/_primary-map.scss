@@ -5,5 +5,128 @@
 .primary-map__wrapper {
   @include alignment(space-between, center, column, nowrap);
   width: 100%;
-  padding: 26px 0;
+  padding: 92px 0 100px;
+}
+
+.primary-map__title {
+  margin-bottom: 53px;
+}
+
+.primary-map__map {
+  position: relative;
+  margin-bottom: 35px;
+
+  .map__location {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .location__pin {
+      position: absolute;
+      @include alignment(center, center, column, nowrap);
+    }
+
+    .pin--eagle {
+      top: 73px;
+      left: 122px;
+    }
+
+    .pin--alligator {
+      top: 102px;
+      left: 245px;
+    }
+
+    .pin--gorilla {
+      top: 189px;
+      left: 572px;
+    }
+
+    .pin--panda {
+      top: 90px;
+      left: 893px;
+    }
+
+    .location__avatar {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translateX(-50%);
+      @extend %transition;
+      pointer-events: none;
+    }
+
+    .avatar--eagle {
+      background-image: url(./assets/img/avatar/eagle-avatar.png);
+    }
+
+    .avatar--alligator {
+      background-image: url(./assets/img/avatar/alligator-avatar.png);
+    }
+
+    .avatar--gorilla {
+      background-image: url(./assets/img/avatar/gorilla-avatar.png);
+    }
+
+    .avatar--panda {
+      background-image: url(./assets/img/avatar/panda-avatar.png);
+    }
+  }
+
+  .map__tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .tooltip__card {
+      position: absolute;
+      width: 436px;
+      height: auto;
+      padding: 38px 55px 40px 129px;
+      border-radius: 8px;
+      background-color: var(--tooltip-color);
+      box-shadow: 2px 4px 15px $box-shadow-color;
+
+      .tooltip__title {
+        margin-bottom: 2px;
+      }
+
+      .tooltip__avatar {
+        position: absolute;
+        top: 50%;
+        left: 44px;
+        transform: translateY(-50%);
+      }
+    }
+
+    .card--eagle {
+      display: block;
+      top: 150px;
+      left: -280px;
+      /* opacity: 1; */
+    }
+
+    .card--alligator {
+      display: none;
+      top: 182px;
+      left: -156px;
+    }
+
+    .card--gorilla {
+      display: none;
+      top: 266px;
+      left: 170px;
+    }
+
+    .card--panda {
+      display: none;
+      top: 168px;
+      left: 492px;
+    }
+  }
 }

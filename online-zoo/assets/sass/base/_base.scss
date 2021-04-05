@@ -40,6 +40,14 @@ h6 {
   @include font-size(1.4rem, 300);
 }
 
+.text--bold {
+  @include font-size(1.4rem, 600);
+}
+
+.text--title {
+  @include font-size(1.8rem, 900);
+}
+
 iframe {
   border-radius: 5px;
 }

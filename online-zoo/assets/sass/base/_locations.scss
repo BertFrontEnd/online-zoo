@@ -1,0 +1,41 @@
+.location__pin {
+  width: 67px;
+  height: 94px;
+  cursor: pointer;
+
+  .pin-icon {
+    width: 67px;
+    height: 94px;
+    fill: $pin-fill-color;
+    @extend %transition;
+
+    &:hover {
+      fill: $pin-fill-hover-color;
+
+      ~ .location__avatar {
+        transform: translateX(-50%) scale(0.9);
+      }
+    }
+  }
+}
+
+/* .pin--eagle {
+  &:hover {
+    .primary-map {
+      .primary-map__map {
+        .map__tooltip {
+          .tooltip__card.card--eagle {
+            opacity: 0;
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+} */
+
+.pin-active {
+  fill: $pin-active;
+}
+
+/* .primary-map__map .map__tooltip .card--eagle  */

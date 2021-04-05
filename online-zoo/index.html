@@ -345,14 +345,14 @@
               <div class="step__icon icon--card"></div>
               <h4 class="step__title">You pay with a VISA card</h4>
             </div>
-            <div class="step-arrow">
+            <div class="content-step__arrow">
               <img src="./assets/img/control/step-arrow.svg" alt="" />
             </div>
             <div class="content__step">
               <div class="step__icon icon--gate"></div>
               <h4 class="step__title">Payment goes to the Zoo</h4>
             </div>
-            <div class="step-arrow">
+            <div class="content-step__arrow">
               <img src="./assets/img/control/step-arrow.svg" alt="" />
             </div>
             <div class="content__step">
@@ -360,9 +360,7 @@
               <h4 class="step__title">Panda gets the bamboo</h4>
             </div>
           </div>
-          <button class="pay-and-feed__button button--default">
-            Watch online
-          </button>
+          <button class="pay-and-feed__button button--default">Donate</button>
         </div>
       </section>
 
@@ -371,8 +369,16 @@
           <h3 class="testimonials__title">Testimonials</h3>
           <div class="testimonials__slider">
             <div class="slider___arrow">
-              <button class="arrow__left arrow">&lt;</button>
-              <button class="arrow__right arrow">&gt;</button>
+              <button class="arrow__left" disabled>
+                <svg class="arrow">
+                  <use xlink:href="#slider-arrow"></use>
+                </svg>
+              </button>
+              <button class="arrow__right">
+                <svg class="arrow">
+                  <use xlink:href="#slider-arrow"></use>
+                </svg>
+              </button>
             </div>
             <div class="slider__card">
               <div class="card__info">
@@ -401,7 +407,7 @@
           </div>
           <div class="testimonials__control">
             <div class="control__counter">
-              <span class="counter__current current--all">01</span>
+              <span class="counter__current current--all">02</span>
               <span class="counter__slash slash--all">/</span>
               <span class="counter__total total--all">08</span>
             </div>
@@ -425,96 +431,106 @@
           <h3 class="primary-map__title">Map</h3>
           <div class="primary-map__map">
             <img src="./assets/img/map/map-light.svg" alt="" />
+            <div class="map__location">
+              <div class="location__pin pin--eagle">
+                <svg class="pin-icon">
+                  <use xlink:href="#pin"></use>
+                </svg>
+                <div class="location__avatar avatar--eagle"></div>
+              </div>
+              <div class="location__pin pin--alligator">
+                <svg class="pin-icon">
+                  <use xlink:href="#pin"></use>
+                </svg>
+                <div class="location__avatar avatar--alligator"></div>
+              </div>
+              <div class="location__pin pin--gorilla">
+                <svg class="pin-icon">
+                  <use xlink:href="#pin"></use>
+                </svg>
+                <div class="location__avatar avatar--gorilla"></div>
+              </div>
+              <div class="location__pin pin--panda">
+                <svg class="pin-icon">
+                  <use xlink:href="#pin"></use>
+                </svg>
+                <div class="location__avatar avatar--panda"></div>
+              </div>
+            </div>
+            <div class="map__tooltip">
+              <div class="tooltip__card card--eagle">
+                <p class="tooltip__title text--title">West End Bald Eagle</p>
+                <p class="tooltip__region text">
+                  <span class="text--bold">Region: </span>on an island near Los
+                  Angeles
+                </p>
+                <p class="tooltip__population text">
+                  <span class="text--bold">Population: </span>more than 270
+                  pairs in 2013
+                </p>
+                <div class="tooltip__avatar">
+                  <img
+                    src="./assets/img/animal-tooltip/eagle-tooltip.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="tooltip__card card--alligator">
+                <p class="tooltip__title text--title">
+                  Alligator Аnd Spoonbill Swamp
+                </p>
+                <p class="tooltip__region text">
+                  <span class="text--bold">Region: </span>on the east coast of
+                  the United States from North Carolina to Texas
+                </p>
+                <p class="tooltip__population text">
+                  <span class="text--bold">Population: </span>the number exceeds
+                  1 million individuals
+                </p>
+                <div class="tooltip__avatar">
+                  <img
+                    src="./assets/img/animal-tooltip/alligator-tooltip.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="tooltip__card card--gorilla">
+                <p class="tooltip__title text--title">Gorilla</p>
+                <p class="tooltip__region text">
+                  <span class="text--bold">Region: </span>equatorial forests of
+                  western and central Africa
+                </p>
+                <p class="tooltip__population text">
+                  <span class="text--bold">Population: </span>low and declining
+                  due to deforestation of habitats and poaching
+                </p>
+                <div class="tooltip__avatar">
+                  <img
+                    src="./assets/img/animal-tooltip/gorilla-tooltip.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="tooltip__card card--panda">
+                <p class="tooltip__title text--title">Panda</p>
+                <p class="tooltip__region text">
+                  <span class="text--bold">Region: </span>in the mountainous
+                  regions of central China
+                </p>
+                <p class="tooltip__population text">
+                  <span class="text--bold">Population: </span>there are about
+                  2060 individuals left in the wild
+                </p>
+                <div class="tooltip__avatar">
+                  <img
+                    src="./assets/img/animal-tooltip/panda-tooltip.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="primary-map__loaction">
-            <div class="loaction__pin eagle">
-              <svg class="pin-icon">
-                <use xlink:href="#pin"></use>
-              </svg>
-            </div>
-            <div class="loaction__pin alligator">
-              <svg class="pin-icon">
-                <use xlink:href="#pin"></use>
-              </svg>
-            </div>
-            <div class="loaction__pin gorilla">
-              <svg class="pin-icon">
-                <use xlink:href="#pin"></use>
-              </svg>
-            </div>
-            <div class="loaction__pin panda">
-              <svg class="pin-icon">
-                <use xlink:href="#pin"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="primary-map__tooltip">
-            <div class="tooltip__card eagle">
-              <p class="tooltip__title">West End Bald Eagle</p>
-              <p class="tooltip__region text">
-                <span>Region: </span>on an island near Los Angeles
-              </p>
-              <p class="tooltip__population text">
-                <span>Population: </span>more than 270 pairs in 2013
-              </p>
-              <div class="tooltip__avatar">
-                <img
-                  src="./assets/img/animal-tooltip/eagle-tooltip.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="tooltip__card alligator">
-              <p class="tooltip__title">Alligator Аnd Spoonbill Swamp</p>
-              <p class="tooltip__region text">
-                <span>Region: </span>on the east coast of the United States from
-                North Carolina to Texas
-              </p>
-              <p class="tooltip__population text">
-                <span>Population: </span>the number exceeds 1 million
-                individuals
-              </p>
-              <div class="tooltip__avatar">
-                <img
-                  src="./assets/img/animal-tooltip/alligator-tooltip.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="tooltip__card gorilla">
-              <p class="tooltip__title">Gorilla</p>
-              <p class="tooltip__region text">
-                <span>Region: </span>equatorial forests of western and central
-                Africa
-              </p>
-              <p class="tooltip__population text">
-                <span>Population: </span>low and declining due to deforestation
-                of habitats and poaching
-              </p>
-              <div class="tooltip__avatar">
-                <img
-                  src="./assets/img/animal-tooltip/gorilla-tooltip.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="tooltip__card panda">
-              <p class="tooltip__title">Panda</p>
-              <p class="tooltip__region text">
-                <span>Region: </span>in the mountainous regions of central China
-              </p>
-              <p class="tooltip__population text">
-                <span>Population: </span>there are about 2060 individuals left
-                in the wild
-              </p>
-              <div class="tooltip__avatar">
-                <img
-                  src="./assets/img/animal-tooltip/panda-tooltip.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+
           <button class="primary-map__button button--custom">
             Watch online
           </button>
