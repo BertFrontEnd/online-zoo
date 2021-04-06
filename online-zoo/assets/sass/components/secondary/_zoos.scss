@@ -1,59 +1,182 @@
+.zoos {
+  background-color: var(--third-background-color);
+}
+
 .zoos__wrapper {
-  @include alignment(center, flex-start, row, nowrap);
+  @include alignment(flex-start, flex-start, row, nowrap);
   width: 100%;
-  padding: 26px 0;
+  padding: 51px 0 99px;
 }
 
 .zoos__slider {
-  @include alignment(center, center, column, nowrap);
+  position: sticky;
+  top: 197px;
+  @include alignment(flex-start, center, column, nowrap);
+  transform: translateX(-124px);
+
+  .slider___arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include alignment(space-between, center, column, nowrap);
+    height: 598px;
+    transform: translate(-50%, -50%);
+  }
 
   .slider__image {
     @include alignment(center, center, column, nowrap);
 
     .image__container {
-      margin: 10px;
+      z-index: 1;
       width: 108px;
       height: 108px;
+      margin: 4px 0;
+      cursor: pointer;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       img {
         width: 100%;
         height: 100%;
       }
+    }
 
-      &.container--current {
+    .container--current {
+      @include alignment(center, center, column, nowrap);
+      width: 157px;
+      height: 157px;
+      margin: 10px 0;
+      background: $active-gradient;
+      border-radius: 50%;
+      cursor: default;
+
+      img {
         width: 137px;
         height: 137px;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 7px var(--secondary-background-color);
       }
     }
   }
 }
 
 .zoos__video {
-  @include alignment(center, center, column, nowrap);
+  margin-right: 30px;
+  margin-left: 53px;
+  @include alignment(flex-start, center, column, nowrap);
 
   .video__title {
     align-self: flex-start;
+    margin-bottom: 33px;
+    @include font-size(4.8rem, 900);
   }
 
   .video__current {
-    margin-bottom: 30px;
+    align-self: flex-start;
+    margin-bottom: 23px;
   }
 
   .video__next {
+    align-self: flex-start;
     @include alignment(center, center, row, nowrap);
+    margin-bottom: 23px;
 
-    .next__iframe:nth-child(2) {
-      margin-left: 26px;
-      margin-right: 26px;
+    .next__iframe {
+      position: relative;
+
+      &:nth-child(2) {
+        margin-left: 26px;
+        margin-right: 26px;
+      }
+    }
+
+    .next__cap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 246px;
+      height: 141px;
+      border-radius: 5px;
+      background-color: transparent;
+    }
+  }
+
+  .video__dot {
+    @include alignment(space-between, center, row, nowrap);
+    width: 40px;
+    height: 12px;
+
+    .dot__switch {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $dot-color;
+      transform-origin: center;
+      @extend %transition;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.4);
+      }
+    }
+
+    .switch--current {
+      transform: scale(1.4);
+      background: $primary-gradient;
+      @extend %transition;
     }
   }
 }
 
 .zoos__description {
+  position: absolute;
+  top: 152px;
+  left: 1030px;
   width: 380px;
+  /* margin-top: 102px; */
+
+  .description__population {
+    margin-bottom: 6px;
+
+    .population__title {
+      @include font-size(2rem, 900);
+      color: var(--primary-text-color);
+    }
+
+    .population__description {
+      color: var(--secondary-text-color);
+    }
+  }
+
+  .description__habitat {
+    margin-bottom: 6px;
+
+    .habitat__title {
+      @include font-size(2rem, 900);
+      color: var(--primary-text-color);
+    }
+
+    .habitat__description {
+      color: var(--secondary-text-color);
+    }
+  }
+
+  .description__diet {
+    margin-bottom: 35px;
+    .diet__title {
+      @include font-size(2rem, 900);
+      color: var(--primary-text-color);
+    }
+
+    .diet__description {
+      line-height: 1.7rem;
+      color: var(--secondary-text-color);
+    }
+  }
 }

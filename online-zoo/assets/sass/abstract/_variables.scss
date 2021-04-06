@@ -1,6 +1,7 @@
 :root {
   --primary-background-color: #fbfbfb;
   --secondary-background-color: #f2f2f2;
+  --third-background-color: transparent;
   --header-background-color: #ffffff;
   --footer-background-color: #333333;
   --primary-text-color: #333333;
@@ -28,6 +29,7 @@
 [data-background='light'] {
   --primary-background-color: #fbfbfb;
   --secondary-background-color: #f2f2f2;
+  --third-background-color: transparent;
   --header-background-color: #ffffff;
   --footer-background-color: #333333;
   --primary-text-color: #333333;
@@ -55,6 +57,7 @@
 [data-background='dark'] {
   --primary-background-color: #333333;
   --secondary-background-color: #4f4f4f;
+  --third-background-color: #4f4f4f;
   --header-background-color: #333333;
   --footer-background-color: #333333;
   --primary-text-color: #fefefe;

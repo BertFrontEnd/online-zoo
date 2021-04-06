@@ -23,3 +23,30 @@
 .arrow__left {
   transform: rotate(180deg);
 }
+
+.arrow__up,
+.arrow__down {
+  @extend %arrow-reset;
+  transform: rotate(-90deg);
+
+  .arrow {
+    width: 22px;
+    height: 22px;
+    fill: var(--clickable-arrow-color);
+    @extend %transition;
+    cursor: pointer;
+
+    &:hover {
+      fill: var(--non-clickable-arrow-color);
+    }
+  }
+
+  .non-clickable-arrow {
+    fill: var(--non-clickable-arrow-color);
+    cursor: default;
+  }
+}
+
+.arrow__down {
+  transform: rotate(90deg);
+}

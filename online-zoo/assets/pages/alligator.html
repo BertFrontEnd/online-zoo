@@ -58,23 +58,29 @@
           />
         </g>
       </symbol>
+
+      <symbol id="slider-arrow" viewBox="0 0 18 30">
+        <g>
+          <path
+            d="M17.3337 13.8294L3.98332 0.479264C3.67454 0.170243 3.26235 0 2.82284 0C2.38334 0 1.97114 0.170243 1.66237 0.479264L0.679203 1.46218C0.0394526 2.10267 0.0394526 3.14363 0.679203 3.78314L11.8898 14.9938L0.666764 26.2169C0.357986 26.5259 0.1875 26.9378 0.1875 27.3771C0.1875 27.8168 0.357986 28.2288 0.666764 28.5381L1.64993 29.5207C1.95895 29.8298 2.3709 30 2.81041 30C3.24991 30 3.66211 29.8298 3.97088 29.5207L17.3337 16.1584C17.6432 15.8484 17.8132 15.4345 17.8122 14.9945C17.8132 14.5528 17.6432 14.1392 17.3337 13.8294Z"
+          />
+        </g>
+      </symbol>
     </svg>
 
     <header class="header">
-      <div class="wrapper header__wrapper">
-        <div class="header__logo">
+      <div class="header__wrapper wrapper">
+        <a href="#" class="header__logo">
           <h1 class="logo__primary-header">Zoo</h1>
-          <span class="logo__secodary-header">online</span>
-        </div>
+          <span class="logo__secondary-header">online</span>
+        </a>
         <nav class="header__navigation">
           <ul>
-            <li>
-              <a href="../../index.html" class="navigation__header-link"
-                >About</a
-              >
-            </li>
+            <li><a href="../../index.html">About</a></li>
             <li class="navigation__current">Zoos</li>
-            <li><a href="./map.html">Map</a></li>
+            <li>
+              <a href="./map.html" class="navigation__header-link">Map</a>
+            </li>
             <li>
               <a href="#contact-us" class="navigation__header-link"
                 >Contact Us</a
@@ -101,8 +107,16 @@
       <div class="zoos__wrapper wrapper">
         <aside class="zoos__slider">
           <div class="slider___arrow">
-            <button class="arrow__up arrow">&#11165;</button>
-            <button class="arrow__down arrow">&#11167;</button>
+            <button class="arrow__up" disabled>
+              <svg class="arrow non-clickable-arrow">
+                <use xlink:href="#slider-arrow "></use>
+              </svg>
+            </button>
+            <button class="arrow__down">
+              <svg class="arrow">
+                <use xlink:href="#slider-arrow"></use>
+              </svg>
+            </button>
           </div>
           <div class="slider__image">
             <div class="image__container">
@@ -136,7 +150,7 @@
         </aside>
 
         <section class="zoos__video">
-          <p class="video__title">West End Bald Eagle Cam</p>
+          <h3 class="video__title">Alligator and Spoonbill Swamp Webcam</h3>
           <div class="video__current">
             <iframe
               width="790"
@@ -159,7 +173,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-              <div class="cap"></div>
+              <div class="next__cap"></div>
             </div>
             <div class="next__iframe">
               <iframe
@@ -171,7 +185,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-              <div class="cap"></div>
+              <div class="next__cap"></div>
             </div>
             <div class="next__iframe">
               <iframe
@@ -183,88 +197,100 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-              <div class="cap"></div>
+              <div class="next__cap"></div>
             </div>
           </div>
           <div class="video__dot">
-            <span class="dot__switch switch--carrent">·</span>
-            <span class="dot__switch">·</span>
-            <span class="dot__switch">·</span>
+            <span class="dot__switch switch--current"></span>
+            <span class="dot__switch"></span>
+            <span class="dot__switch"></span>
           </div>
         </section>
 
         <section class="zoos__description">
           <div class="description__population">
-            <p class="population__title">Population:</p>
-            <p class="population__descripton">Roughly 1.25 million</p>
+            <p class="population__title text--bold">Population:</p>
+            <p class="population__description text">Roughly 1.25 million</p>
           </div>
           <div class="description__habitat">
-            <p class="habitat__title">Habitat:</p>
-            <p class="habitat__descripton">
+            <p class="habitat__title text--bold">Habitat:</p>
+            <p class="habitat__description text">
               Alligators can be found in slow-moving rivers, ponds, lakes and
               swamps.
             </p>
           </div>
           <div class="description__diet">
-            <p class="diet__title">Diet:</p>
-            <p class="diet__descripton">
+            <p class="diet__title text--bold">Diet:</p>
+            <p class="diet__description text">
               Their diets include prey species that are abundant and easily
               accessible. Juvenile alligators eat primarily insects, amphibians,
               small fish, and other invertebrates. Adult alligators eat rough
               fish, snakes, turtles, small mammals, and birds.
             </p>
           </div>
-          <button class="navigation__button button--default">Feed</button>
+          <button class="navigation__button button--feed">Feed</button>
         </section>
       </div>
     </main>
 
     <footer class="footer">
-      <div class="wrapper footer__wrapper">
+      <div class="footer__wrapper wrapper">
         <div class="footer__navigation">
-          <div class="navigation__logo">
+          <a href="../../index.html" class="navigation__logo">
             <span class="logo__primary-footer">Zoo</span>
-            <span class="logo__secodary-footer">online</span>
+            <span class="logo__secondary-footer">online</span>
+          </a>
+          <div class="navigation__link">
+            <ul>
+              <li><a href="../../index.html">About</a></li>
+              <li>
+                <a href="./panda.html" class="link__footer">Zoos</a>
+              </li>
+              <li>
+                <a href="./map.html" class="link__footer">Map</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                  class="link__footer"
+                  >Design</a
+                >
+              </li>
+            </ul>
+            <button class="link__button button--footer">
+              Donate for volunteers
+            </button>
           </div>
-          <ul class="navigation__link">
-            <li><a href="../../index.html" class="link__footer">About</a></li>
-            <li>Zoos</li>
-            <li><a href="./map.html" class="link__footer">Map</a></li>
-            <li>
-              <a
-                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
-                class="link__footer"
-                >Design</a
-              >
-            </li>
-          </ul>
-          <button class="navigation__button button--footer">
-            Donate for volunteers
-          </button>
         </div>
 
         <div id="contact-us" class="footer__about-us">
           <form action="#" class="about-us__form">
             <h5 class="form__title">Contact us</h5>
             <div class="form__name">
-              <input type="text" text="name" placeholder="Name" />
+              <input type="text" text="name" placeholder="Name" required />
             </div>
             <div class="form__email">
-              <input type="email" text="email" placeholder="Email" />
+              <input type="email" text="email" placeholder="Email" required />
             </div>
             <fieldset class="form__message">
               <legend class="message__legend">Please enter your message</legend>
               <textarea
                 class="message__textarea"
-                cols="30"
-                rows="10"
+                cols="10"
+                rows="1"
+                required
               ></textarea>
             </fieldset>
             <label class="form__checkbox">
               <input type="checkbox" />
-              I agree to the processing of Personal Data
+              <span class="checkbox__custom"></span>
+              <span class="checkbox__text"
+                >I agree to the processing of Personal Data</span
+              >
             </label>
-            <input type="submit" class="form__send" value="Send" />
+            <div class="form__send">
+              <input type="submit" value="Send" />
+            </div>
           </form>
           <div class="about-us__online-centre">
             <p class="online-centre__name">ZOO Online Centre</p>
@@ -275,9 +301,9 @@
               Open Daily 10:00 am - 5:00 pm</time
             >
             <div class="online-centre__phone">
-              <span>T(702)</span> <a href="tel:163-3433">163-3433</a>
+              <span>T(702) </span> <a href="tel:163-3433">163-3433</a>
             </div>
-            <div class="online-centre__mail">
+            <div class="online-centre__email">
               <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
             </div>
             <div class="online-centre__social-footer">
@@ -299,14 +325,14 @@
                 <li>
                   <a href="#">
                     <svg class="social-icon">
-                      <use xlink:href="#youtube"></use>
+                      <use xlink:href="#vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <svg class="social-icon">
-                      <use xlink:href="#vk"></use>
+                      <use xlink:href="#youtube"></use>
                     </svg>
                   </a>
                 </li>

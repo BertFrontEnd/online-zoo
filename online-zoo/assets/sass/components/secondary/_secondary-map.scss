@@ -1,5 +1,6 @@
 .secondary-map {
-  background-color: var(--secondary-background-color);
+  z-index: -1;
+  background-color: var(--third-background-color);
 }
 
 .secondary-map__wrapper {

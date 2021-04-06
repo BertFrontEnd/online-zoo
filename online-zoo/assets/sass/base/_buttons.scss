@@ -24,7 +24,8 @@
 }
 
 .button--default,
-.button--footer {
+.button--footer,
+.button--feed {
   width: 245px;
   height: 55px;
   padding-top: 2px;
@@ -37,4 +38,8 @@
 
 .button--footer {
   width: 275px;
+}
+
+.button--feed {
+  width: 194px;
 }
