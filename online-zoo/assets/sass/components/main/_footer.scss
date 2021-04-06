@@ -5,27 +5,242 @@
 .footer__wrapper {
   @include alignment(flex-start, center, column, nowrap);
   width: 100%;
-  padding: 26px 0;
+  padding: 99px 0 71px;
 }
 
 .footer__navigation {
-  @include alignment(flex-start, center, row, nowrap);
+  @include alignment(space-between, flex-start, row, nowrap);
   width: 100%;
+  margin-bottom: 53px;
 
   .navigation__logo {
     @include alignment(center, center, column, nowrap);
+    color: $primary-footer-color;
+    line-height: 30px;
+    text-decoration: none;
+
+    .logo__primary-footer {
+      @include font-size(2.8rem, 900);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      -webkit-text-stroke: 1px $primary-footer-color;
+    }
+
+    .logo__secondary-footer {
+      margin-top: -10px;
+      @include font-size(1.7rem, 900);
+      letter-spacing: 2.5px;
+    }
   }
 
   .navigation__link {
-    @include alignment(flex-start, center, row, nowrap);
+    @include alignment(center, center, row, nowrap);
+    ul {
+      @include alignment(center, center, row, nowrap);
+      margin-right: 68px;
+
+      li {
+        position: relative;
+        margin-right: 73px;
+        color: $primary-footer-color;
+        cursor: pointer;
+
+        &:hover {
+          &::after {
+            @include underline($primary-footer-color);
+          }
+        }
+
+        a {
+          @include font-size(1.6rem, 500);
+          text-decoration: none;
+          color: $primary-footer-color;
+        }
+      }
+    }
   }
 }
 
 .footer__about-us {
-  @include alignment(flex-start, flex-start, row, nowrap);
+  @include alignment(space-between, flex-start, row, nowrap);
   width: 100%;
+  margin-bottom: 26px;
+  border-bottom: 1px solid $primary-footer-color;
+
+  .about-us__form {
+    margin-bottom: 55px;
+
+    .form__title {
+      margin-bottom: 22px;
+    }
+
+    .form__name {
+      margin-bottom: 12px;
+
+      input {
+        @extend %reset-input;
+        @include font-size(1.4rem, 300);
+      }
+    }
+
+    .form__email {
+      margin-bottom: 20px;
+
+      input {
+        @extend %reset-input;
+        @include font-size(1.4rem, 300);
+      }
+    }
+
+    ::-webkit-input-placeholder {
+      color: $placeholder-footer-color;
+    }
+
+    .form__message {
+      width: 383px;
+      height: 124px;
+      margin-bottom: 20px;
+      border-radius: 3px;
+      border: 1px solid $secondary-footer-color;
+
+      .message__legend {
+        margin-left: -5px;
+        @include font-size(1.2rem, 300);
+        color: $secondary-footer-color;
+      }
+
+      .message__textarea {
+        width: 359px;
+        height: 90px;
+        @include font-size(1.4rem, 300);
+        color: $primary-footer-color;
+        resize: none;
+        outline: none;
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+    .form__checkbox {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 14px;
+      @include font-size(1.2rem, 300);
+      color: $secondary-footer-color;
+
+      input {
+        position: absolute;
+        appearance: none;
+
+        &:checked {
+          + .checkbox__custom {
+            &::after {
+              background-color: $secondary-footer-color;
+            }
+          }
+        }
+      }
+
+      .checkbox__custom {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: inline-block;
+        width: 1.3rem;
+        height: 1.3rem;
+        margin-right: 5px;
+        border-radius: 1px;
+        border: 1px solid $secondary-footer-color;
+        transform: translateY(-50%);
+
+        &:after {
+          position: absolute;
+          top: 1px;
+          right: 1px;
+          bottom: 1px;
+          left: 1px;
+          content: '';
+          border-radius: 1px;
+          @extend %transition;
+        }
+      }
+
+      .checkbox__text {
+        padding-left: 22px;
+      }
+    }
+
+    .form__send {
+      position: relative;
+      @include alignment(flex-end, center, row, nowrap);
+      width: 100%;
+      padding-right: 82px;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        width: 48px;
+        height: 8px;
+        content: '';
+        background-image: url(./assets/img/control/arrow-send.svg);
+        transform: translateY(-50%);
+      }
+
+      input {
+        text-transform: uppercase;
+        @include font-size(1.4rem, 500);
+        color: $primary-footer-color;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
 
   .about-us__online-centre {
+    margin-right: 608px;
+    color: $primary-footer-color;
+
+    .online-centre__name {
+      margin-bottom: 28px;
+      @include font-size(1.4rem, 700);
+      line-height: 2.6rem;
+      text-transform: uppercase;
+    }
+
+    .online-centre__street {
+      /* display: block; */
+      @include font-size(1.4rem, 300);
+      font-style: normal;
+    }
+
+    .online-centre__time {
+      display: block;
+      margin-bottom: 14px;
+      @include font-size(1.4rem, 300);
+    }
+
+    .online-centre__phone {
+      @include font-size(1.4rem, 300);
+
+      a {
+        color: $primary-footer-color;
+        text-decoration: none;
+      }
+    }
+
+    .online-centre__email {
+      margin-bottom: 18px;
+      @include font-size(1.4rem, 300);
+
+      a {
+        color: $primary-footer-color;
+        text-decoration: none;
+      }
+    }
+
     .online-centre__social-footer {
       .social-footer__direction {
         @include alignment(space-between, center, row, nowrap);
@@ -41,5 +256,8 @@
 
   span {
     width: 100%;
+    @include font-size(1.2rem, 300);
+    letter-spacing: 0.2px;
+    color: $secondary-footer-color;
   }
 }

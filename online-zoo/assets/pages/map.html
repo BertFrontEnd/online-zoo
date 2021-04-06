@@ -58,19 +58,27 @@
           />
         </g>
       </symbol>
+
+      <symbol id="slider-arrow" viewBox="0 0 18 30">
+        <g>
+          <path
+            d="M17.3337 13.8294L3.98332 0.479264C3.67454 0.170243 3.26235 0 2.82284 0C2.38334 0 1.97114 0.170243 1.66237 0.479264L0.679203 1.46218C0.0394526 2.10267 0.0394526 3.14363 0.679203 3.78314L11.8898 14.9938L0.666764 26.2169C0.357986 26.5259 0.1875 26.9378 0.1875 27.3771C0.1875 27.8168 0.357986 28.2288 0.666764 28.5381L1.64993 29.5207C1.95895 29.8298 2.3709 30 2.81041 30C3.24991 30 3.66211 29.8298 3.97088 29.5207L17.3337 16.1584C17.6432 15.8484 17.8132 15.4345 17.8122 14.9945C17.8132 14.5528 17.6432 14.1392 17.3337 13.8294Z"
+          />
+        </g>
+      </symbol>
     </svg>
 
     <header class="header">
-      <div class="wrapper header__wrapper">
-        <div class="header__logo">
+      <div class="header__wrapper wrapper">
+        <a href="../../index.html" class="header__logo">
           <h1 class="logo__primary-header">Zoo</h1>
-          <span class="logo__secodary-header">online</span>
-        </div>
+          <span class="logo__secondary-header">online</span>
+        </a>
         <nav class="header__navigation">
           <ul>
             <li>
-              <a href="../../index.html" class="navigation__header-link"
-                >About</a
+              <a href="../../index.html" class="navigation__header-link">
+                About</a
               >
             </li>
             <li>
@@ -118,27 +126,66 @@
         </div>
         <div class="secondary-map__slider">
           <div class="slider___arrow">
-            <button class="arrow__left arrow">&lt;</button>
-            <button class="arrow__right arrow">&gt;</button>
+            <button class="arrow__left" disabled>
+              <svg class="arrow">
+                <use xlink:href="#slider-arrow"></use>
+              </svg>
+            </button>
+            <button class="arrow__right">
+              <svg class="arrow">
+                <use xlink:href="#slider-arrow"></use>
+              </svg>
+            </button>
           </div>
           <div class="slider__image">
-            <img
-              src="../img/animal-pin-sidebar/gorilla-pin-sidebar.png"
-              alt=""
-            />
-            <img src="../img/animal-pin-sidebar/panda-pin-sidebar.png" alt="" />
-            <img
-              src="../img/animal-pin-sidebar/alligator-pin-sidebar.png"
-              alt=""
-            />
-            <img src="../img/animal-pin-sidebar/eagle-pin-sidebar.png" alt="" />
-            <img src="../img/animal-pin-sidebar/tiger-pin-sidebar.png" alt="" />
-            <img
-              src="../img/animal-pin-sidebar/elephant-pin-sidebar.png"
-              alt=""
-            />
-            <img src="../img/animal-pin-sidebar/lion-pin-sidebar.png" alt="" />
-            <img src="../img/animal-pin-sidebar/zebra-pin-sidebar.png" alt="" />
+            <div class="image__container">
+              <img
+                src="../img/animal-pin-sidebar/gorilla-pin-sidebar.png"
+                alt=""
+              />
+            </div>
+            <div class="image__container container--current">
+              <img
+                src="../img/animal-pin-sidebar/panda-pin-sidebar.png"
+                alt=""
+              />
+            </div>
+            <div class="image__container">
+              <img
+                src="../img/animal-pin-sidebar/alligator-pin-sidebar.png"
+                alt=""
+              />
+            </div>
+            <div class="image__container">
+              <img
+                src="../img/animal-pin-sidebar/eagle-pin-sidebar.png"
+                alt=""
+              />
+            </div>
+            <div class="image__container">
+              <img
+                src="../img/animal-pin-sidebar/tiger-pin-sidebar.png"
+                alt=""
+              />
+            </div>
+            <div class="image__container">
+              <img
+                src="../img/animal-pin-sidebar/elephant-pin-sidebar.png"
+                alt=""
+              />
+            </div>
+            <div class="image__container">
+              <img
+                src="../img/animal-pin-sidebar/lion-pin-sidebar.png"
+                alt=""
+              />
+            </div>
+            <div class="image__container">
+              <img
+                src="../img/animal-pin-sidebar/zebra-pin-sidebar.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
         <div class="secondary-map__control">
@@ -158,85 +205,93 @@
         </div>
         <div class="secondary-map__map">
           <img src="../img/map/map-light.svg" alt="" />
-          <div class="map__loaction">
-            <div class="loaction__pin eagle">
+          <div class="map__location">
+            <div class="location__pin pin--eagle">
               <svg class="pin-icon">
                 <use xlink:href="#pin"></use>
               </svg>
+              <div class="location__avatar avatar--eagle"></div>
             </div>
-            <div class="loaction__pin alligator">
+            <div class="location__pin pin--alligator">
               <svg class="pin-icon">
                 <use xlink:href="#pin"></use>
               </svg>
+              <div class="location__avatar avatar--alligator"></div>
             </div>
-            <div class="loaction__pin gorilla">
+            <div class="location__pin pin--gorilla">
               <svg class="pin-icon">
                 <use xlink:href="#pin"></use>
               </svg>
+              <div class="location__avatar avatar--gorilla"></div>
             </div>
-            <div class="loaction__pin panda">
-              <svg class="pin-icon">
+            <div class="location__pin pin--panda">
+              <svg class="pin-icon pin-active">
                 <use xlink:href="#pin"></use>
               </svg>
+              <div class="location__avatar avatar--panda"></div>
             </div>
-          </div>
-          <div class="map__tooltip">
-            <div class="tooltip__card eagle">
-              <p class="tooltip__title">West End Bald Eagle</p>
-              <p class="tooltip__region text">
-                <span>Region: </span>on an island near Los Angeles
+            <div class="location__card card--eagle">
+              <p class="card__title text--title">West End Bald Eagle</p>
+              <p class="card__region text">
+                <span class="text--bold">Region: </span>on an island near Los
+                Angeles
               </p>
-              <p class="tooltip__population text">
-                <span>Population: </span>more than 270 pairs in 2013
+              <p class="card__population text">
+                <span class="text--bold">Population: </span>more than 270 pairs
+                in 2013
               </p>
-              <div class="tooltip__avatar">
+              <div class="card__avatar">
                 <img src="../img/animal-tooltip/eagle-tooltip.png" alt="" />
               </div>
             </div>
-            <div class="tooltip__card alligator">
-              <p class="tooltip__title">Alligator Аnd Spoonbill Swamp</p>
-              <p class="tooltip__region text">
-                <span>Region: </span>on the east coast of the United States from
-                North Carolina to Texas
+            <div class="location__card card--alligator">
+              <p class="card__title text--title">
+                Alligator Аnd Spoonbill Swamp
               </p>
-              <p class="tooltip__population text">
-                <span>Population: </span>the number exceeds 1 million
-                individuals
+              <p class="card__region text">
+                <span class="text--bold">Region: </span>on the east coast of the
+                United States from North Carolina to Texas
               </p>
-              <div class="tooltip__avatar">
+              <p class="card__population text">
+                <span class="text--bold">Population: </span>the number exceeds 1
+                million individuals
+              </p>
+              <div class="card__avatar">
                 <img src="../img/animal-tooltip/alligator-tooltip.png" alt="" />
               </div>
             </div>
-            <div class="tooltip__card gorilla">
-              <p class="tooltip__title">Gorilla</p>
-              <p class="tooltip__region text">
-                <span>Region: </span>equatorial forests of western and central
-                Africa
+            <div class="location__card card--gorilla">
+              <p class="card__title text--title">Gorilla</p>
+              <p class="card__region text">
+                <span class="text--bold">Region: </span>equatorial forests of
+                western and central Africa
               </p>
-              <p class="tooltip__population text">
-                <span>Population: </span>low and declining due to deforestation
-                of habitats and poaching
+              <p class="card__population text">
+                <span class="text--bold">Population: </span>low and declining
+                due to deforestation of habitats and poaching
               </p>
-              <div class="tooltip__avatar">
+              <div class="card__avatar">
                 <img src="../img/animal-tooltip/gorilla-tooltip.png" alt="" />
               </div>
             </div>
-            <div class="tooltip__card panda">
-              <p class="tooltip__title">Panda</p>
-              <p class="tooltip__region text">
-                <span>Region: </span>in the mountainous regions of central China
+            <div class="location__card card--panda">
+              <p class="card__title text--title">Panda</p>
+              <p class="card__region text">
+                <span class="text--bold">Region: </span>in the mountainous
+                regions of central China
               </p>
-              <p class="tooltip__population text">
-                <span>Population: </span>there are about 2060 individuals left
-                in the wild
+              <p class="card__population text">
+                <span class="text--bold">Population: </span>there are about 2060
+                individuals left in the wild
               </p>
-              <div class="tooltip__avatar">
+              <div class="card__avatar">
                 <img src="../img/animal-tooltip/panda-tooltip.png" alt="" />
               </div>
             </div>
           </div>
         </div>
-        <button class="secondary-map__button button--default">
+
+        <button class="secondary-map__button button--custom">
           Watch online
         </button>
       </div>
@@ -245,49 +300,61 @@
     <footer class="footer">
       <div class="footer__wrapper wrapper">
         <div class="footer__navigation">
-          <div class="navigation__logo">
-            <span class="footer__primary-header">Zoo</span>
-            <span class="footer__secodary-header">online</span>
+          <a href="#" class="navigation__logo">
+            <span class="logo__primary-footer">Zoo</span>
+            <span class="logo__secondary-footer">online</span>
+          </a>
+          <div class="navigation__link">
+            <ul>
+              <li><a href="../../index.html">About</a></li>
+              <li>
+                <a href="./panda.html" class="link__footer">Zoos</a>
+              </li>
+              <li>
+                <a href="#" class="link__footer">Map</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                  class="link__footer"
+                  >Design</a
+                >
+              </li>
+            </ul>
+            <button class="link__button button--footer">
+              Donate for volunteers
+            </button>
           </div>
-          <ul class="navigation__link">
-            <li><a href="../../index.html" class="link__footer">About</a></li>
-            <li><a href="./panda.html" class="link__footer">Zoos</a></li>
-            <li>Map</li>
-            <li>
-              <a
-                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
-                class="link__footer"
-                >Design</a
-              >
-            </li>
-          </ul>
-          <button class="navigation__button button--footer">
-            Donate for volunteers
-          </button>
         </div>
 
         <div id="contact-us" class="footer__about-us">
           <form action="#" class="about-us__form">
             <h5 class="form__title">Contact us</h5>
             <div class="form__name">
-              <input type="text" text="name" placeholder="Name" />
+              <input type="text" text="name" placeholder="Name" required />
             </div>
             <div class="form__email">
-              <input type="email" text="email" placeholder="Email" />
+              <input type="email" text="email" placeholder="Email" required />
             </div>
             <fieldset class="form__message">
               <legend class="message__legend">Please enter your message</legend>
               <textarea
                 class="message__textarea"
-                cols="30"
-                rows="10"
+                cols="10"
+                rows="1"
+                required
               ></textarea>
             </fieldset>
             <label class="form__checkbox">
               <input type="checkbox" />
-              I agree to the processing of Personal Data
+              <span class="checkbox__custom"></span>
+              <span class="checkbox__text"
+                >I agree to the processing of Personal Data</span
+              >
             </label>
-            <input type="submit" class="form__send" value="Send" />
+            <div class="form__send">
+              <input type="submit" value="Send" />
+            </div>
           </form>
           <div class="about-us__online-centre">
             <p class="online-centre__name">ZOO Online Centre</p>
@@ -298,9 +365,9 @@
               Open Daily 10:00 am - 5:00 pm</time
             >
             <div class="online-centre__phone">
-              <span>T(702)</span> <a href="tel:163-3433">163-3433</a>
+              <span>T(702) </span> <a href="tel:163-3433">163-3433</a>
             </div>
-            <div class="online-centre__mail">
+            <div class="online-centre__email">
               <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
             </div>
             <div class="online-centre__social-footer">
@@ -322,14 +389,14 @@
                 <li>
                   <a href="#">
                     <svg class="social-icon">
-                      <use xlink:href="#youtube"></use>
+                      <use xlink:href="#vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <svg class="social-icon">
-                      <use xlink:href="#vk"></use>
+                      <use xlink:href="#youtube"></use>
                     </svg>
                   </a>
                 </li>

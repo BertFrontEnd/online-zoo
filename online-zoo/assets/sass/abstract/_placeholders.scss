@@ -19,3 +19,13 @@
   outline: none;
   background-color: transparent;
 }
+
+%reset-input {
+  width: 383px;
+  padding: 6px 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $secondary-footer-color;
+  background-color: transparent;
+  color: $primary-footer-color;
+}

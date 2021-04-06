@@ -26,6 +26,7 @@
     @include alignment(space-between, center, row, nowrap);
 
     .card__info {
+      z-index: 1;
       @include alignment(flex-start, center, column, nowrap);
       width: 585px;
       height: 310px;
@@ -56,6 +57,7 @@
       .info__text {
         line-height: 15px;
         letter-spacing: 0.15px;
+        color: var(--secondary-text-color);
       }
     }
   }

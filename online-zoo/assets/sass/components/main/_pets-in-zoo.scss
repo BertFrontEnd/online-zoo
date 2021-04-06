@@ -7,6 +7,11 @@
 .pets-in-zoo__title {
   margin-bottom: 28px;
 }
+
+.pay-and-feed__text {
+  color: var(--secondary-text-color);
+}
+
 .pets-in-zoo__slider {
   position: relative;
   @include alignment(center, center, row, nowrap);
@@ -25,9 +30,11 @@
     @include alignment(space-between, center, row, nowrap);
 
     .image__container {
+      z-index: 1;
       width: 278px;
       height: 400px;
       margin: 0 15px;
+      cursor: pointer;
 
       &:first-child {
         margin-left: 0;

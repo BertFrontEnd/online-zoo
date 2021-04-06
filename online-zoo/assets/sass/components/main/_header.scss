@@ -13,7 +13,7 @@
   color: var(--primary-text-color);
   text-decoration: none;
 
-  span {
+  .logo__secondary-header {
     margin-top: -12px;
     @include font-size(1.7rem, 900);
     letter-spacing: 2.5px;
@@ -30,6 +30,7 @@
       padding-top: 10px;
       margin: 0 42px;
       color: var(--primary-text-color);
+      cursor: pointer;
 
       &:hover {
         &::after {

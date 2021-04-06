@@ -31,9 +31,8 @@ h4 {
 }
 
 h5 {
-}
-
-h6 {
+  @include font-size(2rem, 900);
+  color: $primary-footer-color;
 }
 
 .text {

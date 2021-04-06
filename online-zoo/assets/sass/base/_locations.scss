@@ -19,23 +19,46 @@
   }
 }
 
-/* .pin--eagle {
+.pin--eagle {
   &:hover {
-    .primary-map {
-      .primary-map__map {
-        .map__tooltip {
-          .tooltip__card.card--eagle {
-            opacity: 0;
-            left: 10px;
-          }
-        }
-      }
+    ~ .location__card.card--eagle {
+      top: 150px;
+      opacity: 1;
+      visibility: visible;
     }
   }
-} */
-
-.pin-active {
-  fill: $pin-active;
 }
 
-/* .primary-map__map .map__tooltip .card--eagle  */
+.pin--alligator {
+  &:hover {
+    ~ .location__card.card--alligator {
+      top: 182px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.pin--gorilla {
+  &:hover {
+    ~ .location__card.card--gorilla {
+      top: 266px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.pin--panda {
+  &:hover {
+    ~ .location__card.card--panda {
+      top: 168px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.pin-icon.pin-active {
+  fill: $pin-active;
+}

@@ -72,7 +72,7 @@
       <div class="header__wrapper wrapper">
         <a href="#" class="header__logo">
           <h1 class="logo__primary-header">Zoo</h1>
-          <span class="logo__secodary-header">online</span>
+          <span class="logo__secondary-header">online</span>
         </a>
         <nav class="header__navigation">
           <ul>
@@ -456,72 +456,70 @@
                 </svg>
                 <div class="location__avatar avatar--panda"></div>
               </div>
-            </div>
-            <div class="map__tooltip">
-              <div class="tooltip__card card--eagle">
-                <p class="tooltip__title text--title">West End Bald Eagle</p>
-                <p class="tooltip__region text">
+              <div class="location__card card--eagle">
+                <p class="card__title text--title">West End Bald Eagle</p>
+                <p class="card__region text">
                   <span class="text--bold">Region: </span>on an island near Los
                   Angeles
                 </p>
-                <p class="tooltip__population text">
+                <p class="card__population text">
                   <span class="text--bold">Population: </span>more than 270
                   pairs in 2013
                 </p>
-                <div class="tooltip__avatar">
+                <div class="card__avatar">
                   <img
                     src="./assets/img/animal-tooltip/eagle-tooltip.png"
                     alt=""
                   />
                 </div>
               </div>
-              <div class="tooltip__card card--alligator">
-                <p class="tooltip__title text--title">
+              <div class="location__card card--alligator">
+                <p class="card__title text--title">
                   Alligator Аnd Spoonbill Swamp
                 </p>
-                <p class="tooltip__region text">
+                <p class="card__region text">
                   <span class="text--bold">Region: </span>on the east coast of
                   the United States from North Carolina to Texas
                 </p>
-                <p class="tooltip__population text">
+                <p class="card__population text">
                   <span class="text--bold">Population: </span>the number exceeds
                   1 million individuals
                 </p>
-                <div class="tooltip__avatar">
+                <div class="card__avatar">
                   <img
                     src="./assets/img/animal-tooltip/alligator-tooltip.png"
                     alt=""
                   />
                 </div>
               </div>
-              <div class="tooltip__card card--gorilla">
-                <p class="tooltip__title text--title">Gorilla</p>
-                <p class="tooltip__region text">
+              <div class="location__card card--gorilla">
+                <p class="card__title text--title">Gorilla</p>
+                <p class="card__region text">
                   <span class="text--bold">Region: </span>equatorial forests of
                   western and central Africa
                 </p>
-                <p class="tooltip__population text">
+                <p class="card__population text">
                   <span class="text--bold">Population: </span>low and declining
                   due to deforestation of habitats and poaching
                 </p>
-                <div class="tooltip__avatar">
+                <div class="card__avatar">
                   <img
                     src="./assets/img/animal-tooltip/gorilla-tooltip.png"
                     alt=""
                   />
                 </div>
               </div>
-              <div class="tooltip__card card--panda">
-                <p class="tooltip__title text--title">Panda</p>
-                <p class="tooltip__region text">
+              <div class="location__card card--panda">
+                <p class="card__title text--title">Panda</p>
+                <p class="card__region text">
                   <span class="text--bold">Region: </span>in the mountainous
                   regions of central China
                 </p>
-                <p class="tooltip__population text">
+                <p class="card__population text">
                   <span class="text--bold">Population: </span>there are about
                   2060 individuals left in the wild
                 </p>
-                <div class="tooltip__avatar">
+                <div class="card__avatar">
                   <img
                     src="./assets/img/animal-tooltip/panda-tooltip.png"
                     alt=""
@@ -541,53 +539,63 @@
     <footer class="footer">
       <div class="footer__wrapper wrapper">
         <div class="footer__navigation">
-          <div class="navigation__logo">
-            <span class="footer__primary-header">Zoo</span>
-            <span class="footer__secodary-header">online</span>
+          <a href="#" class="navigation__logo">
+            <span class="logo__primary-footer">Zoo</span>
+            <span class="logo__secondary-footer">online</span>
+          </a>
+          <div class="navigation__link">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li>
+                <a href="./assets/pages/panda.html" class="link__footer"
+                  >Zoos</a
+                >
+              </li>
+              <li>
+                <a href="./assets/pages/map.html" class="link__footer">Map</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                  class="link__footer"
+                  >Design</a
+                >
+              </li>
+            </ul>
+            <button class="link__button button--footer">
+              Donate for volunteers
+            </button>
           </div>
-          <ul class="navigation__link">
-            <li>About</li>
-            <li>
-              <a href="./assets/pages/panda.html" class="link__footer">Zoos</a>
-            </li>
-            <li>
-              <a href="./assets/pages/map.html" class="link__footer">Map</a>
-            </li>
-            <li>
-              <a
-                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
-                class="link__footer"
-                >Design</a
-              >
-            </li>
-          </ul>
-          <button class="navigation__button button--footer">
-            Donate for volunteers
-          </button>
         </div>
 
         <div id="contact-us" class="footer__about-us">
           <form action="#" class="about-us__form">
             <h5 class="form__title">Contact us</h5>
             <div class="form__name">
-              <input type="text" text="name" placeholder="Name" />
+              <input type="text" text="name" placeholder="Name" required />
             </div>
             <div class="form__email">
-              <input type="email" text="email" placeholder="Email" />
+              <input type="email" text="email" placeholder="Email" required />
             </div>
             <fieldset class="form__message">
               <legend class="message__legend">Please enter your message</legend>
               <textarea
                 class="message__textarea"
-                cols="30"
-                rows="10"
+                cols="10"
+                rows="1"
+                required
               ></textarea>
             </fieldset>
             <label class="form__checkbox">
               <input type="checkbox" />
-              I agree to the processing of Personal Data
+              <span class="checkbox__custom"></span>
+              <span class="checkbox__text"
+                >I agree to the processing of Personal Data</span
+              >
             </label>
-            <input type="submit" class="form__send" value="Send" />
+            <div class="form__send">
+              <input type="submit" value="Send" />
+            </div>
           </form>
           <div class="about-us__online-centre">
             <p class="online-centre__name">ZOO Online Centre</p>
@@ -598,9 +606,9 @@
               Open Daily 10:00 am - 5:00 pm</time
             >
             <div class="online-centre__phone">
-              <span>T(702)</span> <a href="tel:163-3433">163-3433</a>
+              <span>T(702) </span> <a href="tel:163-3433">163-3433</a>
             </div>
-            <div class="online-centre__mail">
+            <div class="online-centre__email">
               <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
             </div>
             <div class="online-centre__social-footer">
@@ -622,14 +630,14 @@
                 <li>
                   <a href="#">
                     <svg class="social-icon">
-                      <use xlink:href="#youtube"></use>
+                      <use xlink:href="#vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <svg class="social-icon">
-                      <use xlink:href="#vk"></use>
+                      <use xlink:href="#youtube"></use>
                     </svg>
                   </a>
                 </li>
