@@ -30,10 +30,12 @@
     @include alignment(space-between, center, row, nowrap);
 
     .image__container {
+      position: relative;
       z-index: 1;
       width: 278px;
       height: 400px;
       margin: 0 15px;
+      overflow: hidden;
       cursor: pointer;
 
       &:first-child {
@@ -49,6 +51,46 @@
         height: 100%;
         border-radius: 5px;
       }
+
+      &:hover {
+        .container__cap {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          @extend %transition;
+          /* cursor: default; */
+        }
+
+        .container__info {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          @extend %transition;
+        }
+      }
+    }
+
+    .container__cap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 278px;
+      height: 400px;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 5px;
+      background-color: $cap-color;
+      transform: translateY(100%);
+      @extend %transition;
+    }
+
+    .container__info {
+      bottom: 45px;
+      left: 23px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(100px);
+      @extend %transition;
     }
   }
 }

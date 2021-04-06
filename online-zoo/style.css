@@ -84,7 +84,8 @@
 
 .social-icon, .arrow__left .arrow,
 .arrow__right .arrow, .arrow__up .arrow,
-.arrow__down .arrow, .location__pin .pin-icon, .primary-map__map .map__location .location__avatar,
+.arrow__down .arrow, .location__pin .pin-icon, .info .info__watch,
+.info .info__donate, .promo__slider .slider__image .image__container.container--current:hover .container__cap, .promo__slider .slider__image .image__container.container--current:hover .container__info, .promo__slider .slider__image .image__container .container__cap, .promo__slider .slider__image .image__container .container__info, .pets-in-zoo__slider .slider__image .image__container:hover .container__cap, .pets-in-zoo__slider .slider__image .image__container:hover .container__info, .pets-in-zoo__slider .slider__image .container__cap, .pets-in-zoo__slider .slider__image .container__info, .primary-map__map .map__location .location__avatar,
 .secondary-map__map .map__location .location__avatar, .primary-map__map .map__location .card--eagle,
 .secondary-map__map .map__location .card--eagle, .primary-map__map .map__location .card--alligator,
 .secondary-map__map .map__location .card--alligator, .primary-map__map .map__location .card--gorilla,
@@ -187,50 +188,40 @@ iframe {
   border-radius: 5px;
 }
 
-.warning {
+/* .warning {
   position: absolute;
   top: 150px;
   left: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 30vw;
   padding: 50px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
+  transform: translateX(-50%);
 
-.warning i {
-  font-size: 20px;
-  text-align: center;
-  color: #fff;
+  i {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+  }
 }
-
+ */
 .header__checkbox {
   position: relative;
   cursor: pointer;
 }
 
-.header__checkbox input {
+.header__checkbox .checkbox__switcher {
   display: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-.header__checkbox input:checked ~ .checkbox__indicator {
+.header__checkbox .checkbox__switcher:checked ~ .checkbox__indicator {
   left: 28px;
 }
 
@@ -266,6 +257,10 @@ iframe {
   color: var(--base-color);
   text-transform: uppercase;
   cursor: pointer;
+  /* a {
+    color: var(--base-color);
+    text-decoration: none;
+  } */
 }
 
 .button--custom:before {
@@ -281,11 +276,6 @@ iframe {
           transform: translateY(-50%);
 }
 
-.button--custom a {
-  color: var(--base-color);
-  text-decoration: none;
-}
-
 .button--default,
 .button--footer,
 .button--feed {
@@ -297,13 +287,10 @@ iframe {
   color: var(--base-color);
   text-transform: uppercase;
   cursor: pointer;
-}
-
-.button--default a,
-.button--footer a,
-.button--feed a {
-  color: var(--base-color);
-  text-decoration: none;
+  /* a {
+    color: var(--base-color);
+    text-decoration: none;
+  } */
 }
 
 .button--footer {
@@ -312,6 +299,11 @@ iframe {
 
 .button--feed {
   width: 194px;
+}
+
+.button--feed:hover {
+  -webkit-transform: background-size scale(1.5);
+          transform: background-size scale(1.5);
 }
 
 .social-icon {
@@ -516,7 +508,7 @@ iframe {
 
 .info {
   position: absolute;
-  width: 196px;
+  width: 197px;
 }
 
 .info .info__text {
@@ -526,10 +518,13 @@ iframe {
   color: var(--base-color);
   line-height: 1.6rem;
   letter-spacing: 0.5px;
+  cursor: text;
 }
 
 .info .info__watch,
 .info .info__donate {
+  position: relative;
+  opacity: 0.7;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 2.4rem;
@@ -537,8 +532,16 @@ iframe {
   text-decoration: none;
 }
 
+.info .info__watch:hover,
+.info .info__donate:hover {
+  opacity: 1;
+}
+
 .info .info__watch::before,
 .info .info__donate::before {
+  position: absolute;
+  top: 50%;
+  left: 0px;
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -546,9 +549,13 @@ iframe {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .info .info__watch {
+  padding-left: 27px;
+  margin-right: 7px;
   color: #4bd8b5;
 }
 
@@ -557,6 +564,7 @@ iframe {
 }
 
 .info .info__donate {
+  padding-left: 27px;
   color: #ffffff;
 }
 
@@ -721,7 +729,7 @@ iframe {
   line-height: 10.5rem;
 }
 
-.promo__content .content__button {
+.promo__content a {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -791,6 +799,7 @@ iframe {
   width: 140px;
   height: 203px;
   margin: 0 23px;
+  cursor: pointer;
 }
 
 .promo__slider .slider__image .image__container img {
@@ -804,6 +813,7 @@ iframe {
   top: -14px;
   width: 245px;
   height: 352px;
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -812,9 +822,42 @@ iframe {
   height: 100%;
 }
 
+.promo__slider .slider__image .image__container.container--current:hover .container__cap {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  /* cursor: default; */
+}
+
+.promo__slider .slider__image .image__container.container--current:hover .container__info {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.promo__slider .slider__image .image__container .container__cap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 245px;
+  height: 352px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  background-color: #00000075;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
 .promo__slider .slider__image .image__container .container__info {
-  bottom: 47px;
+  bottom: 33px;
   left: 23px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 .promo__social-header {
@@ -1112,10 +1155,12 @@ iframe {
 }
 
 .pets-in-zoo__slider .slider__image .image__container {
+  position: relative;
   z-index: 1;
   width: 278px;
   height: 400px;
   margin: 0 15px;
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -1131,6 +1176,44 @@ iframe {
   width: 100%;
   height: 100%;
   border-radius: 5px;
+}
+
+.pets-in-zoo__slider .slider__image .image__container:hover .container__cap {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  /* cursor: default; */
+}
+
+.pets-in-zoo__slider .slider__image .image__container:hover .container__info {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.pets-in-zoo__slider .slider__image .container__cap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 278px;
+  height: 400px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  background-color: #00000075;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.pets-in-zoo__slider .slider__image .container__info {
+  bottom: 45px;
+  left: 23px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 .pets-in-zoo__control {
@@ -1932,6 +2015,7 @@ iframe {
       flex-wrap: nowrap;
   width: 100%;
   padding-right: 82px;
+  cursor: pointer;
 }
 
 .footer__about-us .about-us__form .form__send::after {
@@ -2146,13 +2230,6 @@ iframe {
   height: 108px;
   margin: 4px 0;
   cursor: pointer;
-  /* &:first-child {
-        margin-top: 0;
-      }
-
-       &:last-child {
-        margin-bottom: 0;
-      } */
 }
 
 .zoos__slider .slider__image .image__container img {
@@ -2519,6 +2596,7 @@ iframe {
   margin: 0 -10px;
   background: linear-gradient(103.3deg, #07eee0 -15.1%, #df496d 92.15%);
   border-radius: 50%;
+  cursor: default;
 }
 
 .secondary-map__slider .slider__image .container--current img {

@@ -16,11 +16,10 @@
 
   .content__title {
     margin-bottom: 37px;
-
     line-height: 10.5rem;
   }
 
-  .content__button {
+  a {
     align-self: flex-start;
   }
 }
@@ -72,6 +71,7 @@
       width: 140px;
       height: 203px;
       margin: 0 23px;
+      cursor: pointer;
 
       img {
         width: 100%;
@@ -84,17 +84,53 @@
         top: -14px;
         width: 245px;
         height: 352px;
+        overflow: hidden;
         cursor: pointer;
 
         img {
           width: 100%;
           height: 100%;
         }
+
+        &:hover {
+          .container__cap {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            @extend %transition;
+            /* cursor: default; */
+          }
+
+          .container__info {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            @extend %transition;
+          }
+        }
+      }
+
+      .container__cap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 245px;
+        height: 352px;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 5px;
+        background-color: $cap-color;
+        transform: translateY(100%);
+        @extend %transition;
       }
 
       .container__info {
-        bottom: 47px;
+        bottom: 33px;
         left: 23px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100px);
+        @extend %transition;
       }
     }
   }

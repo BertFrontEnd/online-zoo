@@ -96,7 +96,7 @@
           </ul>
         </nav>
         <label class="header__checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" class="checkbox__switcher" />
           <span class="checkbox__container"></span>
           <span class="checkbox__indicator"></span>
         </label>
@@ -119,27 +119,27 @@
             </button>
           </div>
           <div class="slider__image">
-            <div class="image__container container--current">
+            <div class="image__container container--current" title="Panda">
               <img
                 src="../img/animal-pin-sidebar/panda-pin-sidebar.png"
                 alt=""
               />
             </div>
-            <div class="image__container">
+            <div class="image__container" title="Eagle">
               <a href="./eagle.html">
                 <img
                   src="../img/animal-pin-sidebar/eagle-pin-sidebar.png"
                   alt=""
               /></a>
             </div>
-            <div class="image__container">
+            <div class="image__container" title="Alligator">
               <a href="./alligator.html">
                 <img
                   src="../img/animal-pin-sidebar/alligator-pin-sidebar.png"
                   alt=""
               /></a>
             </div>
-            <div class="image__container">
+            <div class="image__container" title="Gorilla">
               <a href="./gorilla.html">
                 <img
                   src="../img/animal-pin-sidebar/gorilla-pin-sidebar.png"
@@ -227,7 +227,9 @@
               their energy needs.
             </p>
           </div>
-          <button class="navigation__button button--feed">Feed</button>
+          <a href="#"
+            ><button class="navigation__button button--feed">Feed</button></a
+          >
         </section>
       </div>
     </main>
@@ -256,9 +258,11 @@
                 >
               </li>
             </ul>
-            <button class="link__button button--footer">
-              Donate for volunteers
-            </button>
+            <a href="#"
+              ><button class="link__button button--footer">
+                Donate for volunteers
+              </button></a
+            >
           </div>
         </div>
 
@@ -266,10 +270,10 @@
           <form action="#" class="about-us__form">
             <h5 class="form__title">Contact us</h5>
             <div class="form__name">
-              <input type="text" text="name" placeholder="Name" required />
+              <input type="text" placeholder="Name" required />
             </div>
             <div class="form__email">
-              <input type="email" text="email" placeholder="Email" required />
+              <input type="email" placeholder="Email" required />
             </div>
             <fieldset class="form__message">
               <legend class="message__legend">Please enter your message</legend>
@@ -277,6 +281,7 @@
                 class="message__textarea"
                 cols="10"
                 rows="1"
+                maxlength="280"
                 required
               ></textarea>
             </fieldset>
@@ -300,7 +305,7 @@
               Open Daily 10:00 am - 5:00 pm</time
             >
             <div class="online-centre__phone">
-              <span>T(702) </span> <a href="tel:163-3433">163-3433</a>
+              <span>T</span><a href="tel:(702)163-3433">(702) 163-3433</a>
             </div>
             <div class="online-centre__email">
               <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
@@ -308,28 +313,28 @@
             <div class="online-centre__social-footer">
               <ul class="social-footer__direction">
                 <li>
-                  <a href="#">
+                  <a href="https://www.instagram.com/">
                     <svg class="social-icon">
                       <use xlink:href="#instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://twitter.com/">
                     <svg class="social-icon">
                       <use xlink:href="#twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://vk.com/">
                     <svg class="social-icon">
                       <use xlink:href="#vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.youtube.com/">
                     <svg class="social-icon">
                       <use xlink:href="#youtube"></use>
                     </svg>

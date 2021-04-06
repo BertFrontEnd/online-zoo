@@ -175,6 +175,7 @@
       @include alignment(flex-end, center, row, nowrap);
       width: 100%;
       padding-right: 82px;
+      cursor: pointer;
 
       &::after {
         position: absolute;

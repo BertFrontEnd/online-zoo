@@ -22,10 +22,10 @@
     transform: translateY(-50%);
   }
 
-  a {
+  /* a {
     color: var(--base-color);
     text-decoration: none;
-  }
+  } */
 }
 
 .button--default,
@@ -40,10 +40,10 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  a {
+  /* a {
     color: var(--base-color);
     text-decoration: none;
-  }
+  } */
 }
 
 .button--footer {
@@ -52,4 +52,8 @@
 
 .button--feed {
   width: 194px;
+
+  &:hover {
+    transform: background-size scale(1.5);
+  }
 }
