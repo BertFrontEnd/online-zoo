@@ -21,6 +21,11 @@
     background-repeat: no-repeat;
     transform: translateY(-50%);
   }
+
+  a {
+    color: var(--base-color);
+    text-decoration: none;
+  }
 }
 
 .button--default,
@@ -34,6 +39,11 @@
   color: var(--base-color);
   text-transform: uppercase;
   cursor: pointer;
+
+  a {
+    color: var(--base-color);
+    text-decoration: none;
+  }
 }
 
 .button--footer {

@@ -187,27 +187,37 @@ iframe {
   border-radius: 5px;
 }
 
-/* .warning {
+.warning {
   position: absolute;
   top: 150px;
   left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 30vw;
   padding: 50px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  transform: translateX(-50%);
-
-  i {
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-  }
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
- */
+
+.warning i {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
 .header__checkbox {
   position: relative;
   cursor: pointer;
@@ -271,6 +281,11 @@ iframe {
           transform: translateY(-50%);
 }
 
+.button--custom a {
+  color: var(--base-color);
+  text-decoration: none;
+}
+
 .button--default,
 .button--footer,
 .button--feed {
@@ -282,6 +297,13 @@ iframe {
   color: var(--base-color);
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.button--default a,
+.button--footer a,
+.button--feed a {
+  color: var(--base-color);
+  text-decoration: none;
 }
 
 .button--footer {
@@ -2001,7 +2023,7 @@ iframe {
 .zoos__slider {
   position: -webkit-sticky;
   position: sticky;
-  top: 197px;
+  top: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2069,14 +2091,13 @@ iframe {
   height: 108px;
   margin: 4px 0;
   cursor: pointer;
-}
+  /* &:first-child {
+        margin-top: 0;
+      }
 
-.zoos__slider .slider__image .image__container:first-child {
-  margin-top: 0;
-}
-
-.zoos__slider .slider__image .image__container:last-child {
-  margin-bottom: 0;
+       &:last-child {
+        margin-bottom: 0;
+      } */
 }
 
 .zoos__slider .slider__image .image__container img {

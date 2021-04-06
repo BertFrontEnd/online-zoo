@@ -10,7 +10,7 @@
 
 .zoos__slider {
   position: sticky;
-  top: 197px;
+  top: 190px;
   @include alignment(flex-start, center, column, nowrap);
   transform: translateX(-124px);
 
@@ -33,13 +33,13 @@
       margin: 4px 0;
       cursor: pointer;
 
-      &:first-child {
+      /* &:first-child {
         margin-top: 0;
       }
 
-      &:last-child {
+       &:last-child {
         margin-bottom: 0;
-      }
+      } */
 
       img {
         width: 100%;
