@@ -1,0 +1,46 @@
+.info {
+  position: absolute;
+  width: 196px;
+
+  .info__text {
+    margin-bottom: 14px;
+    @include font-size(1.4rem, 300);
+    color: var(--base-color);
+    line-height: 1.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .info__watch,
+  .info__donate {
+    @include font-size(1.2rem, 500);
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::before {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      content: '';
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .info__watch {
+    color: $info-watch-text-color;
+
+    &::before {
+      background-image: url(./assets/img/control/play-info.svg);
+    }
+  }
+
+  .info__donate {
+    color: $info-donate-text-color;
+
+    &::before {
+      background-image: url(./assets/img/icon/donate.svg);
+    }
+  }
+}
