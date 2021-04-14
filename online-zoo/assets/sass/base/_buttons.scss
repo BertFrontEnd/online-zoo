@@ -3,11 +3,12 @@
   width: 245px;
   height: 55px;
   padding-top: 2px;
-  padding-left: 44px;
+  padding-left: 36px;
   @extend %button-reset;
   @include font-size(1.8rem, 900);
   color: var(--base-color);
   text-transform: uppercase;
+  @extend %transition;
   cursor: pointer;
 
   &:before {
@@ -20,6 +21,12 @@
     background-image: url(./assets/img/control/play.svg);
     background-repeat: no-repeat;
     transform: translateY(-50%);
+    @extend %transition;
+  }
+
+  &:hover {
+    background: $button-background-hover-color;
+    @extend %transition;
   }
 }
 
@@ -33,7 +40,13 @@
   @include font-size(1.8rem, 900);
   color: var(--base-color);
   text-transform: uppercase;
+  @extend %transition;
   cursor: pointer;
+
+  &:hover {
+    background: $button-background-hover-color;
+    @extend %transition;
+  }
 }
 
 .button--footer {

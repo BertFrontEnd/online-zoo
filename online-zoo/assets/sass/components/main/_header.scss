@@ -34,9 +34,14 @@
       color: var(--primary-text-color);
       cursor: pointer;
 
+      &::after {
+        @include underline(var(--primary-text-color));
+        @extend %transition;
+      }
+
       &:hover {
         &::after {
-          @include underline(var(--primary-text-color));
+          transform: scaleX(1);
         }
       }
 
@@ -47,6 +52,7 @@
 
         &::after {
           @include underline(var(--primary-text-color));
+          transform: scaleX(1);
         }
       }
 

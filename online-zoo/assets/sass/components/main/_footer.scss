@@ -3,256 +3,266 @@
 }
 
 .footer__wrapper {
-  @include alignment(flex-start, center, column, nowrap);
+  @include alignment(flex-start, flex-start, row, wrap);
   width: 100%;
   padding: 99px 0 71px;
 }
 
-.footer__navigation {
-  @include alignment(space-between, flex-start, row, nowrap);
-  width: 100%;
-  margin-bottom: 53px;
+.footer__logo {
+  @include alignment(center, center, column, nowrap);
+  order: 1;
+  margin-right: 764px;
+  margin-bottom: 58px;
+  color: $primary-footer-color;
+  line-height: 30px;
+  text-decoration: none;
 
-  .navigation__logo {
-    @include alignment(center, center, column, nowrap);
-    color: $primary-footer-color;
-    line-height: 30px;
-    text-decoration: none;
-
-    .logo__primary-footer {
-      @include font-size(2.8rem, 900);
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      -webkit-text-stroke: 1px $primary-footer-color;
-    }
-
-    .logo__secondary-footer {
-      margin-top: -10px;
-      @include font-size(1.7rem, 900);
-      letter-spacing: 2.5px;
-    }
+  .logo__primary-footer {
+    @include font-size(2.8rem, 900);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px $primary-footer-color;
   }
 
-  .navigation__link {
+  .logo__secondary-footer {
+    margin-top: -10px;
+    @include font-size(1.7rem, 900);
+    letter-spacing: 2.5px;
+  }
+}
+
+.footer__navigation {
+  @include alignment(center, center, row, nowrap);
+  order: 2;
+  margin-top: 18px;
+  margin-right: 139px;
+
+  ul {
     @include alignment(center, center, row, nowrap);
-    ul {
-      @include alignment(center, center, row, nowrap);
-      margin-right: 68px;
 
-      li {
-        position: relative;
-        margin-right: 73px;
+    li {
+      position: relative;
+      margin-right: 73px;
+      color: $primary-footer-color;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &::after {
+        @include underline($primary-footer-color);
+        @extend %transition;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+
+      a {
+        @include font-size(1.6rem, 500);
+        text-decoration: none;
         color: $primary-footer-color;
-        cursor: pointer;
-
-        &:hover {
-          &::after {
-            @include underline($primary-footer-color);
-          }
-        }
-
-        a {
-          @include font-size(1.6rem, 500);
-          text-decoration: none;
-          color: $primary-footer-color;
-        }
       }
     }
   }
 }
 
-.footer__about-us {
-  @include alignment(space-between, flex-start, row, nowrap);
-  width: 100%;
-  margin-bottom: 26px;
-  border-bottom: 1px solid $primary-footer-color;
+.footer__form {
+  order: 4;
+  margin-bottom: 55px;
+  margin-right: 441px;
 
-  .about-us__form {
-    margin-bottom: 55px;
+  .form__title {
+    margin-bottom: 22px;
+  }
 
-    .form__title {
-      margin-bottom: 22px;
+  .form__name {
+    margin-bottom: 12px;
+
+    input {
+      @extend %reset-input;
+      @include font-size(1.4rem, 300);
     }
+  }
 
-    .form__name {
-      margin-bottom: 12px;
+  .form__email {
+    margin-bottom: 20px;
 
-      input {
-        @extend %reset-input;
-        @include font-size(1.4rem, 300);
-      }
+    input {
+      @extend %reset-input;
+      @include font-size(1.4rem, 300);
     }
+  }
 
-    .form__email {
-      margin-bottom: 20px;
+  ::-webkit-input-placeholder {
+    color: $placeholder-footer-color;
+  }
 
-      input {
-        @extend %reset-input;
-        @include font-size(1.4rem, 300);
-      }
-    }
+  .form__message {
+    width: 383px;
+    height: 124px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid $secondary-footer-color;
 
-    ::-webkit-input-placeholder {
-      color: $placeholder-footer-color;
-    }
-
-    .form__message {
-      width: 383px;
-      height: 124px;
-      margin-bottom: 20px;
-      border-radius: 3px;
-      border: 1px solid $secondary-footer-color;
-
-      .message__legend {
-        margin-left: -5px;
-        @include font-size(1.2rem, 300);
-        color: $secondary-footer-color;
-      }
-
-      .message__textarea {
-        width: 359px;
-        height: 90px;
-        @include font-size(1.4rem, 300);
-        color: $primary-footer-color;
-        resize: none;
-        outline: none;
-        border: none;
-        background-color: transparent;
-      }
-    }
-
-    .form__checkbox {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 14px;
+    .message__legend {
+      margin-left: -5px;
       @include font-size(1.2rem, 300);
       color: $secondary-footer-color;
+    }
 
-      input {
-        position: absolute;
-        appearance: none;
+    .message__textarea {
+      width: 359px;
+      height: 90px;
+      @include font-size(1.4rem, 300);
+      color: $primary-footer-color;
+      resize: none;
+      outline: none;
+      border: none;
+      background-color: transparent;
+    }
+  }
 
-        &:checked {
-          + .checkbox__custom {
-            &::after {
-              background-color: $secondary-footer-color;
-            }
+  .form__checkbox {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 14px;
+    @include font-size(1.2rem, 300);
+    color: $secondary-footer-color;
+
+    input {
+      position: absolute;
+      appearance: none;
+
+      &:checked {
+        + .checkbox__custom {
+          &::after {
+            background-color: $secondary-footer-color;
           }
         }
       }
-
-      .checkbox__custom {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        display: inline-block;
-        width: 1.3rem;
-        height: 1.3rem;
-        margin-right: 5px;
-        border-radius: 1px;
-        border: 1px solid $secondary-footer-color;
-        transform: translateY(-50%);
-
-        &:after {
-          position: absolute;
-          top: 1px;
-          right: 1px;
-          bottom: 1px;
-          left: 1px;
-          content: '';
-          border-radius: 1px;
-          @extend %transition;
-        }
-      }
-
-      .checkbox__text {
-        padding-left: 22px;
-      }
     }
 
-    .form__send {
-      position: relative;
-      @include alignment(flex-end, center, row, nowrap);
-      width: 100%;
-      padding-right: 82px;
-      cursor: pointer;
+    .checkbox__custom {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: inline-block;
+      width: 1.3rem;
+      height: 1.3rem;
+      margin-right: 5px;
+      border-radius: 1px;
+      border: 1px solid $secondary-footer-color;
+      transform: translateY(-50%);
 
-      &::after {
+      &:after {
         position: absolute;
-        top: 50%;
-        right: 14px;
-        width: 48px;
-        height: 8px;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
         content: '';
-        background-image: url(./assets/img/control/arrow-send.svg);
-        transform: translateY(-50%);
+        border-radius: 1px;
+        @extend %transition;
       }
+    }
 
-      input {
-        text-transform: uppercase;
-        @include font-size(1.4rem, 500);
-        color: $primary-footer-color;
-        outline: none;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-      }
+    .checkbox__text {
+      padding-left: 22px;
     }
   }
 
-  .about-us__online-centre {
-    margin-right: 608px;
-    color: $primary-footer-color;
+  .form__send {
+    position: relative;
+    @include alignment(flex-end, center, row, nowrap);
+    width: 100%;
+    cursor: pointer;
 
-    .online-centre__name {
-      margin-bottom: 28px;
-      @include font-size(1.4rem, 700);
-      line-height: 2.6rem;
+    .send-button {
       text-transform: uppercase;
+      @include font-size(1.4rem, 500);
+      color: $primary-footer-color;
+      margin-right: 18px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
     }
 
-    .online-centre__street {
-      @include font-size(1.4rem, 300);
-      font-style: normal;
-    }
-
-    .online-centre__time {
-      display: block;
-      margin-bottom: 14px;
-      @include font-size(1.4rem, 300);
-    }
-
-    .online-centre__phone {
-      @include font-size(1.4rem, 300);
-
-      a {
-        color: $primary-footer-color;
-        text-decoration: none;
-      }
-    }
-
-    .online-centre__email {
-      margin-bottom: 18px;
-      @include font-size(1.4rem, 300);
-
-      a {
-        color: $primary-footer-color;
-        text-decoration: none;
-      }
-    }
-
-    .online-centre__social-footer {
-      .social-footer__direction {
-        @include alignment(space-between, center, row, nowrap);
-        width: 125px;
-      }
+    .send-arrow {
+      display: inline-block;
+      width: 48px;
+      height: 10px;
+      margin-right: 16px;
+      content: '';
+      background-image: url(./assets/img/control/arrow-send.svg);
+      background-repeat: no-repeat;
     }
   }
+}
+
+.footer__online-centre {
+  order: 5;
+  color: $primary-footer-color;
+
+  .online-centre__name {
+    margin-bottom: 28px;
+    @include font-size(1.4rem, 700);
+    line-height: 2.6rem;
+    text-transform: uppercase;
+  }
+
+  .online-centre__street {
+    @include font-size(1.4rem, 300);
+    font-style: normal;
+  }
+
+  .online-centre__time {
+    display: block;
+    margin-bottom: 14px;
+    @include font-size(1.4rem, 300);
+  }
+
+  .online-centre__phone {
+    @include font-size(1.4rem, 300);
+
+    a {
+      color: $primary-footer-color;
+      text-decoration: none;
+    }
+  }
+
+  .online-centre__email {
+    margin-bottom: 18px;
+    @include font-size(1.4rem, 300);
+
+    a {
+      color: $primary-footer-color;
+      text-decoration: none;
+    }
+  }
+
+  .online-centre__social-footer {
+    .social-footer__direction {
+      @include alignment(space-between, center, row, nowrap);
+      width: 125px;
+    }
+  }
+}
+
+.footer__button {
+  order: 3;
 }
 
 .footer__copyright {
+  order: 6;
   @include alignment(flex-start, center, column, nowrap);
   width: 100%;
+  padding-top: 26px;
+  border-top: 1px solid #fefefe;
 
   span {
     width: 100%;

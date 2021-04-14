@@ -199,7 +199,7 @@
             type="range"
             min="0"
             max="7"
-            value="2"
+            value="1"
             step="1"
           />
         </div>
@@ -290,124 +290,122 @@
             </div>
           </div>
         </div>
-        <a href="./panda.html"
-          ><button class="content__button button--custom">
-            Watch online
-          </button></a
-        >
+        <a href="./panda.html" class="content__button button--custom">
+          Watch online
+        </a>
       </div>
     </main>
 
     <footer class="footer">
       <div class="footer__wrapper wrapper">
+        <a href="#" class="footer__logo">
+          <span class="logo__primary-footer">Zoo</span>
+          <span class="logo__secondary-footer">online</span>
+        </a>
+
         <div class="footer__navigation">
-          <a href="#" class="navigation__logo">
-            <span class="logo__primary-footer">Zoo</span>
-            <span class="logo__secondary-footer">online</span>
-          </a>
-          <div class="navigation__link">
-            <ul>
-              <li><a href="../../index.html">About</a></li>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="./assets/pages/panda.html" class="navigation__link"
+                >Zoos</a
+              >
+            </li>
+            <li>
+              <a href="./assets/pages/map.html" class="navigation__link">Map</a>
+            </li>
+            <li>
+              <a
+                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                class="navigation__link"
+                >Design</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <form action="#" id="contact-us" class="footer__form">
+          <h5 class="form__title">Contact us</h5>
+          <div class="form__name">
+            <input type="text" placeholder="Name" required />
+          </div>
+          <div class="form__email">
+            <input type="email" placeholder="Email" required />
+          </div>
+          <fieldset class="form__message">
+            <legend class="message__legend">Please enter your message</legend>
+            <textarea
+              class="message__textarea"
+              cols="10"
+              rows="1"
+              maxlength="280"
+              required
+            ></textarea>
+          </fieldset>
+          <label class="form__checkbox">
+            <input type="checkbox" />
+            <span class="checkbox__custom"></span>
+            <span class="checkbox__text"
+              >I agree to the processing of Personal Data</span
+            >
+          </label>
+          <label class="form__send">
+            <input type="submit" value="Send" class="send-button" />
+            <span class="send-arrow"></span>
+          </label>
+        </form>
+
+        <div class="footer__online-centre">
+          <p class="online-centre__name">ZOO Online Centre</p>
+          <address class="online-centre__street">
+            132, Address District, Street
+          </address>
+          <time class="online-centre__time">
+            Open Daily 10:00 am - 5:00 pm</time
+          >
+          <div class="online-centre__phone">
+            <span>T</span><a href="tel:(702)163-3433">(702) 163-3433</a>
+          </div>
+          <div class="online-centre__email">
+            <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
+          </div>
+          <div class="online-centre__social-footer">
+            <ul class="social-footer__direction">
               <li>
-                <a href="./panda.html" class="link__footer">Zoos</a>
+                <a href="https://www.instagram.com/">
+                  <svg class="social-icon">
+                    <use xlink:href="#instagram"></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a href="#" class="link__footer">Map</a>
+                <a href="https://twitter.com/">
+                  <svg class="social-icon">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a
-                  href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
-                  class="link__footer"
-                  >Design</a
-                >
+                <a href="https://vk.com/">
+                  <svg class="social-icon">
+                    <use xlink:href="#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/">
+                  <svg class="social-icon">
+                    <use xlink:href="#youtube"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-            <a href="#">
-              <button class="link__button button--footer">
-                Donate for volunteers
-              </button></a
-            >
           </div>
         </div>
 
-        <div id="contact-us" class="footer__about-us">
-          <form action="#" class="about-us__form">
-            <h5 class="form__title">Contact us</h5>
-            <div class="form__name">
-              <input type="text" placeholder="Name" required />
-            </div>
-            <div class="form__email">
-              <input type="email" placeholder="Email" required />
-            </div>
-            <fieldset class="form__message">
-              <legend class="message__legend">Please enter your message</legend>
-              <textarea
-                class="message__textarea"
-                cols="10"
-                rows="1"
-                maxlength="280"
-                required
-              ></textarea>
-            </fieldset>
-            <label class="form__checkbox">
-              <input type="checkbox" />
-              <span class="checkbox__custom"></span>
-              <span class="checkbox__text"
-                >I agree to the processing of Personal Data</span
-              >
-            </label>
-            <div class="form__send">
-              <input type="submit" value="Send" />
-            </div>
-          </form>
-          <div class="about-us__online-centre">
-            <p class="online-centre__name">ZOO Online Centre</p>
-            <address class="online-centre__street">
-              132, Address District, Street
-            </address>
-            <time class="online-centre__time">
-              Open Daily 10:00 am - 5:00 pm</time
-            >
-            <div class="online-centre__phone">
-              <span>T</span><a href="tel:(702)163-3433">(702) 163-3433</a>
-            </div>
-            <div class="online-centre__email">
-              <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
-            </div>
-            <div class="online-centre__social-footer">
-              <ul class="social-footer__direction">
-                <li>
-                  <a href="https://www.instagram.com/">
-                    <svg class="social-icon">
-                      <use xlink:href="#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/">
-                    <svg class="social-icon">
-                      <use xlink:href="#twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://vk.com/">
-                    <svg class="social-icon">
-                      <use xlink:href="#vk"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/">
-                    <svg class="social-icon">
-                      <use xlink:href="#youtube"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <a href="#" class="footer__button button--footer">
+          Donate for volunteers
+        </a>
 
         <div class="footer__copyright">
           <span class="copyright__author">©Noora Sagnayeva</span>
