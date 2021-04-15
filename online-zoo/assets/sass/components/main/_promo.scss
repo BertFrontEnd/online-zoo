@@ -2,6 +2,7 @@
   overflow-x: hidden;
   background-image: url(./assets/img/background/promo.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .promo__wrapper {
@@ -31,6 +32,7 @@
 
   .slider__line {
     position: absolute;
+    left: 0;
     bottom: 177px;
     width: 1920px;
     height: 2px;
@@ -158,5 +160,48 @@
 
   .control__counter {
     margin-bottom: 8px;
+  }
+}
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .promo {
+    background-position: center bottom;
+  }
+
+  .promo__wrapper {
+    padding: 127px 0px 497px;
+  }
+
+  .promo__slider {
+    bottom: 143px;
+    right: -1295px;
+
+    .slider__line {
+      left: -116px;
+      bottom: 162px;
+    }
+
+    .slider__image {
+      width: 1745px;
+
+      .image__container {
+        width: 180px;
+        height: 261px;
+        margin: 0 15px;
+
+        &.container--current {
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  .promo__social-header {
+    bottom: 60px;
+  }
+
+  .promo__control {
+    bottom: 69px;
+    right: -28px;
   }
 }

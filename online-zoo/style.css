@@ -592,6 +592,12 @@ iframe {
   margin: 0 auto;
 }
 
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .wrapper {
+    max-width: 900px;
+  }
+}
+
 .header {
   z-index: 9;
   background-color: var(--header-background-color);
@@ -726,6 +732,7 @@ iframe {
   overflow-x: hidden;
   background-image: url(./assets/img/background/promo.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .promo__wrapper {
@@ -771,6 +778,7 @@ iframe {
 
 .promo__slider .slider__line {
   position: absolute;
+  left: 0;
   bottom: 177px;
   width: 1920px;
   height: 2px;
@@ -942,6 +950,41 @@ iframe {
   margin-bottom: 8px;
 }
 
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .promo {
+    background-position: center bottom;
+  }
+  .promo__wrapper {
+    padding: 127px 0px 497px;
+  }
+  .promo__slider {
+    bottom: 143px;
+    right: -1295px;
+  }
+  .promo__slider .slider__line {
+    left: -116px;
+    bottom: 162px;
+  }
+  .promo__slider .slider__image {
+    width: 1745px;
+  }
+  .promo__slider .slider__image .image__container {
+    width: 180px;
+    height: 261px;
+    margin: 0 15px;
+  }
+  .promo__slider .slider__image .image__container.container--current {
+    top: 2px;
+  }
+  .promo__social-header {
+    bottom: 60px;
+  }
+  .promo__control {
+    bottom: 69px;
+    right: -28px;
+  }
+}
+
 .how-it-works__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -983,12 +1026,15 @@ iframe {
 }
 
 .how-it-works__slider .slider__image .image__container {
+  width: 790px;
   height: 323px;
 }
 
 .how-it-works__slider .slider__image .image__container img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 
@@ -1013,6 +1059,17 @@ iframe {
 
 .how-it-works__control .control__counter {
   margin-bottom: 8px;
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .how-it-works__description {
+    width: 746px;
+    margin-bottom: 14px;
+  }
+  .how-it-works__slider .slider__image .image__container {
+    width: 746px;
+    height: 323px;
+  }
 }
 
 .inspiration {
@@ -1090,6 +1147,12 @@ iframe {
 .inspiration__wrapper .content__text {
   line-height: 1.6rem;
   color: var(--secondary-text-color);
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .inspiration__wrapper {
+    padding: 100px 0 115px;
+  }
 }
 
 .pets-in-zoo__wrapper {

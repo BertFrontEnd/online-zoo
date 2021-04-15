@@ -3,3 +3,9 @@
   max-width: $content-width-desktop-max;
   margin: 0 auto;
 }
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .wrapper {
+    max-width: $content-width-desktop-min;
+  }
+}

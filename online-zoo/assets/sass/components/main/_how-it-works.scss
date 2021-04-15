@@ -25,11 +25,13 @@
 
   .slider__image {
     .image__container {
+      width: 790px;
       height: 323px;
 
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
         border-radius: 5px;
       }
     }
@@ -42,5 +44,21 @@
 
   .control__counter {
     margin-bottom: 8px;
+  }
+}
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .how-it-works__description {
+    width: 746px;
+    margin-bottom: 14px;
+  }
+
+  .how-it-works__slider {
+    .slider__image {
+      .image__container {
+        width: 746px;
+        height: 323px;
+      }
+    }
   }
 }
