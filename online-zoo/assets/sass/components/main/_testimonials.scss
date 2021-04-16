@@ -18,12 +18,13 @@
     top: 50%;
     left: 50%;
     @include alignment(space-between, center, row, nowrap);
-    width: 1316px;
+    width: 100%;
     transform: translate(-50%, -50%);
   }
 
   .slider__card {
     @include alignment(space-between, center, row, nowrap);
+    padding: 0 42px;
 
     .card__info {
       z-index: 1;
@@ -69,5 +70,17 @@
 
   .control__counter {
     margin-bottom: 8px;
+  }
+}
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .testimonials__slider {
+    .slider__card {
+      padding: 0 38px;
+
+      .card__info {
+        width: 440px;
+      }
+    }
   }
 }

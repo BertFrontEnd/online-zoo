@@ -28,7 +28,7 @@
 
   .content__step {
     @include alignment(center, center, column, nowrap);
-    width: 245px;
+    min-width: 245px;
     height: 245px;
     border-radius: 50%;
     border: 3px solid $border-icon-color;
@@ -69,8 +69,28 @@
 
   .content-step__arrow {
     @include alignment(center, center, column, nowrap);
-    width: 107px;
+    width: 106px;
     height: 245px;
     margin: 0 63px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(./assets/img/control/step-arrow.svg);
+  }
+}
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .pay-and-feed__description {
+    margin-bottom: 45px;
+  }
+
+  .pay-and-feed__content {
+    margin-bottom: 50px;
+
+    .content-step__arrow {
+      margin: 0 15px;
+
+      background-image: url(./assets/img/control/step-arrow-little.svg);
+    }
   }
 }

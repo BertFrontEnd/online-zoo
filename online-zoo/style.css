@@ -592,7 +592,7 @@ iframe {
   margin: 0 auto;
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   .wrapper {
     max-width: 900px;
   }
@@ -950,7 +950,7 @@ iframe {
   margin-bottom: 8px;
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   .promo {
     background-position: center bottom;
   }
@@ -1061,7 +1061,7 @@ iframe {
   margin-bottom: 8px;
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   .how-it-works__description {
     width: 746px;
     margin-bottom: 14px;
@@ -1149,7 +1149,7 @@ iframe {
   color: var(--secondary-text-color);
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   .inspiration__wrapper {
     padding: 100px 0 115px;
   }
@@ -1201,6 +1201,7 @@ iframe {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   margin-bottom: 25px;
+  padding: 0 56px;
 }
 
 .pets-in-zoo__slider .slider___arrow {
@@ -1222,7 +1223,7 @@ iframe {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 1316px;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -1266,6 +1267,8 @@ iframe {
 .pets-in-zoo__slider .slider__image .image__container img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 
@@ -1327,6 +1330,17 @@ iframe {
 
 .pets-in-zoo__control .control__counter {
   margin-bottom: 8px;
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .pets-in-zoo__title {
+    margin-bottom: 26px;
+  }
+  .pets-in-zoo__slider .slider__image .image__container {
+    width: 210px;
+    height: 301px;
+    margin: 0 10px;
+  }
 }
 
 .pay-and-feed {
@@ -1416,7 +1430,7 @@ iframe {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 245px;
+  min-width: 245px;
   height: 245px;
   border-radius: 50%;
   border: 3px solid #4bd8b5;
@@ -1470,9 +1484,26 @@ iframe {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 107px;
+  width: 106px;
   height: 245px;
   margin: 0 63px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url(./assets/img/control/step-arrow.svg);
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .pay-and-feed__description {
+    margin-bottom: 45px;
+  }
+  .pay-and-feed__content {
+    margin-bottom: 50px;
+  }
+  .pay-and-feed__content .content-step__arrow {
+    margin: 0 15px;
+    background-image: url(./assets/img/control/step-arrow-little.svg);
+  }
 }
 
 .testimonials__wrapper {
@@ -1538,7 +1569,7 @@ iframe {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 1316px;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -1559,6 +1590,7 @@ iframe {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  padding: 0 42px;
 }
 
 .testimonials__slider .slider__card .card__info {
@@ -1633,6 +1665,15 @@ iframe {
 
 .testimonials__control .control__counter {
   margin-bottom: 8px;
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .testimonials__slider .slider__card {
+    padding: 0 38px;
+  }
+  .testimonials__slider .slider__card .card__info {
+    width: 440px;
+  }
 }
 
 .primary-map {
