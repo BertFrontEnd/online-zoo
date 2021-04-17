@@ -33,3 +33,9 @@
     transform: translateY(-50%);
   }
 }
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .header__checkbox {
+    margin-right: 75px;
+  }
+}

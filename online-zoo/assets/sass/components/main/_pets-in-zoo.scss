@@ -75,8 +75,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 278px;
-      height: 400px;
+      width: inherit;
+      height: inherit;
       opacity: 0;
       visibility: hidden;
       border-radius: 5px;
@@ -116,6 +116,15 @@
         width: 210px;
         height: 301px;
         margin: 0 10px;
+      }
+
+      .container__info {
+        bottom: 32px;
+        left: 9px;
+
+        .info__watch {
+          margin-right: 2px;
+        }
       }
     }
   }

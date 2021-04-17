@@ -35,7 +35,6 @@
   @include alignment(center, center, row, nowrap);
   order: 2;
   margin-top: 18px;
-  margin-right: 139px;
 
   ul {
     @include alignment(center, center, row, nowrap);
@@ -254,6 +253,9 @@
 }
 
 .footer__button {
+  position: absolute;
+  top: 99px;
+  right: 0;
   order: 3;
 }
 
@@ -269,5 +271,53 @@
     @include font-size(1.2rem, 300);
     letter-spacing: 0.2px;
     color: $secondary-footer-color;
+  }
+}
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .footer__logo {
+    order: 1;
+    margin-right: 398px;
+    margin-bottom: 58px;
+  }
+
+  .footer__navigation {
+    order: 2;
+    margin-top: 18px;
+    margin-right: 0px;
+  }
+
+  .footer__form {
+    order: 3;
+    margin-bottom: 62px;
+    margin-right: 75px;
+
+    .form__message {
+      margin-bottom: 15px;
+    }
+
+    .form__send {
+      .send-button {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .footer__online-centre {
+    position: relative;
+    order: 4;
+    margin-top: -12px;
+    margin-right: -15px;
+    margin-bottom: 10px;
+  }
+
+  .footer__button {
+    top: 423px;
+    left: 460px;
+    order: 5;
+  }
+
+  .footer__copyright {
+    padding-top: 30px;
   }
 }

@@ -9,3 +9,9 @@
     max-width: $content-width-desktop-min;
   }
 }
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .wrapper {
+    max-width: $content-width-tablet;
+  }
+}

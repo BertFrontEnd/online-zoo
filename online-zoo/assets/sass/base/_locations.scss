@@ -62,3 +62,39 @@
 .pin-icon.pin-active {
   fill: $pin-active;
 }
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .pin--eagle {
+    &:hover {
+      ~ .location__card.card--eagle {
+        top: 132px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .pin--alligator {
+    &:hover {
+      ~ .location__card.card--alligator {
+        top: 146px;
+      }
+    }
+  }
+
+  .pin--gorilla {
+    &:hover {
+      ~ .location__card.card--gorilla {
+        top: 232px;
+      }
+    }
+  }
+
+  .pin--panda {
+    &:hover {
+      ~ .location__card.card--panda {
+        top: 146px;
+      }
+    }
+  }
+}

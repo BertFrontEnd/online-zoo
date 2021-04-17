@@ -19,7 +19,8 @@
   --all-range-inactive-text-color: #bdbdbd;
   --card-color: #fefefe;
   --tooltip-color: #fefefe;
-  --map-color: #333333;
+  --map-max: url(./assets/img/map/map-light-max.svg);
+  --map-min: url(./assets/img/map/map-light-min.svg);
   --pinned-map-color: #dadada;
   --stroke-pinned-map-color: #333333;
   --checkbox-label-color: #f2f2f2;
@@ -47,7 +48,8 @@
   --all-range-inactive-text-color: #bdbdbd;
   --card-color: #fefefe;
   --tooltip-color: #fefefe;
-  --map-color: #333333;
+  --map-max: url(./assets/img/map/map-light-max.svg);
+  --map-min: url(./assets/img/map/map-light-min.svg);
   --pinned-map-color: #dadada;
   --stroke-pinned-map-color: #333333;
   --checkbox-label-color: #f2f2f2;
@@ -75,7 +77,8 @@
   --all-range-inactive-text-color: #bdbdbd;
   --card-color: #3c3c3c;
   --tooltip-color: #333333;
-  --map-color: #e1e1e1;
+  --map-max: url(./assets/img/map/map-dark-max.svg);
+  --map-min: url(./assets/img/map/map-dark-min.svg);
   --pinned-map-color: #333333;
   --stroke-pinned-map-color: #fefefe;
   --checkbox-label-color: #4f4f4f;
