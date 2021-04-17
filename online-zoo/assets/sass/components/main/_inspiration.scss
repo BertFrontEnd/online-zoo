@@ -6,49 +6,70 @@
   @include alignment(center, flex-start, row, nowrap);
   width: 100%;
   padding: 100px 0 131px;
+}
 
-  .inspiration__content {
-    @include alignment(center, center, column, nowrap);
-    width: 380px;
+.inspiration__content {
+  @include alignment(center, center, column, nowrap);
+  width: 380px;
+  letter-spacing: 0.1px;
 
-    &:nth-child(2) {
-      margin: 0 30px;
-    }
+  &:nth-child(2) {
+    margin: 0 30px;
   }
+}
 
-  .content__icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 12px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.content__icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-  .icon--inspires {
-    background-image: url(./assets/img/icon/inspires.svg);
-  }
+.icon--inspires {
+  background-image: url(./assets/img/icon/inspires.svg);
+}
 
-  .icon--mission {
-    background-image: url(./assets/img/icon/mission.svg);
-  }
+.icon--mission {
+  background-image: url(./assets/img/icon/mission.svg);
+}
 
-  .icon--belief {
-    background-image: url(./assets/img/icon/belief.svg);
-  }
+.icon--belief {
+  background-image: url(./assets/img/icon/belief.svg);
+}
 
-  .content__title {
-    margin-bottom: 12px;
-  }
+.content__title {
+  margin-bottom: 12px;
+}
 
-  .content__text {
-    line-height: 1.6rem;
-    color: var(--secondary-text-color);
-  }
+.content__text {
+  line-height: 1.6rem;
+  color: var(--secondary-text-color);
 }
 
 @media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
   .inspiration__wrapper {
     padding: 100px 0 115px;
+  }
+
+  .inspiration__content {
+    width: 287px;
+  }
+}
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .inspiration__wrapper {
+    @include alignment(center, flex-start, row, wrap);
+    padding: 101px 0 52px;
+  }
+
+  .inspiration__content {
+    width: 287px;
+    margin-bottom: 48px;
+
+    &:nth-child(2) {
+      margin: 0 30px 48px;
+    }
   }
 }

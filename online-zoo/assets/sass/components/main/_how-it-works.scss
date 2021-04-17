@@ -62,3 +62,25 @@
     }
   }
 }
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .how-it-works__wrapper {
+    padding: 62px 0 68px;
+  }
+
+  .how-it-works__description {
+    width: 600px;
+    margin-bottom: 31px;
+  }
+
+  .how-it-works__slider {
+    margin-bottom: 26px;
+
+    .slider__image {
+      .image__container {
+        width: 600px;
+        height: 323px;
+      }
+    }
+  }
+}

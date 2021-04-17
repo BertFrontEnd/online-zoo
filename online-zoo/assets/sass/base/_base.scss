@@ -17,6 +17,7 @@ h1 {
 
 h2 {
   @include font-size(8.9rem, 900);
+  line-height: 10.5rem;
   color: var(--base-color);
 }
 
@@ -49,6 +50,14 @@ h5 {
 
 iframe {
   border-radius: 5px;
+}
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  h2 {
+    @include font-size(6.6rem, 900);
+    letter-spacing: -0.9px;
+    line-height: 7.5rem;
+  }
 }
 
 /* .warning {

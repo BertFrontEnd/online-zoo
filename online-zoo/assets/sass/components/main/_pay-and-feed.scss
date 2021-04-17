@@ -12,11 +12,11 @@
   @include alignment(space-between, center, column, nowrap);
   margin-bottom: 88px;
 
-  .pay-and-feed__title {
+  .description__title {
     margin-bottom: 22px;
   }
 
-  .pay-and-feed__text {
+  .description__text {
     letter-spacing: 0.1px;
   }
 }
@@ -89,8 +89,44 @@
 
     .content-step__arrow {
       margin: 0 15px;
-
       background-image: url(./assets/img/control/step-arrow-little.svg);
+    }
+  }
+}
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .pay-and-feed__wrapper {
+    padding: 93px 0 99px;
+  }
+
+  .pay-and-feed__description {
+    margin-bottom: 45px;
+
+    .description__title {
+      margin-bottom: 8px;
+    }
+
+    .description__text {
+      width: 538px;
+      text-align: center;
+      line-height: 1.7rem;
+    }
+  }
+
+  .pay-and-feed__content {
+    @include alignment(center, center, column, wrap);
+    margin-bottom: 51px;
+
+    .content__step {
+      margin: 0 0;
+    }
+
+    .content-step__arrow {
+      width: 42px;
+      height: 42px;
+      margin: 29px 0;
+      background-image: url(./assets/img/control/step-arrow-little.svg);
+      transform: rotate(90deg);
     }
   }
 }

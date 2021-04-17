@@ -68,8 +68,6 @@
     &:hover {
       ~ .location__card.card--eagle {
         top: 132px;
-        opacity: 1;
-        visibility: visible;
       }
     }
   }
@@ -94,6 +92,41 @@
     &:hover {
       ~ .location__card.card--panda {
         top: 146px;
+      }
+    }
+  }
+}
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .pin--eagle {
+    &:hover {
+      ~ .location__card.card--eagle {
+        top: 77px;
+      }
+    }
+  }
+
+  .pin--alligator {
+    &:hover {
+      ~ .location__card.card--alligator {
+        top: 82px;
+      }
+    }
+  }
+
+  .pin--gorilla {
+    &:hover {
+      ~ .location__card.card--gorilla {
+        z-index: 1;
+        top: 136px;
+      }
+    }
+  }
+
+  .pin--panda {
+    &:hover {
+      ~ .location__card.card--panda {
+        top: 80px;
       }
     }
   }

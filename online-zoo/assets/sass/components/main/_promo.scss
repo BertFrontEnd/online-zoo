@@ -17,7 +17,6 @@
 
   .content__title {
     margin-bottom: 37px;
-    line-height: 10.5rem;
   }
 
   a {
@@ -203,5 +202,52 @@
   .promo__control {
     bottom: 69px;
     right: -28px;
+  }
+}
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .promo__wrapper {
+    padding: 121px 0px 577px;
+  }
+
+  .promo__content {
+    width: 600px;
+
+    .content__title {
+      margin-bottom: 30px;
+    }
+  }
+
+  .promo__slider {
+    bottom: 175px;
+    right: -1297px;
+
+    .slider__line {
+      left: 12px;
+      bottom: 160px;
+    }
+
+    .slider__image {
+      width: 1873px;
+
+      .image__container {
+        width: 180px;
+        height: 261px;
+        margin: 0 15px;
+
+        &.container--current {
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  .promo__social-header {
+    bottom: 88px;
+  }
+
+  .promo__control {
+    bottom: 100px;
+    right: 34px;
   }
 }

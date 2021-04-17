@@ -129,3 +129,39 @@
     }
   }
 }
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .pets-in-zoo__slider {
+    padding: 0 0px;
+    margin-bottom: 30px;
+
+    .slider___arrow {
+      display: none;
+    }
+
+    .slider__image {
+      @include alignment(flex-start, center, row, nowrap);
+      width: 600px;
+      overflow: hidden;
+
+      .image__container {
+        min-width: 210px;
+        height: 301px;
+        margin: 0 10px;
+      }
+
+      .container__info {
+        bottom: 32px;
+        left: 9px;
+
+        .info__watch {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+  .pets-in-zoo__control {
+    margin-bottom: 36px;
+  }
+}
