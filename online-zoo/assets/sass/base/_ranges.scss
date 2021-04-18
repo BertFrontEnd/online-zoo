@@ -73,3 +73,17 @@
     width: 62px;
   }
 }
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .range--promo {
+    width: 140px;
+    height: 5px;
+    outline: none;
+    appearance: none;
+
+    &::-webkit-slider-thumb {
+      width: 17px;
+      height: 10px;
+    }
+  }
+}

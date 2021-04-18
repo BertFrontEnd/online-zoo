@@ -130,3 +130,34 @@
     }
   }
 }
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .pay-and-feed__wrapper {
+    padding: 46px 0 50px;
+  }
+
+  .pay-and-feed__description {
+    margin-bottom: 0;
+
+    .description__text {
+      display: none;
+    }
+  }
+
+  .pay-and-feed__content {
+    @include alignment(center, center, column, wrap);
+    margin-bottom: 40px;
+
+    .content__step {
+      margin: 0 0;
+    }
+
+    .content-step__arrow {
+      width: 42px;
+      height: 42px;
+      margin: 29px 0;
+      background-image: url(./assets/img/control/step-arrow-little.svg);
+      transform: rotate(90deg);
+    }
+  }
+}

@@ -131,3 +131,49 @@
     }
   }
 }
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .location__pin {
+    width: 33px;
+    height: 46px;
+
+    .pin-icon {
+      width: 33px;
+      height: 46px;
+    }
+  }
+
+  .pin--eagle {
+    &:hover {
+      ~ .location__card.card--eagle {
+        top: 36px;
+      }
+    }
+  }
+
+  .pin--alligator {
+    &:hover {
+      ~ .location__card.card--alligator {
+        z-index: 1;
+        top: 44px;
+      }
+    }
+  }
+
+  .pin--gorilla {
+    &:hover {
+      ~ .location__card.card--gorilla {
+        z-index: 1;
+        top: 70px;
+      }
+    }
+  }
+
+  .pin--panda {
+    &:hover {
+      ~ .location__card.card--panda {
+        top: 42px;
+      }
+    }
+  }
+}

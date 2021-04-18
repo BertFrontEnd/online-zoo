@@ -165,3 +165,47 @@
     margin-bottom: 36px;
   }
 }
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .pets-in-zoo__wrapper {
+    padding: 93px 0 50px;
+  }
+
+  .pets-in-zoo__title {
+    margin-bottom: 25px;
+  }
+
+  .pets-in-zoo__slider {
+    padding: 0 0px;
+    margin-bottom: 26px;
+
+    .slider___arrow {
+      display: none;
+    }
+
+    .slider__image {
+      @include alignment(flex-start, center, row, nowrap);
+      width: 300px;
+      overflow: hidden;
+
+      .image__container {
+        min-width: 210px;
+        height: 301px;
+        margin: 0 8px;
+      }
+
+      .container__info {
+        bottom: 32px;
+        left: 9px;
+
+        .info__watch {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+  .pets-in-zoo__control {
+    margin-bottom: 26px;
+  }
+}

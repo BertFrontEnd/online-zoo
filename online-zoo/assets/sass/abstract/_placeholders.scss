@@ -31,3 +31,9 @@
   background-color: transparent;
   color: $primary-footer-color;
 }
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  %reset-input {
+    width: 300px;
+  }
+}

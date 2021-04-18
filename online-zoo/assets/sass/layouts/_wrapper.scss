@@ -15,3 +15,9 @@
     max-width: $content-width-tablet;
   }
 }
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .wrapper {
+    max-width: $content-width-mobile;
+  }
+}

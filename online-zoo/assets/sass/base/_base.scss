@@ -60,6 +60,17 @@ iframe {
   }
 }
 
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  h2 {
+    @include font-size(4.8rem, 900);
+    line-height: 5.6rem;
+  }
+
+  h3 {
+    @include font-size(3.6rem, 900);
+  }
+}
+
 /* .warning {
   position: absolute;
   top: 150px;

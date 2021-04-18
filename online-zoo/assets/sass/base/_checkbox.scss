@@ -39,3 +39,9 @@
     margin-right: 75px;
   }
 }
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .header__checkbox {
+    margin-right: 75px;
+  }
+}

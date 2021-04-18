@@ -1,7 +1,7 @@
 .how-it-works__wrapper {
   @include alignment(space-between, center, column, nowrap);
   width: 100%;
-  padding: 62px 0 101px;
+  padding: 92px 0 101px;
 }
 
 .how-it-works__description {
@@ -9,7 +9,6 @@
   margin-bottom: 30px;
 
   .description__title {
-    margin-top: 30px;
     margin-bottom: 22px;
   }
 
@@ -65,7 +64,7 @@
 
 @media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
   .how-it-works__wrapper {
-    padding: 62px 0 68px;
+    padding: 92px 0 68px;
   }
 
   .how-it-works__description {
@@ -82,5 +81,35 @@
         height: 323px;
       }
     }
+  }
+}
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .how-it-works__wrapper {
+    padding: 44px 0 53px;
+  }
+
+  .how-it-works__description {
+    width: 300px;
+    margin-bottom: 31px;
+
+    .description__title {
+      margin-bottom: 14px;
+    }
+  }
+
+  .how-it-works__slider {
+    margin-bottom: 16px;
+
+    .slider__image {
+      .image__container {
+        width: 300px;
+        height: 323px;
+      }
+    }
+  }
+
+  .how-it-works__control {
+    margin-bottom: 16px;
   }
 }

@@ -94,3 +94,33 @@
     }
   }
 }
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .header__wrapper {
+    padding: 16px 0 21px;
+  }
+
+  .header__navigation {
+    display: none;
+  }
+
+  .header__burger {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    @include alignment(space-between, flex-end, column, wrap);
+    width: 40px;
+    height: 21px;
+    transform: translateY(-50%);
+
+    .burger__line {
+      width: 100%;
+      height: 3px;
+      background-color: var(--primary-text-color);
+
+      &:last-child {
+        width: 80%;
+      }
+    }
+  }
+}
