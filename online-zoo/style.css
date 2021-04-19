@@ -231,27 +231,38 @@ iframe {
   }
 }
 
-/* .warning {
+.warning {
   position: absolute;
+  z-index: 999;
   top: 150px;
   left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 30vw;
-  padding: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50vw;
+  padding: 25px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  transform: translateX(-50%);
-
-  p {
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-  }
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
- */
+
+.warning p {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
 .header__checkbox {
   position: relative;
   cursor: pointer;
@@ -2576,52 +2587,42 @@ iframe {
   .primary-map__title {
     margin-bottom: 53px;
   }
-  .primary-map__map .map__earth,
-  .secondary-map__map .map__earth {
+  .primary-map__map .map__earth {
     width: 900px;
     height: 436px;
   }
-  .primary-map__map .map__earth .earth__image,
-  .secondary-map__map .map__earth .earth__image {
+  .primary-map__map .map__earth .earth__image {
     background-image: var(--map-min);
   }
-  .primary-map__map .map__location .pin--eagle,
-  .secondary-map__map .map__location .pin--eagle {
+  .primary-map__map .map__location .pin--eagle {
     top: 53px;
     left: 84px;
   }
-  .primary-map__map .map__location .pin--alligator,
-  .secondary-map__map .map__location .pin--alligator {
+  .primary-map__map .map__location .pin--alligator {
     top: 66px;
     left: 174px;
   }
-  .primary-map__map .map__location .pin--gorilla,
-  .secondary-map__map .map__location .pin--gorilla {
+  .primary-map__map .map__location .pin--gorilla {
     top: 153px;
     left: 419px;
   }
-  .primary-map__map .map__location .pin--panda,
-  .secondary-map__map .map__location .pin--panda {
+  .primary-map__map .map__location .pin--panda {
     top: 67px;
     left: 656px;
   }
-  .primary-map__map .map__location .card--eagle,
-  .secondary-map__map .map__location .card--eagle {
+  .primary-map__map .map__location .card--eagle {
     top: 152px;
     left: 100px;
   }
-  .primary-map__map .map__location .card--alligator,
-  .secondary-map__map .map__location .card--alligator {
+  .primary-map__map .map__location .card--alligator {
     top: 166px;
     left: 188px;
   }
-  .primary-map__map .map__location .card--gorilla,
-  .secondary-map__map .map__location .card--gorilla {
+  .primary-map__map .map__location .card--gorilla {
     top: 252px;
     left: 432px;
   }
-  .primary-map__map .map__location .card--panda,
-  .secondary-map__map .map__location .card--panda {
+  .primary-map__map .map__location .card--panda {
     top: 166px;
     left: 272px;
   }
@@ -3788,6 +3789,7 @@ iframe {
       flex-wrap: nowrap;
   width: 100%;
   margin-bottom: 28px;
+  padding: 0 56px;
 }
 
 .secondary-map__slider .slider___arrow {
@@ -3809,7 +3811,7 @@ iframe {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 1212px;
+  width: 75%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -3910,5 +3912,113 @@ iframe {
 
 .secondary-map__map {
   margin-bottom: 46px;
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .secondary-map__description {
+    margin-bottom: 35px;
+  }
+  .secondary-map__slider {
+    margin-bottom: 20px;
+  }
+  .secondary-map__slider .slider___arrow {
+    width: 90%;
+  }
+  .secondary-map__slider .slider__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 660px;
+    overflow: hidden;
+  }
+  .secondary-map__slider .slider__image .image__container {
+    min-width: 108px;
+  }
+  .secondary-map__slider .slider__image .container--current {
+    min-width: 157px;
+  }
+  .secondary-map__control {
+    margin-bottom: 51px;
+  }
+  .secondary-map__map {
+    margin-bottom: 35px;
+  }
+  .secondary-map__map .map__earth {
+    width: 800px;
+    height: 388px;
+  }
+  .secondary-map__map .map__earth .earth__image {
+    background-image: var(--map-min);
+  }
+  .secondary-map__map .map__location .location__pin {
+    width: 59px;
+    height: 83px;
+  }
+  .secondary-map__map .map__location .location__pin .pin-icon {
+    width: 59px;
+    height: 83px;
+  }
+  .secondary-map__map .map__location .pin--eagle {
+    top: 47px;
+    left: 76px;
+  }
+  .secondary-map__map .map__location .pin--alligator {
+    top: 59px;
+    left: 156px;
+  }
+  .secondary-map__map .map__location .pin--gorilla {
+    top: 137px;
+    left: 374px;
+  }
+  .secondary-map__map .map__location .pin--panda {
+    top: 59px;
+    left: 584px;
+  }
+  .secondary-map__map .map__location .location__avatar {
+    top: 12px;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+  }
+  .secondary-map__map .map__location .card--eagle {
+    top: 152px;
+    left: 104px;
+  }
+  .secondary-map__map .map__location .card--alligator {
+    top: 164px;
+    left: 184px;
+  }
+  .secondary-map__map .map__location .card--gorilla {
+    top: 240px;
+    left: 402px;
+  }
+  .secondary-map__map .map__location .card--panda {
+    top: 166px;
+    left: 180px;
+  }
+  .secondary-map__map .map__location .pin--eagle:hover ~ .location__card.card--eagle {
+    top: 132px;
+  }
+  .secondary-map__map .map__location .pin--alligator:hover ~ .location__card.card--alligator {
+    top: 144px;
+  }
+  .secondary-map__map .map__location .pin--gorilla:hover ~ .location__card.card--gorilla {
+    top: 220px;
+  }
+  .secondary-map__map .map__location .pin--panda:hover ~ .location__card.card--panda {
+    top: 146px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

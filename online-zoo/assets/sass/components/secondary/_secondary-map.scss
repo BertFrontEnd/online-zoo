@@ -31,13 +31,14 @@
   @include alignment(center, center, row, nowrap);
   width: 100%;
   margin-bottom: 28px;
+  padding: 0 56px;
 
   .slider___arrow {
     position: absolute;
     top: 50%;
     left: 50%;
     @include alignment(space-between, center, row, nowrap);
-    width: 1212px;
+    width: 75%;
     transform: translate(-50%, -50%);
   }
 
@@ -95,4 +96,140 @@
 
 .secondary-map__map {
   margin-bottom: 46px;
+}
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .secondary-map__description {
+    margin-bottom: 35px;
+  }
+
+  .secondary-map__slider {
+    margin-bottom: 20px;
+
+    .slider___arrow {
+      width: 90%;
+    }
+
+    .slider__image {
+      @include alignment(flex-start, center, row, nowrap);
+      width: 660px;
+      overflow: hidden;
+
+      .image__container {
+        min-width: 108px;
+      }
+
+      .container--current {
+        min-width: 157px;
+      }
+    }
+  }
+
+  .secondary-map__control {
+    margin-bottom: 51px;
+  }
+
+  .secondary-map__map {
+    margin-bottom: 35px;
+
+    .map__earth {
+      width: 800px;
+      height: 388px;
+
+      .earth__image {
+        background-image: var(--map-min);
+      }
+    }
+
+    .map__location {
+      .location__pin {
+        width: 59px;
+        height: 83px;
+
+        .pin-icon {
+          width: 59px;
+          height: 83px;
+        }
+      }
+
+      .pin--eagle {
+        top: 47px;
+        left: 76px;
+      }
+
+      .pin--alligator {
+        top: 59px;
+        left: 156px;
+      }
+
+      .pin--gorilla {
+        top: 137px;
+        left: 374px;
+      }
+
+      .pin--panda {
+        top: 59px;
+        left: 584px;
+      }
+
+      .location__avatar {
+        top: 12px;
+        left: 50%;
+        width: 35px;
+        height: 35px;
+      }
+
+      .card--eagle {
+        top: 152px;
+        left: 104px;
+      }
+
+      .card--alligator {
+        top: 164px;
+        left: 184px;
+      }
+
+      .card--gorilla {
+        top: 240px;
+        left: 402px;
+      }
+
+      .card--panda {
+        top: 166px;
+        left: 180px;
+      }
+
+      .pin--eagle {
+        &:hover {
+          ~ .location__card.card--eagle {
+            top: 132px;
+          }
+        }
+      }
+
+      .pin--alligator {
+        &:hover {
+          ~ .location__card.card--alligator {
+            top: 144px;
+          }
+        }
+      }
+
+      .pin--gorilla {
+        &:hover {
+          ~ .location__card.card--gorilla {
+            top: 220px;
+          }
+        }
+      }
+
+      .pin--panda {
+        &:hover {
+          ~ .location__card.card--panda {
+            top: 146px;
+          }
+        }
+      }
+    }
+  }
 }
