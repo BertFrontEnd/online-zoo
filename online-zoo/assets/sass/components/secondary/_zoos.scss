@@ -3,9 +3,9 @@
 }
 
 .zoos__wrapper {
-  @include alignment(flex-start, flex-start, row, nowrap);
+  @include alignment(flex-start, flex-start, row, wrap);
   width: 100%;
-  padding: 51px 0 99px;
+  padding: 51px 0 111px;
 }
 
 .zoos__slider {
@@ -59,9 +59,10 @@
 }
 
 .zoos__video {
-  margin-right: 30px;
-  margin-left: 53px;
+  position: relative;
   @include alignment(flex-start, center, column, nowrap);
+  /* margin-right: 30px; */
+  margin-left: 53px;
 
   .video__title {
     align-self: flex-start;
@@ -71,16 +72,20 @@
 
   .video__current {
     align-self: flex-start;
-    margin-bottom: 23px;
+    width: 790px;
+    height: 442px;
+    margin-bottom: 30px;
   }
 
   .video__next {
     align-self: flex-start;
     @include alignment(center, center, row, nowrap);
-    margin-bottom: 23px;
+    margin-bottom: 30px;
 
     .next__iframe {
       position: relative;
+      width: 246px;
+      height: 141px;
 
       &:nth-child(2) {
         margin-left: 26px;
@@ -92,14 +97,17 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 246px;
-      height: 141px;
+      width: inherit;
+      height: inherit;
       border-radius: 5px;
       background-color: transparent;
     }
   }
 
   .video__dot {
+    position: absolute;
+    bottom: -12px;
+    left: 374px;
     @include alignment(space-between, center, row, nowrap);
     width: 40px;
     height: 12px;
@@ -160,6 +168,7 @@
 
   .description__diet {
     margin-bottom: 35px;
+
     .diet__title {
       @include font-size(2rem, 900);
       color: var(--primary-text-color);
@@ -168,6 +177,294 @@
     .diet__description {
       line-height: 1.7rem;
       color: var(--secondary-text-color);
+    }
+  }
+}
+
+@media (min-width: $width-desktop-min) and (max-width: $width-desktop-max) {
+  .zoos__slider {
+    top: 186px;
+    transform: translateX(-135px);
+
+    .slider___arrow {
+      height: 520px;
+    }
+
+    .slider__image {
+      .image__container {
+        width: 96px;
+        height: 96px;
+        margin: 4px 0;
+      }
+
+      .container--current {
+        width: 120px;
+        height: 120px;
+        margin: 10px 0;
+
+        img {
+          width: 104px;
+          height: 104px;
+          border-radius: 50%;
+          box-shadow: 0px 0px 0px 5px var(--secondary-background-color);
+        }
+      }
+    }
+  }
+
+  .zoos__video {
+    margin-left: -70px;
+
+    .video__title {
+      width: 760px;
+    }
+
+    .video__current {
+      width: 527px;
+      height: 297px;
+      margin-bottom: 27px;
+    }
+
+    .video__next {
+      align-self: flex-start;
+      @include alignment(center, center, row, nowrap);
+      margin-bottom: 30px;
+
+      .next__iframe {
+        position: relative;
+        width: 164px;
+        height: 94px;
+
+        &:nth-child(2) {
+          margin-left: 18px;
+          margin-right: 18px;
+        }
+      }
+    }
+
+    .video__dot {
+      left: 242px;
+    }
+  }
+
+  .zoos__description {
+    left: 597px;
+    width: 253px;
+
+    .description__population {
+      margin-bottom: 10px;
+    }
+
+    .description__diet {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (min-width: $width-tablet-min) and (max-width: $width-tablet-max) {
+  .zoos__wrapper {
+    padding: 51px 0 79px;
+  }
+  .zoos__slider {
+    top: 186px;
+    transform: translateX(-13px);
+
+    .slider___arrow {
+      height: 418px;
+    }
+
+    .slider__image {
+      .image__container {
+        width: 70px;
+        height: 70px;
+        margin: 4px 0;
+      }
+
+      .container--current {
+        width: 90px;
+        height: 90px;
+        margin: 10px 0;
+
+        img {
+          width: 78px;
+          height: 78px;
+          border-radius: 50%;
+          box-shadow: 0px 0px 0px 3px var(--secondary-background-color);
+        }
+      }
+    }
+  }
+
+  .zoos__video {
+    margin-left: 13px;
+
+    .video__title {
+      margin-bottom: 28px;
+      width: 497px;
+    }
+
+    .video__current {
+      width: 497px;
+      height: 280px;
+      margin-bottom: 15px;
+    }
+
+    .video__next {
+      align-self: flex-start;
+      @include alignment(center, center, row, nowrap);
+      margin-bottom: 87px;
+
+      .next__iframe {
+        position: relative;
+        width: 155px;
+        height: 89px;
+
+        &:nth-child(2) {
+          margin-left: 16px;
+          margin-right: 16px;
+        }
+      }
+    }
+
+    .video__dot {
+      bottom: 44px;
+      left: 228px;
+    }
+  }
+
+  .zoos__description {
+    position: static;
+    margin-left: 103px;
+    width: 497px;
+
+    .description__population {
+      margin-bottom: 8px;
+    }
+
+    .description__diet {
+      margin-bottom: 29px;
+    }
+  }
+}
+
+@media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
+  .zoos__wrapper {
+    padding: 31px 0 59px;
+  }
+  .zoos__slider {
+    top: 154px;
+    transform: translateX(-5px);
+
+    .slider___arrow {
+      height: 268px;
+    }
+
+    .slider__image {
+      .image__container {
+        width: 40px;
+        height: 40px;
+        margin: 2px 0;
+      }
+
+      .container--current {
+        width: 65px;
+        height: 65px;
+        margin: 5px 0;
+
+        img {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          box-shadow: 0px 0px 0px 3px var(--secondary-background-color);
+        }
+      }
+    }
+  }
+
+  .zoos__video {
+    margin-left: 20px;
+
+    .video__title {
+      margin-bottom: 16px;
+      width: 205px;
+      @include font-size(2.4rem, 900);
+    }
+
+    .video__current {
+      width: 205px;
+      height: 116px;
+      margin-bottom: 10px;
+    }
+
+    .video__next {
+      align-self: flex-start;
+      @include alignment(flex-start, center, row, nowrap);
+      width: 205px;
+      margin-bottom: 56px;
+      overflow: hidden;
+
+      .next__iframe {
+        position: relative;
+        min-width: 98px;
+        height: 59px;
+
+        &:nth-child(2) {
+          margin-left: 9px;
+          margin-right: px;
+        }
+      }
+    }
+
+    .video__dot {
+      bottom: 27px;
+      left: 82px;
+    }
+  }
+
+  .zoos__description {
+    position: static;
+    margin-left: 85px;
+    width: 205px;
+
+    .description__population {
+      margin-bottom: 11px;
+
+      .population__title {
+        @include font-size(1.4rem, 900);
+        margin-bottom: 3px;
+      }
+
+      .population__description {
+        @include font-size(1.2rem, 300);
+      }
+    }
+
+    .description__habitat {
+      margin-bottom: 11px;
+
+      .habitat__title {
+        @include font-size(1.4rem, 900);
+        margin-bottom: 3px;
+      }
+
+      .habitat__description {
+        @include font-size(1.2rem, 300);
+        line-height: 1.6rem;
+      }
+    }
+
+    .description__diet {
+      margin-bottom: 17px;
+
+      .diet__title {
+        @include font-size(1.4rem, 900);
+        margin-bottom: 4px;
+      }
+
+      .diet__description {
+        @include font-size(1.2rem, 300);
+        line-height: 1.4rem;
+      }
     }
   }
 }

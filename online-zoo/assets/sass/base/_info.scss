@@ -14,7 +14,7 @@
   .info__watch,
   .info__donate {
     position: relative;
-    display: block;
+    display: inline-block;
     opacity: 0.7;
     @include font-size(1.2rem, 500);
     line-height: 2.4rem;
@@ -73,6 +73,7 @@
 
     .info__watch,
     .info__donate {
+      display: block;
       @include font-size(1rem, 500);
 
       &::before {
