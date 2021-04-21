@@ -1,0 +1,28 @@
+.header__burger {
+  position: relative;
+  cursor: pointer;
+
+  .burger__switcher {
+    display: none;
+    appearance: none;
+
+    &:checked {
+      ~ .line--top {
+        transform: rotate(45deg);
+        transform-origin: 18%;
+      }
+
+      ~ .line--middle {
+        transform: translateY(-50%) translateX(-100%);
+        opacity: 0;
+        @extend %transition;
+      }
+
+      ~ .line--bottom {
+        width: 100%;
+        transform: rotate(-45deg);
+        transform-origin: 18%;
+      }
+    }
+  }
+}

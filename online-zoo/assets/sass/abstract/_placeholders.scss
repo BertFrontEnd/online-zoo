@@ -2,6 +2,10 @@
   transition: all 0.3s ease-out;
 }
 
+%burger-animation {
+  animation: burger-animation 0.3s ease-out;
+}
+
 %font {
   font-family: 'Roboto', sans-serif;
 }
