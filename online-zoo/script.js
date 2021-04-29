@@ -5,6 +5,15 @@ const checkbox = document.querySelector('.checkbox__switcher');
 const indicator = document.querySelector('.checkbox__indicator');
 const checkedState = localStorage.getItem('state');
 
+const inputs = document.querySelectorAll('input[type="range"]');
+console.log(inputs);
+
+/* const counters = document.querySelectorAll('.counter__current');
+console.log(counters); */
+const counter = document.querySelector('.counter__current');
+
+// Set Theme
+
 const setTheme = (name) => {
   theme.setAttribute('data-background', name);
   localStorage.setItem('theme', name);
@@ -36,3 +45,9 @@ checkboxButton.addEventListener('change', () => {
     setState('6');
   }
 });
+
+// Set Value of Range
+
+import { handleUpdate } from './assets/modules/ranges.js';
+
+inputs.forEach((input) => input.addEventListener('input', handleUpdate));
