@@ -21,10 +21,19 @@
 
 .how-it-works__slider {
   margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
 
   .slider__image {
+    position: relative;
+    left: 0;
+    @include alignment(flex-start, center, row, nowrap);
+    width: 790px;
+    height: 323px;
+    @extend %transition;
+
     .image__container {
-      width: 790px;
+      min-width: 790px;
       height: 323px;
 
       img {
@@ -54,8 +63,10 @@
 
   .how-it-works__slider {
     .slider__image {
+      width: 746px;
+
       .image__container {
-        width: 746px;
+        min-width: 746px;
         height: 323px;
       }
     }
@@ -76,8 +87,10 @@
     margin-bottom: 26px;
 
     .slider__image {
+      width: 600px;
+
       .image__container {
-        width: 600px;
+        min-width: 600px;
         height: 323px;
       }
     }
@@ -102,8 +115,10 @@
     margin-bottom: 16px;
 
     .slider__image {
+      width: 300px;
+
       .image__container {
-        width: 300px;
+        min-width: 300px;
         height: 323px;
       }
     }

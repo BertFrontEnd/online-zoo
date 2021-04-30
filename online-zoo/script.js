@@ -8,10 +8,6 @@ const checkedState = localStorage.getItem('state');
 const inputs = document.querySelectorAll('input[type="range"]');
 console.log(inputs);
 
-/* const counters = document.querySelectorAll('.counter__current');
-console.log(counters); */
-const counter = document.querySelector('.counter__current');
-
 // Set Theme
 
 const setTheme = (name) => {
@@ -46,8 +42,15 @@ checkboxButton.addEventListener('change', () => {
   }
 });
 
-// Set Value of Range
+// Set Value of Counter
+// Set Carousel of Line
 
-import { handleUpdate } from './assets/modules/ranges.js';
+import { handleUpdate } from './assets/modules/counter.js';
+import { handleRange } from './assets/modules/range.js';
 
-inputs.forEach((input) => input.addEventListener('input', handleUpdate));
+inputs.forEach((input) =>
+  input.addEventListener('input', (event) => {
+    handleUpdate(event);
+    handleRange(event);
+  }),
+);

@@ -92,7 +92,7 @@
 .button--feed:hover, .social-icon, .arrow__left .arrow,
 .arrow__right .arrow, .arrow__up .arrow,
 .arrow__down .arrow, .location__pin .pin-icon, .info .info__watch,
-.info .info__donate, .header__navigation ul li::after, .header__burger .burger__line, .promo__slider .slider__image .image__container.container--current:hover .container__cap, .promo__slider .slider__image .image__container.container--current:hover .container__info, .promo__slider .slider__image .image__container .container__cap, .promo__slider .slider__image .image__container .container__info, .pets-in-zoo__slider .slider__image .image__container:hover .container__cap, .pets-in-zoo__slider .slider__image .image__container:hover .container__info, .pets-in-zoo__slider .slider__image .container__cap, .pets-in-zoo__slider .slider__image .container__info, .primary-map__map .map__location .location__avatar,
+.info .info__donate, .header__navigation ul li::after, .header__burger .burger__line, .promo__slider .slider__image .image__container.container--current:hover .container__cap, .promo__slider .slider__image .image__container.container--current:hover .container__info, .promo__slider .slider__image .image__container .container__cap, .promo__slider .slider__image .image__container .container__info, .how-it-works__slider .slider__image, .pets-in-zoo__slider .slider__image, .pets-in-zoo__slider .slider__image .image__container:hover .container__cap, .pets-in-zoo__slider .slider__image .image__container:hover .container__info, .pets-in-zoo__slider .slider__image .container__cap, .pets-in-zoo__slider .slider__image .container__info, .primary-map__map .map__location .location__avatar,
 .secondary-map__map .map__location .location__avatar, .primary-map__map .map__location .card--eagle,
 .secondary-map__map .map__location .card--eagle, .primary-map__map .map__location .card--alligator,
 .secondary-map__map .map__location .card--alligator, .primary-map__map .map__location .card--gorilla,
@@ -1389,10 +1389,34 @@ iframe {
 
 .how-it-works__slider {
   margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.how-it-works__slider .slider__image {
+  position: relative;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 790px;
+  height: 323px;
 }
 
 .how-it-works__slider .slider__image .image__container {
-  width: 790px;
+  min-width: 790px;
   height: 323px;
 }
 
@@ -1432,8 +1456,11 @@ iframe {
     width: 746px;
     margin-bottom: 14px;
   }
-  .how-it-works__slider .slider__image .image__container {
+  .how-it-works__slider .slider__image {
     width: 746px;
+  }
+  .how-it-works__slider .slider__image .image__container {
+    min-width: 746px;
     height: 323px;
   }
 }
@@ -1449,8 +1476,11 @@ iframe {
   .how-it-works__slider {
     margin-bottom: 26px;
   }
-  .how-it-works__slider .slider__image .image__container {
+  .how-it-works__slider .slider__image {
     width: 600px;
+  }
+  .how-it-works__slider .slider__image .image__container {
+    min-width: 600px;
     height: 323px;
   }
 }
@@ -1469,8 +1499,11 @@ iframe {
   .how-it-works__slider {
     margin-bottom: 16px;
   }
-  .how-it-works__slider .slider__image .image__container {
+  .how-it-works__slider .slider__image {
     width: 300px;
+  }
+  .how-it-works__slider .slider__image .image__container {
+    min-width: 300px;
     height: 323px;
   }
   .how-it-works__control {
@@ -1649,30 +1682,9 @@ iframe {
   color: var(--secondary-text-color);
 }
 
-.pets-in-zoo__slider {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  margin-bottom: 25px;
-  padding: 0 56px;
-}
-
-.pets-in-zoo__slider .slider___arrow {
+.pets-in-zoo___arrow {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1689,18 +1701,19 @@ iframe {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 100%;
+  width: 81%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.pets-in-zoo__slider .slider__image {
+.pets-in-zoo__slider {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1710,24 +1723,47 @@ iframe {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 1202px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.pets-in-zoo__slider .slider__image {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-right: 110px;
+  left: 0px;
 }
 
 .pets-in-zoo__slider .slider__image .image__container {
   position: relative;
   z-index: 1;
-  width: 278px;
+  min-width: 278px;
   height: 400px;
   margin: 0 15px;
-  overflow: hidden;
   cursor: pointer;
 }
 
-.pets-in-zoo__slider .slider__image .image__container:first-child {
+.pets-in-zoo__slider .slider__image .image__container:nth-child(4n + 1) {
   margin-left: 0;
 }
 
-.pets-in-zoo__slider .slider__image .image__container:last-child {
-  margin-right: 0;
+.pets-in-zoo__slider .slider__image .image__container:nth-child(4n) {
+  margin-right: 0px;
 }
 
 .pets-in-zoo__slider .slider__image .image__container img {
@@ -1802,8 +1838,16 @@ iframe {
   .pets-in-zoo__title {
     margin-bottom: 26px;
   }
+  .pets-in-zoo___arrow {
+    top: 46%;
+    left: 50%;
+    width: 112%;
+  }
+  .pets-in-zoo__slider {
+    width: 900px;
+  }
   .pets-in-zoo__slider .slider__image .image__container {
-    width: 210px;
+    min-width: 210px;
     height: 301px;
     margin: 0 10px;
   }
@@ -1817,30 +1861,13 @@ iframe {
 }
 
 @media (min-width: 640px) and (max-width: 1199px) {
-  .pets-in-zoo__slider {
-    padding: 0 0px;
-    margin-bottom: 30px;
-  }
-  .pets-in-zoo__slider .slider___arrow {
+  .pets-in-zoo___arrow {
     display: none;
   }
-  .pets-in-zoo__slider .slider__image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+  .pets-in-zoo__slider {
     width: 600px;
+    padding: 0 0px;
+    margin-bottom: 30px;
     overflow: hidden;
   }
   .pets-in-zoo__slider .slider__image .image__container {
@@ -1867,30 +1894,13 @@ iframe {
   .pets-in-zoo__title {
     margin-bottom: 25px;
   }
-  .pets-in-zoo__slider {
-    padding: 0 0px;
-    margin-bottom: 26px;
-  }
-  .pets-in-zoo__slider .slider___arrow {
+  .pets-in-zoo___arrow {
     display: none;
   }
-  .pets-in-zoo__slider .slider__image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+  .pets-in-zoo__slider {
     width: 300px;
+    padding: 0 0px;
+    margin-bottom: 26px;
     overflow: hidden;
   }
   .pets-in-zoo__slider .slider__image .image__container {
