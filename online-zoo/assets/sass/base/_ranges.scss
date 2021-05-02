@@ -27,7 +27,12 @@
     height: 10px;
     appearance: none;
     background-color: var(--promo-range-point-color);
+    @extend %transition;
     cursor: pointer;
+
+    &:hover {
+      background-color: var(--non-clickable-arrow-color);
+    }
   }
 }
 
@@ -64,7 +69,12 @@
     height: 10px;
     appearance: none;
     background-color: var(--all-range-point-color);
+    @extend %transition;
     cursor: pointer;
+
+    &:hover {
+      background-color: var(--non-clickable-arrow-color);
+    }
   }
 }
 

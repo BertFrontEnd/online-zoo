@@ -6,7 +6,7 @@ const indicator = document.querySelector('.checkbox__indicator');
 const checkedState = localStorage.getItem('state');
 
 const inputs = document.querySelectorAll('input[type="range"]');
-console.log(inputs);
+const arrows = document.querySelectorAll('.arrow');
 
 // Set Theme
 
@@ -52,5 +52,15 @@ inputs.forEach((input) =>
   input.addEventListener('input', (event) => {
     handleUpdate(event);
     handleRange(event);
+  }),
+);
+
+// Click on Arrow
+
+import { handleArrow } from './assets/modules/arrow.js';
+
+arrows.forEach((arrow) =>
+  arrow.addEventListener('click', (event) => {
+    handleArrow(event);
   }),
 );

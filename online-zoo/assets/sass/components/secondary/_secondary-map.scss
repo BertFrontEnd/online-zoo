@@ -26,21 +26,22 @@
   }
 }
 
+.secondary-map___arrow {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  z-index: 1;
+  @include alignment(space-between, center, row, nowrap);
+  width: 75%;
+  transform: translate(-50%, -50%);
+}
+
 .secondary-map__slider {
   position: relative;
   @include alignment(center, center, row, nowrap);
   width: 100%;
   margin-bottom: 28px;
   padding: 0 56px;
-
-  .slider___arrow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include alignment(space-between, center, row, nowrap);
-    width: 75%;
-    transform: translate(-50%, -50%);
-  }
 
   .slider__image {
     @include alignment(center, center, row, nowrap);
