@@ -104,12 +104,13 @@
     margin-bottom: 35px;
   }
 
+  .secondary-map___arrow {
+    top: 30%;
+    width: 90%;
+  }
+
   .secondary-map__slider {
     margin-bottom: 20px;
-
-    .slider___arrow {
-      width: 90%;
-    }
 
     .slider__image {
       @include alignment(flex-start, center, row, nowrap);

@@ -8,6 +8,10 @@ const checkedState = localStorage.getItem('state');
 const inputs = document.querySelectorAll('input[type="range"]');
 const arrows = document.querySelectorAll('.arrow');
 
+const avatars = document.querySelectorAll(
+  '.secondary-map__slider > .slider__image > .image__container',
+);
+
 // Set Theme
 
 const setTheme = (name) => {
@@ -64,3 +68,13 @@ arrows.forEach((arrow) =>
     handleArrow(event);
   }),
 );
+
+// Click on Avatar
+
+import { handleAvatar } from './assets/modules/avatar.js';
+
+avatars.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    handleAvatar(event, avatars);
+  });
+});

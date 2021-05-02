@@ -4375,11 +4375,12 @@ iframe {
   .secondary-map__description {
     margin-bottom: 35px;
   }
+  .secondary-map___arrow {
+    top: 30%;
+    width: 90%;
+  }
   .secondary-map__slider {
     margin-bottom: 20px;
-  }
-  .secondary-map__slider .slider___arrow {
-    width: 90%;
   }
   .secondary-map__slider .slider__image {
     display: -webkit-box;
