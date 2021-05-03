@@ -13,6 +13,8 @@ const avatars = document.querySelectorAll(
 );
 const pinIcons = document.querySelectorAll('.pin-icon');
 
+const dotIcons = document.querySelectorAll('.dot__switch');
+
 // Set Theme
 
 const setTheme = (name) => {
@@ -87,5 +89,15 @@ import { handleLocation } from './assets/modules/location.js';
 pinIcons.forEach((item) => {
   item.addEventListener('click', (event) => {
     handleLocation(event, pinIcons);
+  });
+});
+
+// Click on Dot
+
+import { handleDot } from './assets/modules/dot.js';
+
+dotIcons.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    handleDot(event, dotIcons);
   });
 });
