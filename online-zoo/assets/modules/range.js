@@ -45,6 +45,59 @@ const handleRange = (event) => {
         }
       }
     });
+
+    const viewWidth = document.body.clientWidth;
+
+    if (viewWidth <= 1200 && viewWidth > 640) {
+      switch (true) {
+        case rangeValue === '6':
+          sliderLine.style.left = `-${138}px`;
+          break;
+        case rangeValue === '7':
+          sliderLine.style.left = `-${276}px`;
+          break;
+        case rangeValue === '8':
+          sliderLine.style.left = `-${414}px`;
+          break;
+      }
+    }
+
+    if (viewWidth <= 640 && viewWidth > 320) {
+      switch (true) {
+        case rangeValue === '5':
+          sliderLine.style.left = `-${118}px`;
+          break;
+        case rangeValue === '6':
+          sliderLine.style.left = `-${236}px`;
+          break;
+        case rangeValue === '7':
+          sliderLine.style.left = `-${354}px`;
+          break;
+        case rangeValue === '8':
+          sliderLine.style.left = `-${472}px`;
+          break;
+      }
+    }
+
+    if (viewWidth <= 320) {
+      switch (true) {
+        case rangeValue === '4':
+          sliderLine.style.left = `-${70}px`;
+          break;
+        case rangeValue === '5':
+          sliderLine.style.left = `-${140}px`;
+          break;
+        case rangeValue === '6':
+          sliderLine.style.left = `-${210}px`;
+          break;
+        case rangeValue === '7':
+          sliderLine.style.left = `-${280}px`;
+          break;
+        case rangeValue === '8':
+          sliderLine.style.left = `-${350}px`;
+          break;
+      }
+    }
   }
 
   console.log('===');

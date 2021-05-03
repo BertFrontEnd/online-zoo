@@ -11,6 +11,7 @@ const arrows = document.querySelectorAll('.arrow');
 const avatars = document.querySelectorAll(
   '.secondary-map__slider > .slider__image > .image__container',
 );
+const pinIcons = document.querySelectorAll('.pin-icon');
 
 // Set Theme
 
@@ -76,5 +77,15 @@ import { handleAvatar } from './assets/modules/avatar.js';
 avatars.forEach((item) => {
   item.addEventListener('click', (event) => {
     handleAvatar(event, avatars);
+  });
+});
+
+// Click on Location
+
+import { handleLocation } from './assets/modules/location.js';
+
+pinIcons.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    handleLocation(event, pinIcons);
   });
 });

@@ -22,11 +22,11 @@
     width: 790px;
     letter-spacing: 0.15px;
     line-height: 1.6rem;
-    color: var(--secondary-text-color);
+    color: var(--secondary-text-colSor);
   }
 }
 
-.secondary-map___arrow {
+.secondary-map__arrow {
   position: absolute;
   top: 27%;
   left: 50%;
@@ -38,13 +38,18 @@
 
 .secondary-map__slider {
   position: relative;
-  @include alignment(center, center, row, nowrap);
-  width: 100%;
+  @include alignment(flex-start, center, row, nowrap);
+  width: 1150px;
   margin-bottom: 28px;
-  padding: 0 56px;
+  overflow: hidden;
 
   .slider__image {
-    @include alignment(center, center, row, nowrap);
+    position: relative;
+    left: 0;
+    @include alignment(flex-start, center, row, nowrap);
+    margin: 0 auto;
+    height: 157px;
+    @extend %transition;
 
     .image__container {
       z-index: 1;
@@ -52,6 +57,7 @@
       height: 108px;
       margin: 0 15px;
       cursor: pointer;
+      @extend %transition;
 
       &:first-child {
         margin-left: 0;
@@ -104,19 +110,17 @@
     margin-bottom: 35px;
   }
 
-  .secondary-map___arrow {
+  .secondary-map__arrow {
     top: 30%;
     width: 90%;
   }
 
   .secondary-map__slider {
+    width: 684px;
     margin-bottom: 20px;
+    overflow: hidden;
 
     .slider__image {
-      @include alignment(flex-start, center, row, nowrap);
-      width: 660px;
-      overflow: hidden;
-
       .image__container {
         min-width: 108px;
       }
@@ -249,18 +253,18 @@
     }
   }
 
-  .secondary-map__slider {
-    margin-bottom: 20px;
-    padding: 0 36px;
+  .secondary-map__arrow {
+    top: 36%;
+    width: 102%;
+  }
 
-    .slider___arrow {
-      width: 102%;
-    }
+  .secondary-map__slider {
+    width: 512px;
+    margin-bottom: 20px;
+    overflow: hidden;
 
     .slider__image {
-      @include alignment(flex-start, center, row, nowrap);
-      width: 515px;
-      overflow: hidden;
+      /* @include alignment(flex-start, center, row, nowrap); */
 
       .image__container {
         min-width: 108px;
@@ -386,18 +390,19 @@
     }
   }
 
-  .secondary-map__slider {
-    margin-bottom: 15px;
-    padding: 0 34px;
+  .secondary-map__arrow {
+    top: 43.5%;
+    width: 98%;
+  }
 
-    .slider___arrow {
-      width: 98%;
-    }
+  .secondary-map__slider {
+    width: 226px;
+    margin-bottom: 15px;
+    overflow: hidden;
 
     .slider__image {
-      @include alignment(flex-start, center, row, nowrap);
       width: 225px;
-      overflow: hidden;
+      height: 85px;
 
       .image__container {
         min-width: 60px;
