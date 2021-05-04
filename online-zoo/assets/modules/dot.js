@@ -9,7 +9,7 @@ const handleDot = (event, node) => {
 
   const sliderLine =
     event.currentTarget.parentElement.previousElementSibling.firstElementChild;
-  console.log(sliderLine.offsetWidth);
+  /* console.log(sliderLine.offsetWidth); */
 
   /* node.forEach((dot) => {
     const dotId = dot.dataset.id; */
@@ -17,15 +17,15 @@ const handleDot = (event, node) => {
   switch (true) {
     case event.currentTarget.dataset.id === '1':
       sliderLine.style.left = `-${0}px`;
-      console.log(event.currentTarget.dataset.id);
+      /* console.log(event.currentTarget.dataset.id); */
       break;
     case event.currentTarget.dataset.id === '2':
       sliderLine.style.left = `-${sliderLine.offsetWidth}px`;
-      console.log(event.currentTarget.dataset.id);
+      /* console.log(event.currentTarget.dataset.id); */
       break;
     case event.currentTarget.dataset.id === '3':
       sliderLine.style.left = `-${sliderLine.offsetWidth * 2}px`;
-      console.log(event.currentTarget.dataset.id);
+      /* console.log(event.currentTarget.dataset.id); */
       break;
   }
   /*  }); */

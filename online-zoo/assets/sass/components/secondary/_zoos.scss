@@ -60,7 +60,7 @@
 
 .zoos__video {
   position: relative;
-  @include alignment(flex-start, center, column, nowrap);
+  @include alignment(flex-start, flex-start, column, nowrap);
   /* margin-right: 30px; */
   margin-left: 53px;
 

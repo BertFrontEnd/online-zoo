@@ -115,8 +115,8 @@ const handleArrow = (event) => {
       const viewWidth = document.body.clientWidth;
 
       if (
-        viewWidth <= 1200 &&
-        viewWidth > 640 &&
+        viewWidth < 1600 &&
+        viewWidth >= 1200 &&
         avatar.classList.contains('container--current')
       ) {
         switch (true) {
@@ -148,8 +148,8 @@ const handleArrow = (event) => {
       }
 
       if (
-        viewWidth <= 640 &&
-        viewWidth > 320 &&
+        viewWidth < 1200 &&
+        viewWidth >= 640 &&
         avatar.classList.contains('container--current')
       ) {
         switch (true) {
@@ -180,7 +180,11 @@ const handleArrow = (event) => {
         }
       }
 
-      if (viewWidth <= 320 && avatar.classList.contains('container--current')) {
+      if (
+        viewWidth < 640 &&
+        viewWidth >= 320 &&
+        avatar.classList.contains('container--current')
+      ) {
         switch (true) {
           case avatar.dataset.id === '01':
             sliderLine.style.left = `-${0}px`;
@@ -256,10 +260,11 @@ const handleArrow = (event) => {
       }
 
       const viewWidth = document.body.clientWidth;
+      console.log(viewWidth);
 
       if (
-        viewWidth <= 1200 &&
-        viewWidth > 640 &&
+        viewWidth < 1600 &&
+        viewWidth >= 1200 &&
         avatar.classList.contains('container--current')
       ) {
         switch (true) {
@@ -291,8 +296,8 @@ const handleArrow = (event) => {
       }
 
       if (
-        viewWidth <= 640 &&
-        viewWidth > 320 &&
+        viewWidth < 1200 &&
+        viewWidth >= 640 &&
         avatar.classList.contains('container--current')
       ) {
         switch (true) {
@@ -323,7 +328,11 @@ const handleArrow = (event) => {
         }
       }
 
-      if (viewWidth <= 320 && avatar.classList.contains('container--current')) {
+      if (
+        viewWidth < 640 &&
+        viewWidth >= 320 &&
+        avatar.classList.contains('container--current')
+      ) {
         switch (true) {
           case avatar.dataset.id === '08':
             sliderLine.style.left = `-${350}px`;

@@ -8,7 +8,7 @@ const handleRange = (event) => {
   /* const sliderWidth = sliderLine.offsetWidth * event.target.max; */
   const containerWidth = sliderLine.offsetWidth;
   const rangeValue = event.target.value;
-  console.log(rangeValue);
+  /* console.log(rangeValue); */
 
   if (sliderLine.classList.contains('js-hiw')) {
     offset = containerWidth * counter - containerWidth;
@@ -48,7 +48,7 @@ const handleRange = (event) => {
 
     const viewWidth = document.body.clientWidth;
 
-    if (viewWidth <= 1200 && viewWidth > 640) {
+    if (viewWidth < 1600 && viewWidth > 640) {
       switch (true) {
         case rangeValue === '6':
           sliderLine.style.left = `-${138}px`;
@@ -100,7 +100,7 @@ const handleRange = (event) => {
     }
   }
 
-  console.log('===');
+  /* console.log('==='); */
   /* console.log('offset:', offset); */
   /* console.log('counter:', counter); */
   /* console.log('max:', event.target.max); */

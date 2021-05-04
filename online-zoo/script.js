@@ -14,6 +14,7 @@ const avatars = document.querySelectorAll(
 const pinIcons = document.querySelectorAll('.pin-icon');
 
 const dotIcons = document.querySelectorAll('.dot__switch');
+const videoPreviewCaps = document.querySelectorAll('.next__cap');
 
 // Set Theme
 
@@ -99,5 +100,15 @@ import { handleDot } from './assets/modules/dot.js';
 dotIcons.forEach((item) => {
   item.addEventListener('click', (event) => {
     handleDot(event, dotIcons);
+  });
+});
+
+// Click on Video
+
+import { handleVideo } from './assets/modules/video.js';
+
+videoPreviewCaps.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    handleVideo(event, videoPreviewCaps);
   });
 });
