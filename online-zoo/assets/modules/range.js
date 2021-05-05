@@ -107,6 +107,38 @@ const handleRange = (event) => {
   /* console.log('sliderLine:', sliderLine); */
   /* console.log('sliderWidth:', sliderWidth); */
   /* console.log('containerWidth:', containerWidth); */
+
+  if (sliderLine.classList.contains('js-p')) {
+    const containerImages = sliderLine.querySelectorAll('.image__container');
+
+    containerImages.forEach((container) => {
+      if (!container.classList.contains('container--current')) {
+        containerImages.forEach((container) => {
+          container.classList.remove('container--current');
+          if (`0${rangeValue}` === container.dataset.id) {
+            container.classList.add('container--current');
+
+            const element = document.querySelector('.container--empty');
+            const offsetWidth = element.offsetWidth;
+            const marginRight = parseInt(getComputedStyle(element).marginRight);
+            const marginLeft = parseInt(getComputedStyle(element).marginLeft);
+            const numberId = parseInt(rangeValue);
+
+            if (numberId > 1) {
+              element.parentElement.style.left = `-${
+                (offsetWidth + marginRight + marginLeft) * (numberId - 2)
+              }px`;
+            } else {
+              element.parentElement.style.left = `${
+                (offsetWidth + marginRight + marginLeft) *
+                Math.abs(numberId - 2)
+              }px`;
+            }
+          }
+        });
+      }
+    });
+  }
 };
 
 export { handleRange };

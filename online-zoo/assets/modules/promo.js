@@ -17,7 +17,7 @@ const handleClick = (event, node, offset, width) => {
   const marginLeft = parseInt(getComputedStyle(event.currentTarget).marginLeft);
   const numberId = parseInt(event.currentTarget.dataset.id);
 
-  if (event.x < offset) {
+  if (event.x < offset || event.x > offset + width) {
     if (numberId > 1) {
       event.currentTarget.parentElement.style.left = `-${
         (offsetWidth + marginRight + marginLeft) * Math.abs(numberId - 2)
@@ -29,11 +29,19 @@ const handleClick = (event, node, offset, width) => {
     }
   }
 
-  if (event.x > offset + width) {
+  /*  if (event.x > offset + width) {
     event.currentTarget.parentElement.style.left = `-${
       (offsetWidth + marginRight + marginLeft) * (numberId - 2)
     }px`;
-  }
+  } */
+
+  event.currentTarget.parentElement.parentElement.nextElementSibling.querySelector(
+    '.control__range',
+  ).value = event.currentTarget.dataset.id;
+
+  event.currentTarget.parentElement.parentElement.nextElementSibling.querySelector(
+    '.counter__current',
+  ).textContent = event.currentTarget.dataset.id;
 };
 
 export { handleClick };

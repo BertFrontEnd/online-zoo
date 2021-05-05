@@ -99,11 +99,12 @@
     @extend %transition;
 
     .image__container {
+      /* opacity: 0.1; */
       z-index: 0;
       min-width: 140px;
       height: 203px;
       margin: 0 23px;
-      @extend %transition;
+      /* @extend %transition; */
       cursor: pointer;
 
       img {
@@ -126,46 +127,49 @@
           width: 100%;
           height: 100%;
         }
+      }
 
-        &:hover {
-          .container__cap {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            @extend %transition;
-            /* cursor: default; */
-          }
-
-          .container__info {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            @extend %transition;
-          }
-        }
+      .visibility {
+        opacity: 1;
+        visibility: visible;
       }
 
       .container__cap {
         position: absolute;
         top: 0;
         left: 0;
+        /* z-index: 5; */
         width: inherit;
         height: inherit;
         opacity: 0;
         visibility: hidden;
         border-radius: 5px;
         background-color: $cap-color;
-        transform: translateY(100%);
-        @extend %transition;
+        /* transform-origin: center; */
+        /* transform: translateY(100%); */
+        /* @extend %transition; */
+
+        &.visibility {
+          opacity: 1;
+          visibility: visible;
+        }
       }
 
       .container__info {
+        position: absolute;
         bottom: 33px;
         left: 23px;
+        /* z-index: 5 */
         opacity: 0;
         visibility: hidden;
-        transform: translateY(100px);
-        @extend %transition;
+        /* transform-origin: center; */
+        /* transform: translateY(100px); */
+        /* @extend %transition; */
+
+        &.visibility {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
 
@@ -212,20 +216,37 @@
     padding: 127px 0px 497px;
   }
 
-  .promo__slider {
-    bottom: 143px;
-    right: -1295px;
+  .promo__line {
+    left: 330px;
+    bottom: 300px;
 
-    .slider__line {
-      left: -116px;
-      bottom: 162px;
+    .line__container {
+      .container__dots {
+        .dot {
+          margin-right: 206px;
+
+          &:nth-child(2) {
+            margin-right: 230px;
+          }
+
+          &:nth-child(3) {
+            margin-right: 228px;
+          }
+        }
+      }
     }
+  }
+
+  .promo__slider {
+    left: 236px;
+    bottom: 94px;
+    height: 450px;
 
     .slider__image {
-      width: 1745px;
+      width: 1960px;
 
       .image__container {
-        width: 180px;
+        min-width: 180px;
         height: 261px;
         margin: 0 15px;
 
@@ -259,20 +280,37 @@
     }
   }
 
-  .promo__slider {
-    bottom: 175px;
-    right: -1297px;
+  .promo__line {
+    left: -274px;
+    bottom: 330px;
 
-    .slider__line {
-      left: 12px;
-      bottom: 160px;
+    .line__container {
+      .container__dots {
+        .dot {
+          margin-right: 206px;
+
+          &:nth-child(2) {
+            margin-right: 230px;
+          }
+
+          &:nth-child(3) {
+            margin-right: 228px;
+          }
+        }
+      }
     }
+  }
+
+  .promo__slider {
+    left: -124px;
+    bottom: 126px;
+    height: 450px;
 
     .slider__image {
-      width: 1873px;
+      width: 1960px;
 
       .image__container {
-        width: 180px;
+        min-width: 180px;
         height: 261px;
         margin: 0 15px;
 
@@ -306,7 +344,62 @@
     }
   }
 
+  .promo__line {
+    left: -154px;
+    bottom: 198px;
+
+    .line__container {
+      .container__dots {
+        .dot {
+          margin-right: 206px;
+
+          &:nth-child(2) {
+            margin-right: 122px;
+          }
+
+          &:nth-child(3) {
+            margin-right: 228px;
+          }
+        }
+      }
+    }
+  }
+
   .promo__slider {
+    bottom: 88px;
+    left: -114px;
+    min-width: 1134px;
+    height: 230px;
+
+    .slider__image {
+      min-width: 1134px;
+      height: 230px;
+
+      .image__container {
+        min-width: 113px;
+        height: 164px;
+        margin: 0 5px;
+
+        img {
+          width: inherit;
+          height: inherit;
+        }
+
+        &.container--current {
+          top: 2px;
+          width: 140px;
+          height: 202px;
+        }
+
+        .container__info {
+          bottom: 14px;
+          left: 8px;
+        }
+      }
+    }
+  }
+
+  /*   .promo__slider {
     bottom: 103px;
     right: -772px;
 
@@ -336,7 +429,7 @@
       }
     }
   }
-
+ */
   .promo__control {
     bottom: 49px;
     right: 22px;

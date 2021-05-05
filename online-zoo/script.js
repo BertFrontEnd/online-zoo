@@ -54,6 +54,12 @@ checkboxButton.addEventListener('change', () => {
   }
 });
 
+// Handle of Visibility
+
+import { handleVisibility } from './assets/modules/visibility.js';
+
+window.addEventListener('DOMContentLoaded', handleVisibility);
+
 // Set Value of Counter
 // Set Carousel of Line
 
@@ -64,6 +70,7 @@ inputs.forEach((input) =>
   input.addEventListener('input', (event) => {
     handleUpdate(event);
     handleRange(event);
+    handleVisibility();
   }),
 );
 
@@ -133,5 +140,6 @@ const widthCurrentImage = document
 promoPreviews.forEach((item) => {
   item.addEventListener('click', (event) => {
     handleClick(event, promoPreviews, offsetCurrentImage, widthCurrentImage);
+    handleVisibility();
   });
 });

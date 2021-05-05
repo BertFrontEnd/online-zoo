@@ -63,7 +63,7 @@
 
 @media (min-width: $width-mobile-min) and (max-width: $width-mobile-max) {
   .info {
-    width: 136px;
+    width: 128px;
 
     .info__text {
       @include font-size(1.2rem, 300);
