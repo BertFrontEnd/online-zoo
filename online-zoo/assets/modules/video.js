@@ -1,4 +1,4 @@
-const handleVideo = (event, node) => {
+const handleVideo = (event) => {
   const currentVideo = document.querySelector('.video__current > iframe');
   const currentSrc = currentVideo.getAttribute('src');
 

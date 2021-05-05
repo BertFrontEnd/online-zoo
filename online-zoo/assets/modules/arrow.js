@@ -10,7 +10,7 @@ const handleArrow = (event) => {
   );
 
   rangeValue = Number(rangeValue.value);
-  console.log(rangeValue);
+  /* console.log(rangeValue); */
 
   /* let rangeCount = event.currentTarget.parentElement.parentElement.nextElementSibling.nextElementSibling.querySelector(
     '.counter__current',
@@ -260,7 +260,7 @@ const handleArrow = (event) => {
       }
 
       const viewWidth = document.body.clientWidth;
-      console.log(viewWidth);
+      /* console.log(viewWidth); */
 
       if (
         viewWidth < 1600 &&

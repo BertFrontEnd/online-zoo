@@ -16,6 +16,10 @@ const pinIcons = document.querySelectorAll('.pin-icon');
 const dotIcons = document.querySelectorAll('.dot__switch');
 const videoPreviewCaps = document.querySelectorAll('.next__cap');
 
+const promoPreviews = document.querySelectorAll(
+  '.promo__slider > .slider__image > .image__container',
+);
+
 // Set Theme
 
 const setTheme = (name) => {
@@ -109,6 +113,25 @@ import { handleVideo } from './assets/modules/video.js';
 
 videoPreviewCaps.forEach((item) => {
   item.addEventListener('click', (event) => {
-    handleVideo(event, videoPreviewCaps);
+    handleVideo(event);
+  });
+});
+
+// Click on Promo
+
+import { handleClick } from './assets/modules/promo.js';
+
+const offsetCurrentImage = document
+  .querySelector('.container--current')
+  .getBoundingClientRect().left;
+/* console.log(offsetCurrentImage); */
+const widthCurrentImage = document
+  .querySelector('.container--current')
+  .getBoundingClientRect().width;
+/* console.log(widthCurrentImage); */
+
+promoPreviews.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    handleClick(event, promoPreviews, offsetCurrentImage, widthCurrentImage);
   });
 });
