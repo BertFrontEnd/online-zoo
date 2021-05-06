@@ -104,7 +104,7 @@
       min-width: 140px;
       height: 203px;
       margin: 0 23px;
-      /* @extend %transition; */
+      @extend %transition;
       cursor: pointer;
 
       img {
@@ -399,37 +399,6 @@
     }
   }
 
-  /*   .promo__slider {
-    bottom: 103px;
-    right: -772px;
-
-    .slider__line {
-      left: 41px;
-      bottom: 100px;
-    }
-
-    .slider__image {
-      width: 1116px;
-
-      .image__container {
-        width: 113px;
-        height: 164px;
-        margin: 0 5px;
-
-        &.container--current {
-          top: 2px;
-          width: 140px;
-          height: 202px;
-        }
-
-        .container__info {
-          bottom: 12px;
-          left: 8px;
-        }
-      }
-    }
-  }
- */
   .promo__control {
     bottom: 49px;
     right: 22px;

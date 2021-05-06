@@ -18,6 +18,24 @@ const handleRange = (event) => {
     offset = (containerWidth * counter - containerWidth) / 8;
   }
 
+  const viewWidth = document.body.clientWidth;
+  /* console.log(viewWidth); */
+
+  /*  if (sliderLine.classList.contains('js-t')) {
+    offset = (containerWidth * counter - containerWidth) / 8;
+  } */
+
+  if (
+    sliderLine.classList.contains('js-t') &&
+    viewWidth <= 640 &&
+    viewWidth >= 320
+  ) {
+    offset = (containerWidth * counter - containerWidth) / 16;
+    console.log(offset);
+  } else {
+    offset = (containerWidth * counter - containerWidth) / 8;
+  }
+
   sliderLine.style.left = `-${offset}px`;
 
   if (sliderLine.classList.contains('js-sms')) {
@@ -42,14 +60,49 @@ const handleRange = (event) => {
 
         if (`0${rangeValue}` === pin.dataset.id) {
           pin.classList.add('pin-active');
+
+          const animal = pin.parentElement
+            .getAttribute('title')
+            .toLocaleLowerCase();
+
+          const animalSrc = `./${animal}.html`;
+
+          if (animalSrc === null) {
+            document
+              .querySelector('.secondary-map__wrapper > a')
+              .setAttribute('href', `./#.html`);
+          } else {
+            document
+              .querySelector('.secondary-map__wrapper > a')
+              .setAttribute('href', animalSrc);
+          }
         }
       }
     });
 
     const viewWidth = document.body.clientWidth;
 
+    if (viewWidth >= 1600) {
+      sliderLine.style.left = `-${0}px`;
+    }
+
     if (viewWidth < 1600 && viewWidth > 640) {
       switch (true) {
+        case rangeValue === '1':
+          sliderLine.style.left = `-${0}px`;
+          break;
+        case rangeValue === '2':
+          sliderLine.style.left = `-${0}px`;
+          break;
+        case rangeValue === '3':
+          sliderLine.style.left = `-${0}px`;
+          break;
+        case rangeValue === '4':
+          sliderLine.style.left = `-${0}px`;
+          break;
+        case rangeValue === '5':
+          sliderLine.style.left = `-${0}px`;
+          break;
         case rangeValue === '6':
           sliderLine.style.left = `-${138}px`;
           break;
@@ -136,6 +189,14 @@ const handleRange = (event) => {
             }
           }
         });
+      }
+
+      if (container.classList.contains('container--current')) {
+        const animalSrc = container.querySelector('a').getAttribute('href');
+
+        document
+          .querySelector('.promo__content > a')
+          .setAttribute('href', animalSrc);
       }
     });
   }

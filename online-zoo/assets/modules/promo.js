@@ -8,6 +8,14 @@ const handleClick = (event, node, offset, width) => {
     });
 
     event.currentTarget.classList.add('container--current');
+
+    const animalSrc = event.currentTarget
+      .querySelector('a')
+      .getAttribute('href');
+
+    document
+      .querySelector('.promo__content > a')
+      .setAttribute('href', animalSrc);
   }
 
   const offsetWidth = document.querySelector('.container--empty').offsetWidth;

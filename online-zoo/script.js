@@ -143,3 +143,14 @@ promoPreviews.forEach((item) => {
     handleVisibility();
   });
 });
+
+// Remove Message
+
+import { handleMessage } from './assets/modules/message.js';
+
+const message = document.querySelector('.message > a');
+
+message.addEventListener('click', (event) => {
+  event.preventDefault();
+  handleMessage();
+});

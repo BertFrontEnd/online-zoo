@@ -30,9 +30,9 @@
 
   .slider__image {
     position: relative;
+    left: 0px;
     @include alignment(flex-start, center, row, nowrap);
     margin-right: 110px;
-    left: 0px;
     @extend %transition;
 
     .image__container {

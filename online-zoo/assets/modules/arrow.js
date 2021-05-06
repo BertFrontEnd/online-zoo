@@ -79,6 +79,59 @@ const handleArrow = (event) => {
   }
 
   if (
+    sliderLine.classList.contains('js-t') &&
+    event.currentTarget.parentElement.classList.contains('arrow__right')
+  ) {
+    offset += containerWidth;
+
+    if (offset > sliderWidth - containerWidth) {
+      offset = 0;
+    }
+
+    sliderLine.style.left = `-${offset}px`;
+    /* console.log('offset return:', offset); */
+    rangeValue++;
+
+    if (rangeValue > 8) {
+      rangeValue = 1;
+    }
+    /* console.log('rangeValue in if:', rangeValue); */
+    event.currentTarget.parentElement.parentElement.nextElementSibling.nextElementSibling.querySelector(
+      '.control__range',
+    ).value = rangeValue;
+    event.currentTarget.parentElement.parentElement.nextElementSibling.nextElementSibling.querySelector(
+      '.counter__current',
+    ).textContent = `0${rangeValue}`;
+  }
+
+  if (
+    sliderLine.classList.contains('js-t') &&
+    event.currentTarget.parentElement.classList.contains('arrow__left')
+  ) {
+    offset -= containerWidth;
+
+    if (offset < 0) {
+      offset = sliderWidth - containerWidth;
+    }
+
+    sliderLine.style.left = `-${offset}px`;
+    /* console.log('offset return:', offset); */
+    rangeValue--;
+
+    if (rangeValue < 1) {
+      rangeValue = 8;
+    }
+    /* console.log('rangeValue in if:', rangeValue); */
+
+    event.currentTarget.parentElement.parentElement.nextElementSibling.nextElementSibling.querySelector(
+      '.control__range',
+    ).value = rangeValue;
+    event.currentTarget.parentElement.parentElement.nextElementSibling.nextElementSibling.querySelector(
+      '.counter__current',
+    ).textContent = `0${rangeValue}`;
+  }
+
+  if (
     sliderLine.classList.contains('js-sms') &&
     event.currentTarget.parentElement.classList.contains('arrow__right')
   ) {
@@ -110,6 +163,14 @@ const handleArrow = (event) => {
 
       if (avatar.dataset.id === `0${rangeValue}`) {
         avatar.classList.add('container--current');
+
+        const animal = avatar.getAttribute('title').toLocaleLowerCase();
+
+        const animalSrc = `./${animal}.html`;
+
+        document
+          .querySelector('.secondary-map__wrapper > a')
+          .setAttribute('href', animalSrc);
       }
 
       const viewWidth = document.body.clientWidth;
@@ -257,6 +318,14 @@ const handleArrow = (event) => {
 
       if (avatar.dataset.id === `0${rangeValue}`) {
         avatar.classList.add('container--current');
+
+        const animal = avatar.getAttribute('title').toLocaleLowerCase();
+
+        const animalSrc = `./${animal}.html`;
+
+        document
+          .querySelector('.secondary-map__wrapper > a')
+          .setAttribute('href', animalSrc);
       }
 
       const viewWidth = document.body.clientWidth;

@@ -5,6 +5,16 @@ const handleAvatar = (event, node) => {
     });
 
     event.currentTarget.classList.add('container--current');
+
+    const animal = event.currentTarget
+      .getAttribute('title')
+      .toLocaleLowerCase();
+
+    const animalSrc = `./${animal}.html`;
+
+    document
+      .querySelector('.secondary-map__wrapper > a')
+      .setAttribute('href', animalSrc);
   }
 
   const dataSetEvent = event.currentTarget.dataset.id;
