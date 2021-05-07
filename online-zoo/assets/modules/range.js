@@ -10,10 +10,6 @@ const handleRange = (event) => {
   const rangeValue = event.target.value;
   /* console.log(rangeValue); */
 
-  if (sliderLine.classList.contains('js-hiw')) {
-    offset = containerWidth * counter - containerWidth;
-  }
-
   if (sliderLine.classList.contains('js-piz')) {
     offset = (containerWidth * counter - containerWidth) / 8;
   }
@@ -34,6 +30,10 @@ const handleRange = (event) => {
     console.log(offset);
   } else {
     offset = (containerWidth * counter - containerWidth) / 8;
+  }
+
+  if (sliderLine.classList.contains('js-hiw')) {
+    offset = containerWidth * counter - containerWidth;
   }
 
   sliderLine.style.left = `-${offset}px`;
